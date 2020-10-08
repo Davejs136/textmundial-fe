@@ -3,16 +3,14 @@ const path = require("path")
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const productoTemplate = path.resolve(`src/templates/producto.js`)
+  const productoTemplate = path.resolve(`src/pages/productos/producto.template.js`)
 
   const result = await graphql(`
     {
-      allMarkdownRemark(filter: {frontmatter: {path: {ne: null }}}) {
-        edges {
-          node {
-            frontmatter {
-              path
-            }
+      markdownRemark {
+        frontmatter {
+          productos {
+            path
           }
         }
       }
@@ -24,11 +22,15 @@ exports.createPages = async ({ actions, graphql }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  console.log()
+
+  result.data.markdownRemark.frontmatter.productos.forEach(producto => {
     createPage({
-      path: node.frontmatter.path,
+      path: producto.path,
       component: productoTemplate,
-      context: {},
+      context: {
+        path: producto.path
+      },
     })
   })
 }
