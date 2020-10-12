@@ -28,9 +28,7 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: producto.path,
       component: productoTemplate,
-      context: {
-        path: producto.path
-      },
+      context: {},
     })
   })
 }
