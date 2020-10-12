@@ -21,8 +21,8 @@ asesoramos sin ningún compromiso.</h2>
           <li className="productos__item" key={producto.nombre}>
             <img src="" alt="producto x" className="productos__imagen"/>
             <p className="productos__nombre">{producto.nombre}</p>
-            <p className="productos__precio">{producto.precio}</p>
-            <Link to={""} className="productos__link">Ver producto</Link>
+            {/* <p className="productos__precio">{producto.precio}</p> */}
+            <Link to={`${producto.path}`} className="productos__link">Ver producto</Link>
           </li>
         ))}
       </ul>
@@ -51,7 +51,7 @@ export const query = graphql`
         productos {
           path
           nombre
-          precio
+          descripcion
         }
       }
     }

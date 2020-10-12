@@ -1,5 +1,5 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from "react"
+import { graphql, Link } from "gatsby"
 
 const ProductoTemplate = ({ data, path }) => (
   <section className="producto">
@@ -11,13 +11,9 @@ const ProductoTemplate = ({ data, path }) => (
           <h2 className="producto__titulo">
             Producto en detalle - {producto.nombre}
           </h2>
-          <p className="producto__descripcion">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab,
-            distinctio delectus, ex porro doloribus excepturi sequi nobis qui
-            vel eligendi temporibus similique deserunt vero est iste laborum
-            corporis, voluptatibus blanditiis.
-          </p>
+          <p className="producto__descripcion">{producto.descripcion}</p>
           <span className="producto__precio">{producto.precio}</span>
+          <Link to="/">Ir a inicio</Link>
         </>
       ))}
   </section>
@@ -32,7 +28,7 @@ export const query = graphql`
         productos {
           path
           nombre
-          precio
+          descripcion
         }
       }
     }
