@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby"
 
 const ProductoTemplate = ({ data, path }) => (
   <section className="producto">
-    {console.log({ data, path })}
     {data.markdownRemark.frontmatter.productos
       .filter(producto => producto.path === path)
       .map(producto => (
@@ -11,6 +10,7 @@ const ProductoTemplate = ({ data, path }) => (
           <h2 className="producto__titulo">
             Producto en detalle - {producto.nombre}
           </h2>
+          <img src={producto.imagen} alt="una bonita imagen" />
           <p className="producto__descripcion">{producto.descripcion}</p>
           <span className="producto__precio">{producto.precio}</span>
           <Link to="/">Ir a inicio</Link>
@@ -29,6 +29,7 @@ export const query = graphql`
           path
           nombre
           descripcion
+          imagen
         }
       }
     }
