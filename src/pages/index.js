@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 
 const IndexPage = ({
@@ -18,7 +18,6 @@ const IndexPage = ({
         ¿Aún no se decide cuál tela le conviene para ese negocio que tiene en
         mente?
       </h2>
-      {/* {console.log(productosImg)} */}
       <div className="slide__imagen">
         <Img fluid={carousel.fluid} alt="tela de color x" />
       </div>
@@ -33,6 +32,7 @@ const IndexPage = ({
                 fluid={productosImg.edges[index].node.fluid}
               />
               <p className="productos__nombre">{producto.nombre}</p>
+              <Link to={producto.path} >Ver producto</Link>
             </li>
           ))}
         </ul>
@@ -111,7 +111,7 @@ export const query = graphql`
           path
           nombre
           descripcion
-          imagen
+          imagenId
         }
       }
     }
