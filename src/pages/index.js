@@ -1,12 +1,15 @@
 import React from "react"
-import Layout from "../components/layout"
+import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
 
 const IndexPage = ({
   data: {
     items: {
       frontmatter: { productos },
     },
+    carousel,
+    productosImg,
   },
 }) => (
   <Layout>
@@ -15,20 +18,19 @@ const IndexPage = ({
         ¿Aún no se decide cuál tela le conviene para ese negocio que tiene en
         mente?
       </h2>
+      {/* {console.log(productosImg)} */}
       <div className="slide__imagen">
-        <img src="" alt="buena tela" />
+        <Img fluid={carousel.fluid} alt="tela de color x" />
       </div>
     </section>
     <section className="productos">
       <h2 className="producto__titulo">Productos</h2>
       <div className="productos__grid">
         <ul className="productos__lista">
-          {productos.map(producto => (
+          {productos.map((producto, index) => (
             <li className="productos__items" key={producto.id}>
-              <img
-                className="productos__imagen"
-                src={producto.imagen}
-                alt="telas con spandex"
+              <Img 
+                fluid={productosImg.edges[index].node.fluid}
               />
               <p className="productos__nombre">{producto.nombre}</p>
             </li>
@@ -72,13 +74,13 @@ const IndexPage = ({
       </div>
     </section>
     <section className="contacto">
-      <p className="contacto__descripcion">
+      <div className="contacto__descripcion">
         También puede consultarnos enviándonos un mensaje a WhatsApp{" "}
         <div className="contacto__info">
           <span className="contacto__ws-icon"></span>+58 414-270-28-86
         </div>{" "}
         a través del siguiente formulario:
-      </p>
+      </div>
       <form className="form">
         <input
           type="text"
@@ -105,10 +107,27 @@ export const query = graphql`
     items: markdownRemark {
       frontmatter {
         productos {
+          id
           path
           nombre
           descripcion
           imagen
+        }
+      }
+    }
+
+    carousel: imageSharp(fluid:{originalName:{ eq: "tm-sec1.jpg" }}) {
+      fluid(maxWidth: 490) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+
+    productosImg: allImageSharp {
+      edges {
+        node {
+          fluid(maxWidth: 490) {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     }
