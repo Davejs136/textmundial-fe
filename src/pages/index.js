@@ -14,31 +14,30 @@ const IndexPage = ({
 }) => (
   <Layout>
     <section className="slider">
-      <h2 className="slider__titulo">
+      <h1 className="slider__titulo">
         ¿Aún no se decide cuál tela le conviene para ese negocio que tiene en
         mente?
-      </h2>
-      <div className="slide__imagen">
+      </h1>
+      <div className="slider__imagen">
         <Img fluid={carousel.fluid} alt="tela de color x" />
       </div>
     </section>
     <section className="productos">
-      <h2 className="producto__titulo">Productos</h2>
-      <div className="productos__grid">
+      <h2>Productos</h2>
         <ul className="productos__lista">
           {productos.map((producto, index) => (
             <li className="productos__items" key={producto.id}>
-              <Img 
+              <Img className="productos__imagen"
                 fluid={productosImg.edges[index].node.fluid}
               />
               <p className="productos__nombre">{producto.nombre}</p>
-              <Link to={producto.path} >Ver producto</Link>
+              <Link className="productos__vermas" to={producto.path} >Ver producto</Link>
             </li>
           ))}
         </ul>
-      </div>
     </section>
     <section className="acerca">
+    <h2>Acerca de nosotros</h2>
       <article className="acerca__colleft">
         <img src="" alt="otra imagen" className="acerca__imagen" />
         <div className="info">

@@ -1,26 +1,30 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+// Imagen
+import Logo from "../assets/images/tm-logo.svg"
 
 const Header = () => (
-  <header className="header">
-    <div className="header__logo-site">
-      <img src="" alt="logo" className="head__logo" />
-      <p className="head__descripcion">
-        Distribuidores del mejor surtido en telas para trajes de baño
-      </p>
+  <header className="cabecera">
+    <div className="contenedor">
+      <div className="cabecera__logo">
+        <img src={Logo} alt="logo" className="logo" />
+        <p className="cabecera__descripcion">
+          Distribuidores del mejor surtido en telas para trajes de baño
+        </p>
+      </div>
+      <nav className="cabecera__nav">
+        <Link to="/home" className="cabecera__link">
+          Inicio
+        </Link>
+        <Link to="#productos" className="cabecera__link">
+          Productos
+        </Link>
+        <Link to="#blog" className="cabecera__link">
+          Blog
+        </Link>
+      </nav>
     </div>
-    <nav className="header__nav">
-      <Link to="/home" className="header__link">
-        Inicio
-      </Link>
-      <Link to="#productos" className="header__link">
-        Productos
-      </Link>
-      <Link to="#blog" className="header__link">
-        Blog
-      </Link>
-    </nav>
   </header>
 )
 

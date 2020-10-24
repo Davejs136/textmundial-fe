@@ -12,9 +12,9 @@ import Header from "./header"
 import Footer from "./footer"
 
 const Layout = ({ children }) => (
-  <div className="contenedor">
+  <div>
     <Header />
-    <main className="contenido">{children}</main>
+    <main className="contenedor">{children}</main>
     <Footer />
   </div>
 )

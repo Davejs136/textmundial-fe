@@ -1,0 +1,255 @@
+// Archivos importados
+@import "./normalize";
+@import "./font";
+
+// Las variables comienzan con "$"
+
+/* Colores */
+$azul1: #001880;
+
+$azul2: #000c3d;
+
+$amarillo: #ffee00;
+
+$gris1: #969696;
+
+$gris2: #c6c6c6;
+
+$verde: #009c36;
+
+$blanco1: #fff;
+
+$blanco2: #edecec;
+
+/* Contenedores principales */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.centro {
+  justify-content: center;
+  align-content: center;
+}
+
+.contenedor {
+  @extend .flex;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 500;
+  color: $azul2;
+}
+
+h2 {
+  font-weight: 600;
+  border-bottom: $azul2 3px solid;
+  color: $azul2;
+  position: relative;
+  display: inline-flex;
+  &:before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    left: -1.5vh;
+    right: -1.5vh;
+    bottom: 0;
+    border: 3px solid transparent;
+    -moz-border-image: -moz-linear-gradient(to right, #ffee00 0%, #e14314 100%);
+    -webkit-border-image: -webkit-linear-gradient(
+      to right,
+      #ffee00 0%,
+      #e14314 100%
+    );
+    border-image: linear-gradient(to right, #ffee00 0%, #e14314 100%);
+    border-image-slice: 1;
+  }
+}
+
+h3 {
+  padding: 0 40px;
+  font-size: 30px;
+  line-height: 34px;
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 38px;
+}
+
+ul {
+  list-style: none;
+  @extend .flex;
+}
+
+/*--------Cabecera--------*/
+.cabecera {
+  background: rgb(0, 12, 61);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 12, 61, 1) 17%,
+    rgba(0, 24, 128, 1) 25%
+  );
+  &__logo {
+    text-align: right;
+    background: $azul2;
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+  }
+  &__descripcion {
+    font-weight: 100;
+    color: $blanco1;
+  }
+  &__nav {
+    background: $azul1;
+    display: flex;
+  }
+  &__link {
+    color: $amarillo;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+/*--------Slider--------*/
+.slider {
+  @extend .flex;
+  align-items: center;
+}
+
+/*--------Productos--------*/
+.productos {
+  margin-top: 12.5vh;
+  width: 100%;
+  &__lista {
+    border-bottom: $gris2 3px solid;
+  }
+  &__items {
+    flex: 1 1 33.3333333%;
+    padding:5vh;
+  }
+  &__imagen {
+    height:20vh;
+  }
+  &__boton {
+  }
+}
+
+/*--------Pie--------*/
+.pie {
+  font-weight: 200;
+  background: $azul2;
+  color: $blanco1;
+  &__circulo {
+    border-radius: 50%;
+    color: $azul1;
+    background: $amarillo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  &__novanet {
+    cursor: pointer;
+  }
+}
+
+/*-------------------------------------------- Mobile Portrait --------------------------------------------*/
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+}
+
+/*-------------------------------------------- Mobile Landscape --------------------------------------------*/
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+}
+
+/*-------------------------------------------- Tablet Portrait --------------------------------------------*/
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+}
+
+/*-------------------------------------------- Tablet Landscape --------------------------------------------*/
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+}
+
+/*-------------------------------------------- Desktop responsive --------------------------------------------*/
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .contenedor {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    padding-right: 5vh;
+    font-size: 2.1rem;
+    line-height: 2.3rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+    padding-bottom: 1vh;
+  }
+
+  /*--------Cabecera--------*/
+  .cabecera {
+    &__logo {
+      flex: 1 1 0;
+      padding: 5vh 10vh 5vh 0;
+      .logo {
+        width: 35vh;
+      }
+    }
+    &__descripcion {
+      padding-top: 1vh;
+      font-size: 1.02rem;
+      line-height: 1.1rem;
+    }
+    &__nav {
+      flex: 3 1 0;
+    }
+    &__link {
+      font-size: 1.02rem;
+      flex-grow: 1;
+    }
+  }
+
+  /*--------Slider--------*/
+  .slider {
+    margin-top: 12.5vh;
+    &__titulo {
+      flex: 2 1;
+      text-align: right;
+    }
+    &__imagen {
+      flex: 3 1 0;
+    }
+  }
+
+  /*--------Pie--------*/
+  .pie {
+    font-size: 0.82rem;
+    line-height: 1.3rem;
+    &__logo {
+      width: 30vh;
+      padding: 8vh 0;
+    }
+    &__rrss {
+      padding: 0 3vh;
+    }
+    &__circulo {
+      width: 4.5vh;
+      height: 4.5vh;
+      svg {
+        width: 1.5em !important;
+        height: 1.5em;
+      }
+    }
+    &__copy {
+      padding: 0 5vh;
+    }
+    &__designers {
+      padding: 0 3vh;
+    }
+    &__novanet {
+      width: 11.5vh;
+    }
+  }
+}

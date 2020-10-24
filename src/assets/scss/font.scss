@@ -1,0 +1,51 @@
+/* Prompt 100 - Thin */
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../font/Prompt/Prompt-Thin.ttf");
+}
+
+/* Prompt 200 - ExtraLight */
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../font/Prompt/Prompt-ExtraLight.ttf");
+}
+
+/* Prompt 300 - Light */
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/Prompt/Prompt-Light.ttf");
+}
+
+/* Prompt 400 - Regular */
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/Prompt/Prompt-Regular.ttf");
+}
+
+/* Prompt 500 - Medium */
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/Prompt/Prompt-Medium.ttf");
+}
+
+/* Prompt 900 - Black */
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../font/Prompt/Prompt-Black.ttf");
+}
+
+* {
+  font-family: "Prompt", sans-serif;
+}
