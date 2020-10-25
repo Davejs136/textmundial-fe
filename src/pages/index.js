@@ -58,10 +58,10 @@ const IndexPage = ({
       <h2>Acerca de nosotros</h2>
       <div className="acerca__cabecera">
         <img src={acerca} alt="otra imagen" className="acerca__imagen" />
-        <h3 className="acerca__titulo">
+        <p className="acerca__titulo descripcion__azul">
           Somos una empresa con más de 27 años en el mercado conocidos por la
           excelente calidad de nuestros productos.
-        </h3>
+        </p>
       </div>
       <div className="acerca__contenido">
         <div className="acerca__grupo">
@@ -85,9 +85,9 @@ const IndexPage = ({
     <section className="contacto">
       <h2>Reciba nuestra asesoría</h2>
       <div className="contacto__cabecera">
-        <h3 className="contacto__titulo">
+        <p className="contacto__titulo descripcion__azul">
           Atención personalizada sin ningún compromiso visitándonos en:
-        </h3>
+        </p>
         <div className="contacto__mapa"></div>
       </div>
 
@@ -98,6 +98,7 @@ const IndexPage = ({
         </span>{" "}
         o enviános un mensaje a través del siguiente formulario:
       </p>
+      
 
       <form className="contacto__form">
         <input

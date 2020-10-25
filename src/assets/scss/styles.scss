@@ -69,12 +69,15 @@ h2 {
 
 h3 {
   font-weight: 500;
-  color: $azul2;
 }
 
 h4 {
   font-weight: 300;
   color: $blanco1;
+}
+
+.descripcion__azul {
+  color: $azul2;
 }
 
 ul {
@@ -250,7 +253,7 @@ ul {
 
   h1 {
     padding-right: 5vh;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     line-height: 2.5rem;
   }
 
@@ -260,14 +263,19 @@ ul {
   }
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 2rem;
-    padding: 0 5vh;
   }
 
   h4 {
     font-size: 1.4rem;
     line-height: 1.8rem;
+  }
+
+  .descripcion__azul {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    padding: 0 5vh;
   }
 
   /*--------Cabecera--------*/
@@ -349,7 +357,6 @@ ul {
     }
     &__titulo {
       flex: 3 1;
-      padding: 0 5vh;
     }
     &__contenido {
       margin-top: 8vh;
@@ -375,6 +382,7 @@ ul {
   margin-top: 8vh;
   &__cabecera {
     margin-top: 3vh;
+    margin-bottom: 12vh;
   }
   &__titulo {
     text-align: right;
@@ -385,7 +393,6 @@ ul {
     height: 28vh;
   }
   &__descripcion {
-    margin-top: 12vh;
     font-size: 1.6rem;
     line-height: 1.8rem;
   }
