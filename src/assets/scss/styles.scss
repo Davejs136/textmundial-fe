@@ -76,13 +76,17 @@ h4 {
   color: $blanco1;
 }
 
-.descripcion__azul {
+.descripcion {
   color: $azul2;
 }
 
 ul {
   list-style: none;
   @extend .flex;
+}
+
+.gatsby-image-wrapper {
+  width: 100%;
 }
 
 /*--------Cabecera--------*/
@@ -152,8 +156,8 @@ ul {
   }
 }
 
-/*--------Acerca--------*/
-.acerca {
+/*--------nosotros--------*/
+.nosotros {
   &__cabecera {
     @extend .flex;
     align-items: center;
@@ -162,6 +166,7 @@ ul {
     @extend .flex;
   }
   &__subtitulo {
+    width: fit-content;
     background: $azul1;
   }
 }
@@ -175,9 +180,12 @@ ul {
   &__mapa {
     border: 1px solid $gris1;
   }
-  &__descripcion {
-    font-weight: 300;
-    color: $gris1;
+  &__informacion {
+    .descripcion {
+      padding: 0;
+      font-weight: 300;
+      color: $gris1;
+    }
   }
   &__whatsapp {
     color: $verde;
@@ -187,7 +195,7 @@ ul {
     background: $blanco2;
   }
   &__input {
-    font-weight:300;
+    font-weight: 300;
     color: $gris1;
     border-top: 0;
     border-right: 0;
@@ -196,11 +204,11 @@ ul {
     background: none;
     &::placeholder {
       color: $gris1;
-      font-weight:300;
+      font-weight: 300;
     }
   }
   &__boton {
-    font-weight:300;
+    font-weight: 300;
     text-align: center;
     cursor: pointer;
     color: $blanco1;
@@ -221,19 +229,408 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-  }
-  &__novanet {
-    cursor: pointer;
+    a {
+      color: $azul1;
+    }
+    a:hover,
+    a:active {
+      color: $azul1;
+    }
   }
 }
 
 /*-------------------------------------------- Mobile Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .contenedor {
+    margin: 0 6vh;
+  }
+
+  h1 {
+    padding: 0 0 7vh 0;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    padding-bottom: 2vh;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    line-height: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.15rem;
+    line-height: 1.4rem;
+  }
+
+  .descripcion {
+    font-size: 1.25rem;
+    line-height: 1.55rem;
+    padding: 5vh 0;
+  }
+
+  /*--------Cabecera--------*/
+  .cabecera {
+    &__logo {
+      flex: 2 1 0;
+      padding: 6vh 8vh 6vh 0;
+      .logo {
+        width: 50vh;
+      }
+    }
+    &__descripcion {
+      padding-top: 1vh;
+      font-size: 0.8rem;
+      line-height: 1.1rem;
+    }
+    &__nav {
+      flex: 3 1 0;
+    }
+    &__link {
+      font-size: 0.75rem;
+      flex: 1 1 0;
+    }
+  }
+
+  /*--------Slider--------*/
+  .slider {
+    margin-top: 15vh;
+    &__imagen {
+      flex: 1;
+    }
+  }
+
+  /*--------Productos--------*/
+  .productos {
+    margin-top: 20vh;
+    &__lista {
+      margin-top: 2vh;
+      margin-bottom: 4vh;
+    }
+    &__items {
+      flex: 0 0 50%;
+      padding: 5vh;
+    }
+    &__imagen {
+      height: 35vh;
+    }
+    &__nombre {
+      width: 100%;
+      padding: 2vh 4.5vh;
+      margin: -6.5vh -1vh 0 2.5vh;
+      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
+    }
+    &__vermas {
+      padding-top: 2vh;
+      font-size: 0.8rem;
+    }
+    &__boton {
+      font-size: 1.1rem;
+      img {
+        padding: 1vh 0 0 0;
+        width: 13vh;
+      }
+    }
+  }
+
+  /*--------nosotros--------*/
+  .nosotros {
+    margin-top: 15vh;
+    &__cabecera {
+      margin-top: 5vh;
+    }
+    &__imagen {
+      flex: 1 1;
+    }
+    &__grupo {
+      padding: 7vh 0;
+    }
+    &__subtitulo {
+      padding: 2vh 4vh;
+      margin: 0 0 1.5vh 0;
+      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
+    }
+    &__texto {
+      font-size: 0.95rem;
+      line-height: 1.3rem;
+    }
+  }
+
+  /*--------Contacto--------*/
+  .contacto {
+    margin-top: 15vh;
+    &__cabecera {
+      margin-bottom: 15vh;
+    }
+    &__mapa {
+      flex: 1;
+      height: 46vh;
+    }
+    &__informacion {
+      .descripcion {
+        font-size: 1.15rem;
+        line-height: 1.5rem;
+      }
+    }
+    &__form {
+      margin-top: 6vh;
+      margin-bottom: 20vh;
+      padding: 6vh;
+    }
+    &__input {
+      flex: 0 0 100%;
+      margin: 0 0 8vh 0;
+      padding-bottom: 1vh;
+      font-size: 0.95rem;
+    }
+    &__boton {
+      flex: 0 0 100%;
+      font-size: 1.1rem;
+      padding: 2vh;
+    }
+  }
+
+  /*--------Pie--------*/
+  .pie {
+    font-size: 0.68rem;
+    line-height: 1.2rem;
+    .contenedor {
+      padding: 7vh 0;
+    }
+    &__logo {
+      flex: 1;
+      width: 40vh;
+    }
+    &__rrss {
+      flex: 1;
+      padding: 0 0 0 4vh;
+      li {
+        margin-right: 4vh;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &__circulo {
+      width: 7vh;
+      height: 7vh;
+      svg {
+        margin-top: 1vh;
+        width: 1.5em !important;
+        height: 1.5em;
+      }
+    }
+    &__copy {
+      flex: 3.6 1;
+      padding: 0 4vh;
+    }
+    &__designers {
+      flex: 1;
+    }
+    &__novanet {
+      width: 20vh;
+    }
+  }
 }
 
 /*-------------------------------------------- Mobile Landscape --------------------------------------------*/
 @media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .contenedor {
+    margin: 0 6vh;
+  }
+
+  h1 {
+    padding: 0 0 7vh 0;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    padding-bottom: 2vh;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    line-height: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.15rem;
+    line-height: 1.4rem;
+  }
+
+  .descripcion {
+    font-size: 1.25rem;
+    line-height: 1.55rem;
+    padding: 5vh 0;
+  }
+
+  /*--------Cabecera--------*/
+  .cabecera {
+    &__logo {
+      flex: 2 1 0;
+      padding: 6vh 8vh 6vh 0;
+      .logo {
+        width: 50vh;
+      }
+    }
+    &__descripcion {
+      padding-top: 1vh;
+      font-size: 0.8rem;
+      line-height: 1.1rem;
+    }
+    &__nav {
+      flex: 3 1 0;
+    }
+    &__link {
+      font-size: 0.75rem;
+      flex: 1 1 0;
+    }
+  }
+
+  /*--------Slider--------*/
+  .slider {
+    margin-top: 15vh;
+    &__imagen {
+      flex: 1;
+    }
+  }
+
+  /*--------Productos--------*/
+  .productos {
+    margin-top: 20vh;
+    &__lista {
+      margin-top: 2vh;
+      margin-bottom: 4vh;
+    }
+    &__items {
+      flex: 0 0 50%;
+      padding: 5vh;
+    }
+    &__imagen {
+      height: 35vh;
+    }
+    &__nombre {
+      width: 100%;
+      padding: 2vh 4.5vh;
+      margin: -6.5vh -1vh 0 2.5vh;
+      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
+    }
+    &__vermas {
+      padding-top: 2vh;
+      font-size: 0.8rem;
+    }
+    &__boton {
+      font-size: 1.1rem;
+      img {
+        padding: 1vh 0 0 0;
+        width: 13vh;
+      }
+    }
+  }
+
+  /*--------nosotros--------*/
+  .nosotros {
+    margin-top: 15vh;
+    &__cabecera {
+      margin-top: 5vh;
+    }
+    &__imagen {
+      flex: 1 1;
+    }
+    &__grupo {
+      padding: 7vh 0;
+    }
+    &__subtitulo {
+      padding: 2vh 4vh;
+      margin: 0 0 1.5vh 0;
+      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
+    }
+    &__texto {
+      font-size: 0.95rem;
+      line-height: 1.3rem;
+    }
+  }
+
+  /*--------Contacto--------*/
+  .contacto {
+    margin-top: 15vh;
+    &__cabecera {
+      margin-bottom: 15vh;
+    }
+    &__mapa {
+      flex: 1;
+      height: 46vh;
+    }
+    &__informacion {
+      .descripcion {
+        font-size: 1.15rem;
+        line-height: 1.5rem;
+      }
+    }
+    &__form {
+      margin-top: 6vh;
+      margin-bottom: 20vh;
+      padding: 6vh;
+    }
+    &__input {
+      flex: 0 0 100%;
+      margin: 0 0 8vh 0;
+      padding-bottom: 1vh;
+      font-size: 0.95rem;
+    }
+    &__boton {
+      flex: 0 0 100%;
+      font-size: 1.1rem;
+      padding: 2vh;
+    }
+  }
+
+  /*--------Pie--------*/
+  .pie {
+    font-size: 0.68rem;
+    line-height: 1.2rem;
+    .contenedor {
+      padding: 7vh 0;
+    }
+    &__logo {
+      flex: 1;
+      width: 40vh;
+    }
+    &__rrss {
+      flex: 1;
+      padding: 0 0 0 4vh;
+      li {
+        margin-right: 4vh;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &__circulo {
+      width: 7vh;
+      height: 7vh;
+      svg {
+        margin-top: 1vh;
+        width: 1.5em !important;
+        height: 1.5em;
+      }
+    }
+    &__copy {
+      flex: 3.6 1;
+      padding: 0 4vh;
+    }
+    &__designers {
+      flex: 1;
+    }
+    &__novanet {
+      width: 20vh;
+    }
+  }
 }
 
 /*-------------------------------------------- Tablet Portrait --------------------------------------------*/
@@ -242,39 +639,34 @@ ul {
 
 /*-------------------------------------------- Tablet Landscape --------------------------------------------*/
 @media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-}
-
-/*-------------------------------------------- Desktop responsive --------------------------------------------*/
-@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
   .contenedor {
-    width: 1280px;
-    margin: 0 auto;
+    margin: 0 4vh;
   }
 
   h1 {
-    padding-right: 5vh;
-    font-size: 2.1rem;
-    line-height: 2.5rem;
+    padding: 0 5vh 0 0;
+    font-size: 1.9rem;
+    line-height: 2.2rem;
   }
 
   h2 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     padding-bottom: 1vh;
   }
 
   h3 {
-    font-size: 1.7rem;
-    line-height: 2rem;
-  }
-
-  h4 {
     font-size: 1.4rem;
     line-height: 1.8rem;
   }
 
-  .descripcion__azul {
-    font-size: 1.8rem;
-    line-height: 2rem;
+  h4 {
+    font-size: 1.2rem;
+    line-height: 1.45rem;
+  }
+
+  .descripcion {
+    font-size: 1.35rem;
+    line-height: 1.85rem;
     padding: 0 5vh;
   }
 
@@ -282,28 +674,21 @@ ul {
   .cabecera {
     &__logo {
       flex: 1 1 0;
-      padding: 5vh 10vh 5vh 0;
+      padding: 4vh 8vh 4vh 0;
       .logo {
         width: 35vh;
       }
     }
     &__descripcion {
-      padding-top: 1vh;
       font-size: 1.02rem;
-      line-height: 1.1rem;
-    }
-    &__nav {
-      flex: 3 1 0;
     }
     &__link {
       font-size: 1.02rem;
-      flex: 1 1 0;
     }
   }
 
   /*--------Slider--------*/
   .slider {
-    margin-top: 12.5vh;
     &__titulo {
       flex: 2 1;
       text-align: right;
@@ -317,130 +702,226 @@ ul {
   .productos {
     margin-top: 12.5vh;
     &__lista {
-      margin-bottom: 3vh;
+      margin-bottom: 1vh;
     }
     &__items {
-      flex: 1 1 33.3333333%;
-      padding: 5vh 6vh;
+      flex: 0 0 33.33%;
+      padding: 3vh 2.5vh;
     }
     &__imagen {
-      width: 100%;
-      height: 20vh;
+      height: 17vh;
     }
     &__nombre {
-      width: 100%;
       padding: 0.7vh 2vh;
-      margin: -1.5vh -1.5vh 0 1.5vh;
-      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
+      margin: -2.5vh -1vh 0 2.5vh;
     }
     &__vermas {
       padding-top: 1vh;
+      font-size: 0.9rem;
     }
     &__boton {
       padding-top: 1vh;
-      font-size: 1.1rem;
       img {
-        padding: 1vh 0 0 0;
+        padding: 0;
         width: 5vh;
       }
     }
   }
 
-  /*--------Acerca--------*/
-  .acerca {
+  /*--------nosotros--------*/
+  .nosotros {
     margin-top: 8vh;
-    &__cabecera {
-      margin-top: 5vh;
-    }
-    &__imagen {
+    .descripcion {
       flex: 2 1;
     }
-    &__titulo {
-      flex: 3 1;
-    }
     &__contenido {
-      margin-top: 8vh;
+      margin-top: 5vh;
     }
     &__grupo {
-      flex: 1 1 0;
-      padding-right: 5vh;
+      flex: 1 1;
+      padding: 0 5vh 0 0;
     }
     &__subtitulo {
       padding: 0.7vh 2vh;
-      width: 60%;
-      margin: 0 0 1.5vh 0;
-      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
     }
     &__texto {
-      font-size: 1.3rem;
+      padding-left: 1vh;
+      font-size: 1.1rem;
       line-height: 1.6rem;
     }
   }
 
   /*--------Contacto--------*/
-.contacto {
-  margin-top: 8vh;
-  &__cabecera {
-    margin-top: 3vh;
-    margin-bottom: 12vh;
+  .contacto {
+    margin-top: 10vh;
+    &__cabecera {
+      margin-top: 3vh;
+      margin-bottom: 10vh;
+      .descripcion {
+        flex: 0.8 1;
+        text-align: right;
+      }
+    }
+    &__mapa {
+      flex: 0.9 1;
+      height: 28vh;
+    }
+    &__informacion {
+      .descripcion {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+    }
+    &__form {
+      margin-top: 3vh;
+      margin-bottom: 10vh;
+      padding: 5vh 3vh;
+    }
+    &__input {
+      flex: 2 1;
+      margin: 0 1.5vh;
+      padding-bottom: 1vh;
+      font-size: 1.15rem;
+    }
+    &__boton {
+      margin: 0 1.5vh;
+      padding: 0;
+      flex: 1 1;
+      font-size: 1.15rem;
+    }
   }
-  &__titulo {
-    text-align: right;
-    flex: 1 1;
-  }
-  &__mapa {
-    flex: 1 1;
-    height: 28vh;
-  }
-  &__descripcion {
-    font-size: 1.6rem;
-    line-height: 1.8rem;
-  }
-  &__form {
-    margin-top: 3vh;
-    margin-bottom: 10vh;
-    padding: 7vh 4vh;
-  }
-  &__input {
-    flex: 2 1 ;
-    margin: 0 1.5vh;
-    padding-bottom: 1vh;
-    font-size: 1.4rem;
-  }
-  &__boton {
-    margin:0 1.5vh;
-    flex: 1 1 ;
-    font-size: 1.4rem;
-  }
-}
 
   /*--------Pie--------*/
   .pie {
     font-size: 0.82rem;
     line-height: 1.3rem;
     &__logo {
-      width: 30vh;
-      padding: 8vh 0;
+      width: 25vh;
     }
     &__rrss {
-      padding: 0 3vh;
+      flex: 0.5 1;
     }
     &__circulo {
       width: 4.5vh;
       height: 4.5vh;
       svg {
-        width: 1.5em !important;
-        height: 1.5em;
+        margin-top: 0.5vh;
       }
     }
     &__copy {
-      padding: 0 5vh;
-    }
-    &__designers {
-      padding: 0 3vh;
+      flex: 1.5 1;
     }
     &__novanet {
-      width: 11.5vh;
+      width: 10.8vh;
+    }
+  }
+}
+
+/*-------------------------------------------- Desktop responsive --------------------------------------------*/
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .contenedor {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  .descripcion {
+    font-size: 1.8rem;
+  }
+
+  /*--------Productos--------*/
+  .productos {
+    &__lista {
+      margin-bottom: 3vh;
+    }
+    &__items {
+      padding: 5vh 6vh;
+    }
+    &__imagen {
+      height: 20vh;
+    }
+    &__boton {
+      img {
+        padding: 0.5vh 0 0 0;
+        width: 7vh;
+      }
+    }
+  }
+
+  /*--------nosotros--------*/
+  .nosotros {
+    &__imagen {
+      flex: 2 1;
+    }
+    .descripcion {
+      flex: 3 1;
+    }
+    &__contenido {
+      margin-top: 8vh;
+    }
+    &__texto {
+      font-size: 1.3rem;
+    }
+  }
+
+  /*--------Contacto--------*/
+  .contacto {
+    margin-top: 12vh;
+    &__cabecera {
+      margin-bottom: 12vh;
+      .descripcion {
+        flex: 1 1;
+      }
+    }
+    &__mapa {
+      flex: 1 1;
+    }
+    &__informacion {
+      .descripcion {
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
+    }
+    &__form {
+      margin-bottom: 15vh;
+      padding: 7vh 4vh;
+    }
+    &__input {
+      font-size: 1.4rem;
+    }
+    &__boton {
+      font-size: 1.4rem;
+    }
+  }
+
+  /*--------Pie--------*/
+  .pie {
+    &__logo {
+      flex: 0.2 1;
+    }
+    &__rrss {
+      flex: 0.2 1;
+    }
+    &__copy {
+      flex: 0.6 1;
     }
   }
 }

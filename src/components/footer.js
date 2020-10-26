@@ -5,9 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // @fortawesome libraries
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
-import { fas } from "@fortawesome/free-solid-svg-icons"
 // add fas and fab to the library
-library.add(fab, fas)
+library.add(fab)
 
 const Footer = () => (
   <footer className="pie">
@@ -15,9 +14,18 @@ const Footer = () => (
       <img src={Logo} alt="pie logo" className="pie__logo" />
       <ul className="pie__rrss">
         <li className="pie__circulo">
-          <FontAwesomeIcon
-            icon={["fab", "instagram"]}
-          />
+          <a
+            href="https://www.instagram.com/texmundial/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={["fab", "instagram"]} />
+          </a>
+        </li>
+        <li className="pie__circulo">
+          <a href="https://wa.me/584142702886" rel="noopener noreferrer" target="_blank">
+            <FontAwesomeIcon icon={["fab", "whatsapp"]} />
+          </a>
         </li>
       </ul>
       <div className="pie__copy">
@@ -28,7 +36,13 @@ const Footer = () => (
       </div>
       <div className="pie__designers">
         <p className="pie__texto">Diseñado por:</p>
-        <img src={Novanet} alt="novanet-logo" className="pie__novanet" />
+        <a
+          href="http://novanet.studio/site/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img src={Novanet} alt="novanet-logo" className="pie__novanet" />
+        </a>
       </div>
     </div>
   </footer>

@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 // Imagen
 import flecha from "../assets/images/flecha.svg"
-import acerca from "../assets/images/tm-sec3.png"
+import nosotros from "../assets/images/tm-sec3.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // @fortawesome libraries
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -54,26 +54,26 @@ const IndexPage = ({
       </button>
     </section>
 
-    <section className="acerca">
+    <section className="nosotros">
       <h2>Acerca de nosotros</h2>
-      <div className="acerca__cabecera">
-        <img src={acerca} alt="otra imagen" className="acerca__imagen" />
-        <p className="acerca__titulo descripcion__azul">
+      <div className="nosotros__cabecera">
+        <img src={nosotros} alt="otra imagen" className="nosotros__imagen" />
+        <p className="descripcion">
           Somos una empresa con más de 27 años en el mercado conocidos por la
           excelente calidad de nuestros productos.
         </p>
       </div>
-      <div className="acerca__contenido">
-        <div className="acerca__grupo">
-          <h4 className="acerca__subtitulo">¿Cuál es nuestra oferta?</h4>
-          <p className="acerca__texto">
+      <div className="nosotros__contenido">
+        <div className="nosotros__grupo">
+          <h4 className="nosotros__subtitulo">¿Cuál es nuestra oferta?</h4>
+          <p className="nosotros__texto">
             Ofrecemos difentes telas con variados colores y estampados para
             confeccionar trajes de baño, ropa ortiva, pijamas, entre otros.
           </p>
         </div>
-        <div className="acerca__grupo">
-          <h4 className="acerca__subtitulo">Qué nos distingue?</h4>
-          <p className="acerca__texto">
+        <div className="nosotros__grupo">
+          <h4 className="nosotros__subtitulo">Qué nos distingue?</h4>
+          <p className="nosotros__texto">
             Nos caracterizamos por nuestra disposición a responder todas sus
             preguntas para ayudarle a escoger la tela que más le conviene a su
             negocio
@@ -85,20 +85,26 @@ const IndexPage = ({
     <section className="contacto">
       <h2>Reciba nuestra asesoría</h2>
       <div className="contacto__cabecera">
-        <p className="contacto__titulo descripcion__azul">
+        <p className="descripcion">
           Atención personalizada sin ningún compromiso visitándonos en:
         </p>
         <div className="contacto__mapa"></div>
       </div>
 
-      <p className="contacto__descripcion">
-        También puede consultarnos enviándonos un mensaje a WhatsApp{" "}
-        <span className="contacto__whatsapp">
-          <FontAwesomeIcon icon={["fab", "whatsapp"]} /> +58 414-270-28-86
-        </span>{" "}
-        o enviános un mensaje a través del siguiente formulario:
-      </p>
-      
+      <div className="contacto__informacion">
+        <p className="descripcion">
+          También puede consultarnos enviándonos un mensaje a WhatsApp{" "}
+          <a
+            className="contacto__whatsapp"
+            href="https://wa.me/584142702886"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={["fab", "whatsapp"]} /> +58 414-270-28-86
+          </a>{" "}
+          o enviános un mensaje a través del siguiente formulario:
+        </p>
+      </div>
 
       <form className="contacto__form">
         <input
