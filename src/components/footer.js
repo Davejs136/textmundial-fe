@@ -11,7 +11,9 @@ library.add(fab)
 const Footer = () => (
   <footer className="pie">
     <div className="contenedor">
-      <img src={Logo} alt="pie logo" className="pie__logo" />
+      <div className="pie__logo">
+        <img src={Logo} alt="pie logo" />
+      </div>
       <ul className="pie__rrss">
         <li className="pie__circulo">
           <a
@@ -23,7 +25,11 @@ const Footer = () => (
           </a>
         </li>
         <li className="pie__circulo">
-          <a href="https://wa.me/584142702886" rel="noopener noreferrer" target="_blank">
+          <a
+            href="https://wa.me/584142702886"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={["fab", "whatsapp"]} />
           </a>
         </li>

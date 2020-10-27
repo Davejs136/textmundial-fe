@@ -57,7 +57,9 @@ const IndexPage = ({
     <section className="nosotros">
       <h2>Acerca de nosotros</h2>
       <div className="nosotros__cabecera">
-        <img src={nosotros} alt="otra imagen" className="nosotros__imagen" />
+        <div className="nosotros__imagen">
+          <img src={nosotros} alt="otra imagen" />
+        </div>
         <p className="descripcion">
           Somos una empresa con más de 27 años en el mercado conocidos por la
           excelente calidad de nuestros productos.

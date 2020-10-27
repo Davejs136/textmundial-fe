@@ -22,19 +22,28 @@ $blanco1: #fff;
 $blanco2: #edecec;
 
 /* Contenedores principales */
-.flex {
+
+@mixin flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-.centro {
-  justify-content: center;
-  align-content: center;
+@mixin centro {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contenedor {
-  @extend .flex;
+  @include flex;
   align-items: center;
+}
+
+@mixin mask-tit {
+  clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
+}
+
+@mixin w-full {
+  width:100%
 }
 
 h1 {
@@ -82,11 +91,11 @@ h4 {
 
 ul {
   list-style: none;
-  @extend .flex;
+  @include flex;
 }
 
 .gatsby-image-wrapper {
-  width: 100%;
+  @include w-full;
 }
 
 /*--------Cabecera--------*/
@@ -103,12 +112,12 @@ ul {
     clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
   }
   &__descripcion {
-    font-weight: 100;
+    font-weight: 200;
     color: $blanco1;
   }
   &__nav {
     background: $azul1;
-    display: flex;
+    @include flex;
   }
   &__link {
     color: $amarillo;
@@ -119,22 +128,24 @@ ul {
 
 /*--------Slider--------*/
 .slider {
-  @extend .flex;
+  @include flex;
   align-items: center;
 }
 
 /*--------Productos--------*/
 .productos {
-  @extend .flex;
+  @include flex;
   &__lista {
     border-bottom: $gris2 3px solid;
   }
   &__items {
-    @extend .flex;
+    @include flex;
     justify-content: flex-end;
   }
   &__nombre {
     background: $azul2;
+    @include w-full;
+    @include mask-tit;
   }
   &__vermas {
     font-weight: 500;
@@ -159,22 +170,28 @@ ul {
 /*--------nosotros--------*/
 .nosotros {
   &__cabecera {
-    @extend .flex;
+    @include flex;
     align-items: center;
   }
+  &__imagen {
+    img {
+      @include w-full;
+    }
+  }
   &__contenido {
-    @extend .flex;
+    @include flex;
   }
   &__subtitulo {
     width: fit-content;
     background: $azul1;
+    @include mask-tit;
   }
 }
 
 /*--------Contacto--------*/
 .contacto {
   &__cabecera {
-    @extend .flex;
+    @include flex;
     align-items: center;
   }
   &__mapa {
@@ -191,7 +208,7 @@ ul {
     color: $verde;
   }
   &__form {
-    @extend .flex;
+    @include flex;
     background: $blanco2;
   }
   &__input {
@@ -222,6 +239,16 @@ ul {
   font-weight: 200;
   background: $azul2;
   color: $blanco1;
+  &__logo {
+    @include w-full;
+  }
+  &__rrss {
+    .pie__circulo {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
   &__circulo {
     border-radius: 50%;
     color: $azul1;
@@ -242,11 +269,11 @@ ul {
 /*-------------------------------------------- Mobile Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .contenedor {
-    margin: 0 6vh;
+    margin: 0 3vh;
   }
 
   h1 {
-    padding: 0 0 7vh 0;
+    padding: 0 0 4vh 0;
     font-size: 1.5rem;
     line-height: 1.7rem;
   }
@@ -267,78 +294,82 @@ ul {
   }
 
   .descripcion {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.55rem;
-    padding: 5vh 0;
+    padding: 3vh 0;
   }
 
   /*--------Cabecera--------*/
   .cabecera {
     &__logo {
-      flex: 2 1 0;
-      padding: 6vh 8vh 6vh 0;
+      flex: 1;
+      padding: 2vh 3vh 2vh 0;
       .logo {
-        width: 50vh;
+        width: 30vh;
       }
     }
     &__descripcion {
       padding-top: 1vh;
-      font-size: 0.8rem;
+      font-size: 0.76rem;
       line-height: 1.1rem;
     }
     &__nav {
-      flex: 3 1 0;
+      flex: 0.6;
     }
     &__link {
       font-size: 0.75rem;
-      flex: 1 1 0;
+      text-align: left;
+      flex: 0 0 100%;
+      margin: 1vh 0 1vh 2vh;
     }
   }
 
   /*--------Slider--------*/
   .slider {
-    margin-top: 15vh;
+    margin-top: 5vh;
     &__imagen {
       flex: 1;
+      .gatsby-image-wrapper {
+        height: 30vh;
+      }
     }
   }
 
   /*--------Productos--------*/
   .productos {
-    margin-top: 20vh;
+    margin-top: 7vh;
     &__lista {
       margin-top: 2vh;
-      margin-bottom: 4vh;
+      margin-bottom: 2vh;
+      padding-bottom: 2vh;
     }
     &__items {
-      flex: 0 0 50%;
-      padding: 5vh;
+      flex: 0 0 100%;
+      padding: 4vh 0 1vh 0;
     }
     &__imagen {
-      height: 35vh;
+      height: 22vh;
     }
     &__nombre {
-      width: 100%;
-      padding: 2vh 4.5vh;
-      margin: -6.5vh -1vh 0 2.5vh;
-      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
+      padding: 1.5vh 2.5vh;
+      margin: -3.5vh -1vh 0 2.5vh;
     }
     &__vermas {
-      padding-top: 2vh;
-      font-size: 0.8rem;
+      padding-top: 1vh;
+      font-size: 0.9rem;
     }
     &__boton {
-      font-size: 1.1rem;
+      font-size: 1rem;
       img {
-        padding: 1vh 0 0 0;
-        width: 13vh;
+        padding: 0.5vh 0 0 0;
+        width: 7vh;
       }
     }
   }
 
   /*--------nosotros--------*/
   .nosotros {
-    margin-top: 15vh;
+    margin-top: 10vh;
     &__cabecera {
       margin-top: 5vh;
     }
@@ -346,92 +377,85 @@ ul {
       flex: 1 1;
     }
     &__grupo {
-      padding: 7vh 0;
+      padding: 3vh 0;
     }
     &__subtitulo {
-      padding: 2vh 4vh;
+      padding: 1.5vh 2vh;
       margin: 0 0 1.5vh 0;
-      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
     }
     &__texto {
       font-size: 0.95rem;
       line-height: 1.3rem;
+      padding-left: 1vh;
     }
   }
 
   /*--------Contacto--------*/
   .contacto {
-    margin-top: 15vh;
+    margin-top: 7vh;
     &__cabecera {
-      margin-bottom: 15vh;
+      margin-bottom: 5vh;
     }
     &__mapa {
-      flex: 1;
-      height: 46vh;
+      flex: 1 1;
+      height: 30vh;
     }
     &__informacion {
       .descripcion {
-        font-size: 1.15rem;
-        line-height: 1.5rem;
+        font-size: 1.1rem;
       }
     }
     &__form {
-      margin-top: 6vh;
-      margin-bottom: 20vh;
-      padding: 6vh;
+      margin-top: 4vh;
+      margin-bottom: 10vh;
+      padding: 3vh;
     }
     &__input {
       flex: 0 0 100%;
-      margin: 0 0 8vh 0;
+      margin: 0 0 4vh 0;
       padding-bottom: 1vh;
       font-size: 0.95rem;
     }
     &__boton {
       flex: 0 0 100%;
-      font-size: 1.1rem;
-      padding: 2vh;
+      font-size: 1rem;
+      padding: 1vh;
     }
   }
 
   /*--------Pie--------*/
   .pie {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     line-height: 1.2rem;
     .contenedor {
-      padding: 7vh 0;
+      padding: 4vh 0;
     }
     &__logo {
-      flex: 1;
-      width: 40vh;
+      flex: 1 1;
     }
     &__rrss {
-      flex: 1;
-      padding: 0 0 0 4vh;
-      li {
-        margin-right: 4vh;
-        &:last-child {
-          margin-right: 0;
-        }
-      }
+      flex: 1 1;
+      padding: 0 0 0 6vh;
     }
     &__circulo {
-      width: 7vh;
-      height: 7vh;
+      margin-right: 5vh;
+      width: 4.8vh;
+      height: 4.8vh;
       svg {
-        margin-top: 1vh;
-        width: 1.5em !important;
-        height: 1.5em;
+        margin-top: 0.5vh;
+        width: 1.6em !important;
+        height: 1.6em;
       }
     }
     &__copy {
-      flex: 3.6 1;
-      padding: 0 4vh;
+      flex: 0 0 100%;
+      padding: 2vh 0;
     }
     &__designers {
-      flex: 1;
+      flex: 1 1;
     }
     &__novanet {
-      width: 20vh;
+      width: 11vh;
     }
   }
 }
@@ -515,10 +539,8 @@ ul {
       height: 35vh;
     }
     &__nombre {
-      width: 100%;
       padding: 2vh 4.5vh;
       margin: -6.5vh -1vh 0 2.5vh;
-      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
     }
     &__vermas {
       padding-top: 2vh;
@@ -548,7 +570,6 @@ ul {
     &__subtitulo {
       padding: 2vh 4vh;
       margin: 0 0 1.5vh 0;
-      clip-path: polygon(0 0, 98% 0, 100% 100%, 2% 100%);
     }
     &__texto {
       font-size: 0.95rem;
@@ -598,20 +619,14 @@ ul {
       padding: 7vh 0;
     }
     &__logo {
-      flex: 1;
-      width: 40vh;
+      flex: 2 1;
     }
     &__rrss {
       flex: 1;
       padding: 0 0 0 4vh;
-      li {
-        margin-right: 4vh;
-        &:last-child {
-          margin-right: 0;
-        }
-      }
     }
     &__circulo {
+      margin-right: 5vh;
       width: 7vh;
       height: 7vh;
       svg {
@@ -628,13 +643,162 @@ ul {
       flex: 1;
     }
     &__novanet {
-      width: 20vh;
+      width: 19.5vh;
     }
   }
 }
 
 /*-------------------------------------------- Tablet Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  h1 {
+    padding: 0 3vh 0 0;
+    font-size: 1.9rem;
+    line-height: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    padding-bottom: 1vh;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.35rem;
+    line-height: 1.45rem;
+  }
+
+  .descripcion {
+    font-size: 1.35rem;
+    line-height: 1.85rem;
+    padding: 0 3vh;
+  }
+
+  /*--------Cabecera--------*/
+  .cabecera {
+    &__logo {
+      .logo {
+        width: 20vh;
+      }
+    }
+    &__descripcion {
+      font-size: 0.8rem;
+    }
+    &__nav {
+      flex: 3 1 0;
+    }
+    &__link {
+      font-size: 0.85rem;
+      flex: 1 1;
+      text-align: center;
+    }
+  }
+
+  /*--------Slider--------*/
+  .slider {
+    margin-top: 7vh;
+    &__titulo {
+      flex: 2 1;
+      text-align: right;
+    }
+    &__imagen {
+      flex: 3 1 0;
+      .gatsby-image-wrapper {
+        height: 20vh;
+      }
+    }
+  }
+
+  /*--------Productos--------*/
+  .productos {
+    &__items {
+      flex: 0 0 50%;
+      padding: 3vh 2.5vh;
+    }
+    &__imagen {
+      height: 15vh;
+    }
+    &__nombre {
+      padding: 0.7vh 1.5vh;
+      margin: -2.5vh -1vh 0 2.5vh;
+    }
+    &__boton {
+      img {
+        width: 4.5vh;
+      }
+    }
+  }
+
+  /*--------nosotros--------*/
+  .nosotros {
+    margin-top: 8vh;
+    .descripcion {
+      flex: 1 1;
+    }
+    &__contenido {
+      margin-top: 5vh;
+    }
+    &__grupo {
+      flex: 1 1;
+      padding: 0 1vh 0 0;
+    }
+    &__subtitulo {
+      padding: 0.7vh 1.5vh;
+      margin: 0 0 1vh 0;
+    }
+    &__texto {
+      padding-left: 0.5vh;
+      font-size: 1rem;
+    }
+  }
+
+  /*--------Contacto--------*/
+  .contacto {
+    &__cabecera {
+      margin-top: 3vh;
+      .descripcion {
+        flex: 0.8 1;
+        text-align: right;
+      }
+    }
+    &__mapa {
+      height: 18vh;
+    }
+    &__informacion {
+      .descripcion {
+        font-size: 1.25rem;
+        line-height: 1.7rem;
+      }
+    }
+    &__boton {
+      font-size: 1.1rem;
+    }
+  }
+
+  /*--------Pie--------*/
+  .pie {
+    &__rrss {
+      flex: 0.7 1;
+      padding: 0 0 0 3vh;
+    }
+    &__circulo {
+      margin-right: 2.5vh;
+      width: 3vh;
+      height: 3vh;
+    }
+    &__copy {
+      flex: 1.8 1;
+    }
+    &__designers {
+      flex: 0.5 1;
+    }
+    &__novanet {
+      width: 7vh;
+    }
+  }
 }
 
 /*-------------------------------------------- Tablet Landscape --------------------------------------------*/
@@ -659,13 +823,8 @@ ul {
     line-height: 1.8rem;
   }
 
-  h4 {
-    font-size: 1.2rem;
-    line-height: 1.45rem;
-  }
-
   .descripcion {
-    font-size: 1.35rem;
+    font-size: 1.38rem;
     line-height: 1.85rem;
     padding: 0 5vh;
   }
@@ -674,7 +833,6 @@ ul {
   .cabecera {
     &__logo {
       flex: 1 1 0;
-      padding: 4vh 8vh 4vh 0;
       .logo {
         width: 35vh;
       }
@@ -695,15 +853,15 @@ ul {
     }
     &__imagen {
       flex: 3 1 0;
+      .gatsby-image-wrapper {
+        height: 25vh;
+      }
     }
   }
 
   /*--------Productos--------*/
   .productos {
     margin-top: 12.5vh;
-    &__lista {
-      margin-bottom: 1vh;
-    }
     &__items {
       flex: 0 0 33.33%;
       padding: 3vh 2.5vh;
@@ -732,7 +890,7 @@ ul {
   .nosotros {
     margin-top: 8vh;
     .descripcion {
-      flex: 2 1;
+      flex: 1 1;
     }
     &__contenido {
       margin-top: 5vh;
@@ -758,12 +916,11 @@ ul {
       margin-top: 3vh;
       margin-bottom: 10vh;
       .descripcion {
-        flex: 0.8 1;
+        flex: 1 1;
         text-align: right;
       }
     }
     &__mapa {
-      flex: 0.9 1;
       height: 28vh;
     }
     &__informacion {
@@ -780,7 +937,6 @@ ul {
     &__input {
       flex: 2 1;
       margin: 0 1.5vh;
-      padding-bottom: 1vh;
       font-size: 1.15rem;
     }
     &__boton {
@@ -796,7 +952,7 @@ ul {
     font-size: 0.82rem;
     line-height: 1.3rem;
     &__logo {
-      width: 25vh;
+      flex: 1 1;
     }
     &__rrss {
       flex: 0.5 1;
@@ -845,6 +1001,7 @@ ul {
 
   .descripcion {
     font-size: 1.8rem;
+    line-height: 2rem;
   }
 
   /*--------Productos--------*/
@@ -885,15 +1042,6 @@ ul {
   /*--------Contacto--------*/
   .contacto {
     margin-top: 12vh;
-    &__cabecera {
-      margin-bottom: 12vh;
-      .descripcion {
-        flex: 1 1;
-      }
-    }
-    &__mapa {
-      flex: 1 1;
-    }
     &__informacion {
       .descripcion {
         font-size: 1.6rem;
@@ -915,7 +1063,7 @@ ul {
   /*--------Pie--------*/
   .pie {
     &__logo {
-      flex: 0.2 1;
+      flex: 0.3 1;
     }
     &__rrss {
       flex: 0.2 1;
