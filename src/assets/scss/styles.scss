@@ -43,12 +43,11 @@ $blanco2: #edecec;
 }
 
 @mixin w-full {
-  width:100%
+  width: 100%;
 }
 
 h1 {
-  font-weight: 500;
-  color: $azul2;
+  display: none;
 }
 
 h2 {
@@ -61,10 +60,10 @@ h2 {
     content: " ";
     position: absolute;
     z-index: -1;
-    left: -1.5vh;
-    right: -1.5vh;
+    left: -1vh;
+    right: -1vh;
     bottom: 0;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     -moz-border-image: -moz-linear-gradient(to right, #ffee00 0%, #e14314 100%);
     -webkit-border-image: -webkit-linear-gradient(
       to right,
@@ -77,15 +76,12 @@ h2 {
 }
 
 h3 {
-  font-weight: 500;
-}
-
-h4 {
   font-weight: 300;
   color: $blanco1;
 }
 
 .descripcion {
+  font-weight: 500;
   color: $azul2;
 }
 
@@ -130,6 +126,14 @@ ul {
 .slider {
   @include flex;
   align-items: center;
+  @include w-full;
+  &__titulo {
+    font-weight: 500;
+    border-bottom: none;
+    &:before {
+      display: none;
+    }
+  }
 }
 
 /*--------Productos--------*/
@@ -206,13 +210,14 @@ ul {
   }
   &__whatsapp {
     color: $verde;
+    font-weight: 400;
   }
   &__form {
     @include flex;
     background: $blanco2;
   }
   &__input {
-    font-weight: 300;
+    font-weight: 400;
     color: $gris1;
     border-top: 0;
     border-right: 0;
@@ -221,7 +226,7 @@ ul {
     background: none;
     &::placeholder {
       color: $gris1;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
   &__boton {
@@ -272,30 +277,19 @@ ul {
     margin: 0 3vh;
   }
 
-  h1 {
-    padding: 0 0 4vh 0;
-    font-size: 1.5rem;
-    line-height: 1.7rem;
-  }
-
   h2 {
     font-size: 1.4rem;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
   }
 
   h3 {
-    font-size: 1.3rem;
-    line-height: 1.75rem;
-  }
-
-  h4 {
     font-size: 1.15rem;
     line-height: 1.4rem;
   }
 
   .descripcion {
-    font-size: 1.2rem;
-    line-height: 1.55rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
     padding: 3vh 0;
   }
 
@@ -303,9 +297,9 @@ ul {
   .cabecera {
     &__logo {
       flex: 1;
-      padding: 2vh 3vh 2vh 0;
+      padding: 1.5vh 3vh 1.5vh 0;
       .logo {
-        width: 30vh;
+        width: 25vh;
       }
     }
     &__descripcion {
@@ -317,7 +311,7 @@ ul {
       flex: 0.6;
     }
     &__link {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       text-align: left;
       flex: 0 0 100%;
       margin: 1vh 0 1vh 2vh;
@@ -326,20 +320,22 @@ ul {
 
   /*--------Slider--------*/
   .slider {
-    margin-top: 5vh;
+    margin-top: 7vh;
+    &__titulo {
+      padding: 0 0 2vh 0;
+    }
     &__imagen {
       flex: 1;
       .gatsby-image-wrapper {
-        height: 30vh;
+        height: 23vh;
       }
     }
   }
 
   /*--------Productos--------*/
   .productos {
-    margin-top: 7vh;
+    margin-top: 5vh;
     &__lista {
-      margin-top: 2vh;
       margin-bottom: 2vh;
       padding-bottom: 2vh;
     }
@@ -348,11 +344,11 @@ ul {
       padding: 4vh 0 1vh 0;
     }
     &__imagen {
-      height: 22vh;
+      height: 20vh;
     }
     &__nombre {
-      padding: 1.5vh 2.5vh;
-      margin: -3.5vh -1vh 0 2.5vh;
+      padding: 1vh 2.5vh;
+      margin: -3vh -1vh 0 3vh;
     }
     &__vermas {
       padding-top: 1vh;
@@ -369,7 +365,7 @@ ul {
 
   /*--------nosotros--------*/
   .nosotros {
-    margin-top: 10vh;
+    margin-top: 8vh;
     &__cabecera {
       margin-top: 5vh;
     }
@@ -380,12 +376,12 @@ ul {
       padding: 3vh 0;
     }
     &__subtitulo {
-      padding: 1.5vh 2vh;
+      padding: 1vh 2vh;
       margin: 0 0 1.5vh 0;
     }
     &__texto {
       font-size: 0.95rem;
-      line-height: 1.3rem;
+      line-height: 1.4rem;
       padding-left: 1vh;
     }
   }
@@ -398,15 +394,15 @@ ul {
     }
     &__mapa {
       flex: 1 1;
-      height: 30vh;
+      height: 18vh;
     }
     &__informacion {
       .descripcion {
-        font-size: 1.1rem;
+        font-size: 0.96rem;
       }
     }
     &__form {
-      margin-top: 4vh;
+      margin-top: 2vh;
       margin-bottom: 10vh;
       padding: 3vh;
     }
@@ -414,11 +410,11 @@ ul {
       flex: 0 0 100%;
       margin: 0 0 4vh 0;
       padding-bottom: 1vh;
-      font-size: 0.95rem;
+      font-size: 0.8rem;
     }
     &__boton {
       flex: 0 0 100%;
-      font-size: 1rem;
+      font-size: 0.85rem;
       padding: 1vh;
     }
   }
@@ -428,7 +424,7 @@ ul {
     font-size: 0.7rem;
     line-height: 1.2rem;
     .contenedor {
-      padding: 4vh 0;
+      padding: 2vh 0;
     }
     &__logo {
       flex: 1 1;
@@ -466,38 +462,27 @@ ul {
     margin: 0 6vh;
   }
 
-  h1 {
-    padding: 0 0 7vh 0;
-    font-size: 1.5rem;
-    line-height: 1.7rem;
-  }
-
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     padding-bottom: 2vh;
   }
 
   h3 {
-    font-size: 1.3rem;
-    line-height: 1.75rem;
-  }
-
-  h4 {
-    font-size: 1.15rem;
-    line-height: 1.4rem;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
   }
 
   .descripcion {
-    font-size: 1.25rem;
-    line-height: 1.55rem;
-    padding: 5vh 0;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: 5vh;
   }
 
   /*--------Cabecera--------*/
   .cabecera {
     &__logo {
       flex: 2 1 0;
-      padding: 6vh 8vh 6vh 0;
+      padding: 5vh 10vh 5vh 0;
       .logo {
         width: 50vh;
       }
@@ -518,7 +503,10 @@ ul {
 
   /*--------Slider--------*/
   .slider {
-    margin-top: 15vh;
+    margin-top: 10vh;
+    &__titulo {
+      padding: 0 0 5vh 0;
+    }
     &__imagen {
       flex: 1;
     }
@@ -547,10 +535,10 @@ ul {
       font-size: 0.8rem;
     }
     &__boton {
-      font-size: 1.1rem;
+      font-size: 1rem;
       img {
         padding: 1vh 0 0 0;
-        width: 13vh;
+        width: 10vh;
       }
     }
   }
@@ -564,16 +552,23 @@ ul {
     &__imagen {
       flex: 1 1;
     }
+    .descripcion {
+      flex: 1 1;
+    }
+    &__contenido {
+      margin-top: 2vh;
+    }
     &__grupo {
-      padding: 7vh 0;
+      padding: 4vh 0;
     }
     &__subtitulo {
-      padding: 2vh 4vh;
+      padding: 2vh 4vh 2vh 3vh;
       margin: 0 0 1.5vh 0;
     }
     &__texto {
-      font-size: 0.95rem;
+      font-size: 1.02rem;
       line-height: 1.3rem;
+      padding-left: 2vh;
     }
   }
 
@@ -581,20 +576,25 @@ ul {
   .contacto {
     margin-top: 15vh;
     &__cabecera {
+      margin-top: 1vh;
       margin-bottom: 15vh;
+      .descripcion {
+        flex: 1 1;
+        text-align: right;
+      }
     }
     &__mapa {
-      flex: 1;
-      height: 46vh;
+      flex: 1 1;
+      height: 40vh;
     }
     &__informacion {
       .descripcion {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         line-height: 1.5rem;
       }
     }
     &__form {
-      margin-top: 6vh;
+      margin-top: 5vh;
       margin-bottom: 20vh;
       padding: 6vh;
     }
@@ -602,11 +602,11 @@ ul {
       flex: 0 0 100%;
       margin: 0 0 8vh 0;
       padding-bottom: 1vh;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
     }
     &__boton {
       flex: 0 0 100%;
-      font-size: 1.1rem;
+      font-size: 1rem;
       padding: 2vh;
     }
   }
@@ -650,30 +650,9 @@ ul {
 
 /*-------------------------------------------- Tablet Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
-  h1 {
-    padding: 0 3vh 0 0;
-    font-size: 1.9rem;
-    line-height: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-    padding-bottom: 1vh;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-  }
-
-  h4 {
-    font-size: 1.35rem;
-    line-height: 1.45rem;
-  }
-
   .descripcion {
     font-size: 1.35rem;
-    line-height: 1.85rem;
+    line-height: 1.8rem;
     padding: 0 3vh;
   }
 
@@ -684,9 +663,6 @@ ul {
         width: 20vh;
       }
     }
-    &__descripcion {
-      font-size: 0.8rem;
-    }
     &__nav {
       flex: 3 1 0;
     }
@@ -694,20 +670,21 @@ ul {
       font-size: 0.85rem;
       flex: 1 1;
       text-align: center;
+      margin: 0;
     }
   }
 
   /*--------Slider--------*/
   .slider {
-    margin-top: 7vh;
     &__titulo {
       flex: 2 1;
       text-align: right;
+      padding: 0 2vh 0 0;
     }
     &__imagen {
       flex: 3 1 0;
       .gatsby-image-wrapper {
-        height: 20vh;
+        height: 18vh;
       }
     }
   }
@@ -716,14 +693,16 @@ ul {
   .productos {
     &__items {
       flex: 0 0 50%;
-      padding: 3vh 2.5vh;
+      padding: 2vh 2.5vh;
     }
     &__imagen {
-      height: 15vh;
+      height: 13vh;
     }
     &__nombre {
       padding: 0.7vh 1.5vh;
-      margin: -2.5vh -1vh 0 2.5vh;
+    }
+    &__vermas {
+      padding-top: 0.5vh;
     }
     &__boton {
       img {
@@ -734,44 +713,45 @@ ul {
 
   /*--------nosotros--------*/
   .nosotros {
-    margin-top: 8vh;
     .descripcion {
       flex: 1 1;
     }
     &__contenido {
-      margin-top: 5vh;
+      margin-top: 3vh;
     }
     &__grupo {
       flex: 1 1;
-      padding: 0 1vh 0 0;
+      padding: 0 3vh 0 0;
     }
     &__subtitulo {
-      padding: 0.7vh 1.5vh;
+      padding: 0.6vh 1.5vh;
       margin: 0 0 1vh 0;
     }
     &__texto {
       padding-left: 0.5vh;
-      font-size: 1rem;
     }
   }
 
   /*--------Contacto--------*/
   .contacto {
     &__cabecera {
-      margin-top: 3vh;
+      margin-top: 1vh;
       .descripcion {
         flex: 0.8 1;
         text-align: right;
       }
     }
-    &__mapa {
-      height: 18vh;
-    }
     &__informacion {
       .descripcion {
-        font-size: 1.25rem;
-        line-height: 1.7rem;
+        font-size: 1.15rem;
+        line-height: 1.5rem;
       }
+    }
+    &__form {
+      padding: 2.5vh;
+    }
+    &__input {
+      font-size: 1rem;
     }
     &__boton {
       font-size: 1.1rem;
@@ -807,38 +787,29 @@ ul {
     margin: 0 4vh;
   }
 
-  h1 {
-    padding: 0 5vh 0 0;
-    font-size: 1.9rem;
-    line-height: 2.2rem;
-  }
-
   h2 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     padding-bottom: 1vh;
   }
 
   h3 {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
   }
 
   .descripcion {
-    font-size: 1.38rem;
-    line-height: 1.85rem;
-    padding: 0 5vh;
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 
   /*--------Cabecera--------*/
   .cabecera {
     &__logo {
       flex: 1 1 0;
+      padding: 3vh 5vh 3vh 0;
       .logo {
-        width: 35vh;
+        width: 30vh;
       }
-    }
-    &__descripcion {
-      font-size: 1.02rem;
     }
     &__link {
       font-size: 1.02rem;
@@ -850,24 +821,25 @@ ul {
     &__titulo {
       flex: 2 1;
       text-align: right;
+      padding: 0 5vh 0 0;
     }
     &__imagen {
       flex: 3 1 0;
       .gatsby-image-wrapper {
-        height: 25vh;
+        height: 28vh;
       }
     }
   }
 
   /*--------Productos--------*/
   .productos {
-    margin-top: 12.5vh;
+    margin-top: 10vh;
     &__items {
       flex: 0 0 33.33%;
       padding: 3vh 2.5vh;
     }
     &__imagen {
-      height: 17vh;
+      height: 18vh;
     }
     &__nombre {
       padding: 0.7vh 2vh;
@@ -875,10 +847,8 @@ ul {
     }
     &__vermas {
       padding-top: 1vh;
-      font-size: 0.9rem;
     }
     &__boton {
-      padding-top: 1vh;
       img {
         padding: 0;
         width: 5vh;
@@ -889,9 +859,6 @@ ul {
   /*--------nosotros--------*/
   .nosotros {
     margin-top: 8vh;
-    .descripcion {
-      flex: 1 1;
-    }
     &__contenido {
       margin-top: 5vh;
     }
@@ -904,7 +871,7 @@ ul {
     }
     &__texto {
       padding-left: 1vh;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       line-height: 1.6rem;
     }
   }
@@ -913,20 +880,15 @@ ul {
   .contacto {
     margin-top: 10vh;
     &__cabecera {
-      margin-top: 3vh;
       margin-bottom: 10vh;
-      .descripcion {
-        flex: 1 1;
-        text-align: right;
-      }
     }
     &__mapa {
-      height: 28vh;
+      height: 30vh;
     }
     &__informacion {
       .descripcion {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
       }
     }
     &__form {
@@ -937,13 +899,13 @@ ul {
     &__input {
       flex: 2 1;
       margin: 0 1.5vh;
-      font-size: 1.15rem;
+      font-size: 1.09rem;
     }
     &__boton {
       margin: 0 1.5vh;
       padding: 0;
       flex: 1 1;
-      font-size: 1.15rem;
+      font-size: 1.09rem;
     }
   }
 
@@ -980,83 +942,31 @@ ul {
     margin: 0 auto;
   }
 
-  h1 {
-    font-size: 2.1rem;
-    line-height: 2.5rem;
-  }
-
-  h2 {
-    font-size: 1.9rem;
-  }
-
-  h3 {
-    font-size: 1.7rem;
-    line-height: 2rem;
-  }
-
-  h4 {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-  }
-
-  .descripcion {
-    font-size: 1.8rem;
-    line-height: 2rem;
-  }
-
   /*--------Productos--------*/
   .productos {
-    &__lista {
-      margin-bottom: 3vh;
-    }
     &__items {
       padding: 5vh 6vh;
-    }
-    &__imagen {
-      height: 20vh;
-    }
-    &__boton {
-      img {
-        padding: 0.5vh 0 0 0;
-        width: 7vh;
-      }
     }
   }
 
   /*--------nosotros--------*/
   .nosotros {
     &__imagen {
-      flex: 2 1;
+      flex: 1.5 1;
     }
     .descripcion {
-      flex: 3 1;
+      flex: 2 1;
     }
     &__contenido {
       margin-top: 8vh;
-    }
-    &__texto {
-      font-size: 1.3rem;
     }
   }
 
   /*--------Contacto--------*/
   .contacto {
     margin-top: 12vh;
-    &__informacion {
-      .descripcion {
-        font-size: 1.6rem;
-        line-height: 2rem;
-      }
-    }
     &__form {
       margin-bottom: 15vh;
-      padding: 7vh 4vh;
-    }
-    &__input {
-      font-size: 1.4rem;
-    }
-    &__boton {
-      font-size: 1.4rem;
     }
   }
 

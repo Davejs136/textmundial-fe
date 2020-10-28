@@ -22,11 +22,12 @@ const IndexPage = ({
   },
 }) => (
   <Layout>
+    <h1>Texmundial</h1>
     <section className="slider">
-      <h1 className="slider__titulo">
+      <h2 className="slider__titulo">
         ¿Aún no se decide cuál tela le conviene para ese negocio que tiene en
         mente?
-      </h1>
+      </h2>
       <div className="slider__imagen">
         <Img fluid={carousel.fluid} alt="tela de color x" />
       </div>
@@ -41,7 +42,7 @@ const IndexPage = ({
               className="productos__imagen"
               fluid={productosImg.edges[index].node.fluid}
             />
-            <h4 className="productos__nombre">{producto.nombre}</h4>
+            <h3 className="productos__nombre">{producto.nombre}</h3>
             <Link className="productos__vermas" to={producto.path}>
               Ver producto
             </Link>
@@ -67,14 +68,14 @@ const IndexPage = ({
       </div>
       <div className="nosotros__contenido">
         <div className="nosotros__grupo">
-          <h4 className="nosotros__subtitulo">¿Cuál es nuestra oferta?</h4>
+          <h3 className="nosotros__subtitulo">¿Cuál es nuestra oferta?</h3>
           <p className="nosotros__texto">
             Ofrecemos difentes telas con variados colores y estampados para
             confeccionar trajes de baño, ropa ortiva, pijamas, entre otros.
           </p>
         </div>
         <div className="nosotros__grupo">
-          <h4 className="nosotros__subtitulo">Qué nos distingue?</h4>
+          <h3 className="nosotros__subtitulo">Qué nos distingue?</h3>
           <p className="nosotros__texto">
             Nos caracterizamos por nuestra disposición a responder todas sus
             preguntas para ayudarle a escoger la tela que más le conviene a su
