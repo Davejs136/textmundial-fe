@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Logo from "../assets/images/tm-logo.svg"
 import Novanet from "../assets/images/novanet.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -12,7 +13,9 @@ const Footer = () => (
   <footer className="pie">
     <div className="contenedor">
       <div className="pie__logo">
-        <img src={Logo} alt="pie logo" />
+        <Link to="/">
+          <img src={Logo} alt="pie logo" />
+        </Link>
       </div>
       <ul className="pie__rrss">
         <li className="pie__circulo">

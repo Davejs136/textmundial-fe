@@ -49,10 +49,10 @@ const IndexPage = ({
           </li>
         ))}
       </ul>
-      <button className="productos__boton">
+      <Link to="/productos" className="productos__boton">
         <span>Ver todos</span>
         <img src={flecha} alt="flecha boton" />
-      </button>
+      </Link>
     </section>
 
     <section className="nosotros">
@@ -61,7 +61,7 @@ const IndexPage = ({
         <div className="nosotros__imagen">
           <img src={nosotros} alt="otra imagen" />
         </div>
-        <p className="descripcion">
+        <p className="descripcion--grande">
           Somos una empresa con más de 27 años en el mercado conocidos por la
           excelente calidad de nuestros productos.
         </p>
@@ -88,7 +88,7 @@ const IndexPage = ({
     <section className="contacto">
       <h2>Reciba nuestra asesoría</h2>
       <div className="contacto__cabecera">
-        <p className="descripcion">
+        <p className="descripcion--grande">
           Atención personalizada sin ningún compromiso visitándonos en:
         </p>
         <div className="contacto__mapa"></div>

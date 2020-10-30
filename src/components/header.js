@@ -8,16 +8,18 @@ const Header = () => (
   <header className="cabecera">
     <div className="contenedor">
       <div className="cabecera__logo">
-        <img src={Logo} alt="logo" className="logo" />
+        <Link to="/">
+          <img src={Logo} alt="logo" className="logo" />
+        </Link>
         <p className="cabecera__descripcion">
           Distribuidores del mejor surtido en telas para trajes de baño
         </p>
       </div>
       <nav className="cabecera__nav">
-        <Link to="/home" className="cabecera__link">
+        <Link to="/" className="cabecera__link">
           Inicio
         </Link>
-        <Link to="#productos" className="cabecera__link">
+        <Link to="/productos" className="cabecera__link">
           Productos
         </Link>
         <Link to="#blog" className="cabecera__link">
