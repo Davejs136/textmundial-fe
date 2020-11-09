@@ -92,8 +92,8 @@ h3 {
 }
 
 .descripcion--grande {
-  font-weight:500;
-  color:$azul2;
+  font-weight: 500;
+  color: $azul2;
 }
 
 ul {
@@ -150,25 +150,30 @@ ul {
 /*--------Productos--------*/
 .productos {
   @include flex;
+
   &__lista {
     @include w-full;
     border-bottom: $gris2 3px solid;
   }
+
   &__items {
     @include flex;
     justify-content: flex-end;
   }
+
   &__nombre {
     text-transform: capitalize;
     background: $azul2;
     @include w-full;
     @include mask-tit;
   }
+
   &__vermas {
     font-weight: 500;
     text-align: right;
     color: $azul1;
   }
+
   &__boton {
     text-align: center;
     font-weight: 500;
@@ -182,6 +187,7 @@ ul {
       display: block;
     }
   }
+
   &__paginacion {
     text-align: center;
     font-weight: 500;
@@ -190,20 +196,91 @@ ul {
     color: $azul1;
     @include flex;
   }
+
   &__anterior,
   &__siguiente {
     color: $amarillo;
     background: $azul1;
   }
+
   &__numeros {
     background: $blanco1;
   }
+
   &__pagina {
     color: $gris3;
     &:hover {
       transition: 0.5s;
       color: $azul1;
       background: $amarillo;
+    }
+  }
+
+  &__individual {
+    @include flex;
+  }
+
+  &__regreso {
+    font-weight: 500;
+  }
+
+  &__titulo {
+    display: block;
+    text-transform: capitalize;
+    color: $blanco1;
+    background: $azul2;
+  }
+
+  &__informacion {
+    position: relative;
+    h3 {
+      color: $azul1;
+      font-weight: 500;
+    }
+    .descripcion {
+      font-weight: 300;
+    }
+    &:before {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid transparent;
+      -moz-border-image: -moz-linear-gradient(
+        to right,
+        #ffee00 0%,
+        #e14314 100%
+      );
+      -webkit-border-image: -webkit-linear-gradient(
+        to right,
+        #ffee00 0%,
+        #e14314 100%
+      );
+      border-image: linear-gradient(to right, #ffee00 0%, #e14314 100%);
+      border-image-slice: 1;
+    }
+  }
+
+  &__precio {
+    display: none;
+  }
+
+  &__compartir {
+    @include flex;
+    align-items: center;
+    font-weight: 500;
+    background: $blanco2;
+    &-link {
+      border-radius: 50%;
+      background: $azul1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        color: $amarillo;
+      }
     }
   }
 }
@@ -240,8 +317,6 @@ ul {
   }
   &__informacion {
     .descripcion {
-      padding: 0;
-      font-weight: 300;
       color: $gris1;
     }
   }
@@ -293,16 +368,11 @@ ul {
   }
   &__circulo {
     border-radius: 50%;
-    color: $azul1;
     background: $amarillo;
     display: flex;
     align-items: center;
     justify-content: center;
     a {
-      color: $azul1;
-    }
-    a:hover,
-    a:active {
       color: $azul1;
     }
   }
@@ -324,12 +394,11 @@ ul {
     line-height: 1.4rem;
   }
 
-
   .descripcion {
-      font-size: 0.9rem;
-      line-height: 1.3rem;
-    }
-
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    margin: 4vh 0 0 0;
+  }
 
   .descripcion--grande {
     font-size: 1.15rem;
@@ -452,6 +521,11 @@ ul {
       flex: 1 1;
       height: 18vh;
     }
+    &__informacion {
+      .descripcion {
+        margin: 0;
+      }
+    }
     &__form {
       margin-top: 2vh;
       margin-bottom: 10vh;
@@ -513,6 +587,10 @@ ul {
     margin: 0 6vh;
   }
 
+  h1 {
+    font-size: 1.4rem;
+  }
+
   h2 {
     font-size: 1.35rem;
     padding-bottom: 2vh;
@@ -524,9 +602,9 @@ ul {
   }
 
   .descripcion {
-      font-size: 1.1rem;
-      line-height: 1.5rem;
-    padding: 5vh;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin: 5vh 0 0 0;
   }
 
   .descripcion--grande {
@@ -612,6 +690,58 @@ ul {
       padding: 1vh 3vh;
       font-size: 0.9rem;
     }
+
+    &__regreso {
+      flex: 0 0 100%;
+      margin: 0 0 5vh 0;
+      font-size: 0.9rem;
+    }
+
+    &__col-izq {
+      order: 2;
+      flex: 0 0 100%;
+      margin-top: 1vh;
+    }
+
+    &__col-der {
+      order: 1;
+      flex: 0 0 100%;
+    }
+
+    &__titulo {
+      padding: 3vh 8vh;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 2% 100%);
+    }
+
+    &__informacion {
+      margin: 0 4vh;
+      padding: 7vh 0;
+      h3 {
+        margin-bottom: 1vh;
+      }
+      .descripcion {
+        margin: 0;
+        font-size: 0.95rem;
+      }
+    }
+
+    &__imagen-principal {
+      margin-bottom: 1vh;
+    }
+
+    &__compartir {
+      padding: 3vh;
+      font-size: 1rem;
+      &-link {
+        width: 7vh;
+        height: 7vh;
+        margin-left: 5vh;
+        svg {
+          width: 0.9em !important;
+          height: 0.9em;
+        }
+      }
+    }
   }
 
   /*--------nosotros--------*/
@@ -651,6 +781,11 @@ ul {
       .descripcion--grande {
         flex: 1 1;
         text-align: right;
+      }
+    }
+    &__informacion {
+      .descripcion {
+        margin: 0;
       }
     }
     &__mapa {
@@ -715,9 +850,8 @@ ul {
 /*-------------------------------------------- Tablet Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .descripcion {
-    padding: 0 3vh;
-      font-size: 1.15rem;
-      line-height: 1.5rem;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
   }
 
   .descripcion--grande {
@@ -851,6 +985,10 @@ ul {
     margin: 0 4vh;
   }
 
+  h1 {
+    font-size: 1.85rem;
+  }
+
   h2 {
     font-size: 1.8rem;
     padding-bottom: 1vh;
@@ -931,6 +1069,48 @@ ul {
 
     &__pagina {
       padding: 1vh 2vh;
+    }
+
+    &__regreso {
+      margin: 0 0 2vh 2vh;
+      font-size: 1.05rem;
+    }
+
+    &__col-izq {
+      order: 1;
+      flex: 0 0 50%;
+      margin: 0;
+    }
+
+    &__col-der {
+      order: 2;
+      flex: 0 0 50%;
+      margin-top: -5vh;
+    }
+
+    &__titulo {
+      padding: 1.5vh 3vh;
+    }
+
+    &__informacion {
+      margin: 0 5vh 0 3vh;
+      padding: 3vh 0 4vh;
+      .descripcion {
+        font-size: 1.05rem;
+      }
+    }
+
+    &__imagen-principal {
+      margin-bottom: 0.5vh;
+    }
+
+    &__compartir {
+      padding: 1.5vh 2vh;
+      &-link {
+        width: 3.5vh;
+        height: 3.5vh;
+        margin-left: 3vh;
+      }
     }
   }
 
@@ -1017,6 +1197,12 @@ ul {
   .productos {
     &__items {
       padding: 5vh;
+    }
+
+    &__informacion {
+      .descripcion {
+        font-size: 1.1rem;
+      }
     }
   }
 
