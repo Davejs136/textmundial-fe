@@ -21,7 +21,7 @@ const ProductoTemplate = ({ data, path }) => (
             </Link>
             <div className="productos__col-izq">
               <h1 className="productos__titulo">
-                Producto - {producto.nombre}
+                {producto.nombre}
               </h1>
               <div className="productos__informacion">
                 <h3>Descripción</h3>

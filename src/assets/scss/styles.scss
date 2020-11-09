@@ -118,14 +118,17 @@ ul {
     background: $azul2;
     clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
   }
+
   &__descripcion {
     font-weight: 200;
     color: $blanco1;
   }
+
   &__nav {
     background: $azul1;
     @include flex;
   }
+
   &__link {
     color: $amarillo;
     font-weight: 500;
@@ -150,7 +153,6 @@ ul {
 /*--------Productos--------*/
 .productos {
   @include flex;
-
   &__lista {
     @include w-full;
     border-bottom: $gris2 3px solid;
@@ -229,6 +231,7 @@ ul {
     text-transform: capitalize;
     color: $blanco1;
     background: $azul2;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 2% 100%);
   }
 
   &__informacion {
@@ -237,6 +240,7 @@ ul {
       color: $azul1;
       font-weight: 500;
     }
+
     .descripcion {
       font-weight: 300;
     }
@@ -291,14 +295,17 @@ ul {
     @include flex;
     align-items: center;
   }
+
   &__imagen {
     img {
       @include w-full;
     }
   }
+
   &__contenido {
     @include flex;
   }
+
   &__subtitulo {
     width: fit-content;
     background: $azul1;
@@ -312,22 +319,27 @@ ul {
     @include flex;
     align-items: center;
   }
+
   &__mapa {
     border: 1px solid $gris1;
   }
+
   &__informacion {
     .descripcion {
       color: $gris1;
     }
   }
+
   &__whatsapp {
     color: $verde;
     font-weight: 400;
   }
+
   &__form {
     @include flex;
     background: $blanco2;
   }
+
   &__input {
     font-weight: 400;
     color: $gris3;
@@ -341,6 +353,7 @@ ul {
       font-weight: 400;
     }
   }
+
   &__boton {
     font-weight: 400;
     text-align: center;
@@ -359,6 +372,7 @@ ul {
   &__logo {
     @include w-full;
   }
+
   &__rrss {
     .pie__circulo {
       &:last-child {
@@ -366,6 +380,7 @@ ul {
       }
     }
   }
+
   &__circulo {
     border-radius: 50%;
     background: $amarillo;
@@ -384,8 +399,12 @@ ul {
     margin: 0 3vh;
   }
 
+  h1 {
+    font-size: 1.4em;
+  }
+
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     padding-bottom: 1vh;
   }
 
@@ -415,14 +434,17 @@ ul {
         width: 25vh;
       }
     }
+
     &__descripcion {
       padding-top: 1vh;
       font-size: 0.76rem;
       line-height: 1rem;
     }
+
     &__nav {
       flex: 0.6;
     }
+
     &__link {
       font-size: 0.7rem;
       text-align: left;
@@ -437,6 +459,7 @@ ul {
     &__titulo {
       padding: 0 0 2vh 0;
     }
+
     &__imagen {
       flex: 1;
       .gatsby-image-wrapper {
@@ -447,27 +470,32 @@ ul {
 
   /*--------Productos--------*/
   .productos {
-    margin-top: 8vh;
+    margin-top: 6vh;
     margin-bottom: 8vh;
     &__lista {
       margin-bottom: 2vh;
       padding-bottom: 2vh;
     }
+
     &__items {
       flex: 0 0 100%;
       padding: 4vh 0 1vh 0;
     }
+
     &__imagen {
       height: 20vh;
     }
+
     &__nombre {
       padding: 1vh 2.5vh;
       margin: -3vh -1vh 0 3vh;
     }
+
     &__vermas {
       padding-top: 1vh;
       font-size: 0.9rem;
     }
+
     &__boton {
       font-size: 1rem;
       img {
@@ -475,17 +503,73 @@ ul {
         width: 7vh;
       }
     }
+
     &__paginacion {
       padding-top: 1vh;
     }
+
     &__anterior,
     &__siguiente {
       padding: 0.5vh 1vh;
     }
+
     &__pagina {
       margin: 0 0.4vh;
       padding: 0.5vh 1.5vh;
       font-size: 0.9rem;
+    }
+
+    &__regreso {
+      flex: 0 0 100%;
+      margin: 0 0 2vh 0;
+      font-size: 0.9rem;
+    }
+
+    &__col-izq {
+      order: 2;
+      flex: 0 0 100%;
+      margin-top: 5vh;
+    }
+
+    &__col-der {
+      order: 1;
+      flex: 0 0 100%;
+    }
+
+    &__titulo {
+      padding: 1.5vh 3vh;
+      margin-right: -3vh;
+    }
+
+    &__informacion {
+      margin: 0 1.5vh;
+      padding: 3vh 0;
+      h3 {
+        margin-bottom: 1vh;
+      }
+
+      .descripcion {
+        margin: 0;
+        font-size: 0.85rem;
+      }
+    }
+
+    &__imagen-principal {
+      margin-bottom: 1vh;
+    }
+
+    &__compartir {
+      padding: 1.5vh;
+      font-size: 0.9rem;
+      &-link {
+        width: 4vh;
+        height: 4vh;
+        margin-left: 2vh;
+        svg {
+          width: 0.9em !important;
+          height: 0.9em;
+        }
+      }
     }
   }
 
@@ -494,16 +578,20 @@ ul {
     &__cabecera {
       margin-top: 5vh;
     }
+
     &__imagen {
       flex: 1 1;
     }
+
     &__grupo {
       padding: 3vh 0;
     }
+
     &__subtitulo {
       padding: 1vh 2vh;
       margin: 0 0 1.5vh 0;
     }
+
     &__texto {
       font-size: 0.95rem;
       line-height: 1.4rem;
@@ -517,26 +605,31 @@ ul {
     &__cabecera {
       margin-bottom: 5vh;
     }
+
     &__mapa {
       flex: 1 1;
       height: 18vh;
     }
+
     &__informacion {
       .descripcion {
         margin: 0;
       }
     }
+
     &__form {
       margin-top: 2vh;
       margin-bottom: 10vh;
       padding: 3vh;
     }
+
     &__input {
       flex: 0 0 100%;
       margin: 0 0 4vh 0;
       padding-bottom: 1vh;
       font-size: 0.9rem;
     }
+
     &__boton {
       flex: 0 0 100%;
       font-size: 0.85rem;
@@ -549,15 +642,18 @@ ul {
     font-size: 0.7rem;
     line-height: 1.2rem;
     .contenedor {
-      padding: 3.5vh 0;
+      padding: 2.5vh 0;
     }
+
     &__logo {
       flex: 1 1;
     }
+
     &__rrss {
       flex: 1 1;
       padding: 0 0 0 6vh;
     }
+
     &__circulo {
       margin-right: 5vh;
       width: 4.8vh;
@@ -568,13 +664,16 @@ ul {
         height: 1.6em;
       }
     }
+
     &__copy {
       flex: 0 0 100%;
       padding: 2vh 0;
     }
+
     &__designers {
       flex: 1 1;
     }
+
     &__novanet {
       width: 11vh;
     }
@@ -588,11 +687,11 @@ ul {
   }
 
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 
   h2 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     padding-bottom: 2vh;
   }
 
@@ -622,14 +721,17 @@ ul {
         width: 50vh;
       }
     }
+
     &__descripcion {
       padding-top: 1vh;
       font-size: 0.8rem;
       line-height: 1.1rem;
     }
+
     &__nav {
       flex: 3 1 0;
     }
+
     &__link {
       font-size: 0.75rem;
       flex: 1 1 0;
@@ -642,6 +744,7 @@ ul {
     &__titulo {
       padding: 0 0 5vh 0;
     }
+
     &__imagen {
       flex: 1;
     }
@@ -649,27 +752,32 @@ ul {
 
   /*--------Productos--------*/
   .productos {
-    margin-top: 15vh;
+    margin-top: 12vh;
     margin-bottom: 15vh;
     &__lista {
       margin-top: 2vh;
       margin-bottom: 4vh;
     }
+
     &__items {
       flex: 0 0 50%;
       padding: 5vh;
     }
+
     &__imagen {
       height: 35vh;
     }
+
     &__nombre {
       padding: 2vh 4.5vh;
       margin: -6.5vh -1vh 0 2.5vh;
     }
+
     &__vermas {
       padding-top: 2vh;
       font-size: 0.85rem;
     }
+
     &__boton {
       font-size: 1rem;
       img {
@@ -677,14 +785,17 @@ ul {
         width: 10vh;
       }
     }
+
     &__paginacion {
       padding-top: 2vh;
       padding-bottom: 2vh;
     }
+
     &__anterior,
     &__siguiente {
       padding: 1vh 2vh;
     }
+
     &__pagina {
       margin: 0 0.4vh;
       padding: 1vh 3vh;
@@ -700,7 +811,7 @@ ul {
     &__col-izq {
       order: 2;
       flex: 0 0 100%;
-      margin-top: 1vh;
+      margin-top: 9vh;
     }
 
     &__col-der {
@@ -710,15 +821,16 @@ ul {
 
     &__titulo {
       padding: 3vh 8vh;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 2% 100%);
+      margin-right: -6vh;
     }
 
     &__informacion {
       margin: 0 4vh;
-      padding: 7vh 0;
+      padding: 6vh 0 7vh;
       h3 {
         margin-bottom: 1vh;
       }
+
       .descripcion {
         margin: 0;
         font-size: 0.95rem;
@@ -749,22 +861,28 @@ ul {
     &__cabecera {
       margin-top: 5vh;
     }
+
     &__imagen {
       flex: 1 1;
     }
+
     .descripcion--grande {
       flex: 1 1;
     }
+
     &__contenido {
       margin-top: 2vh;
     }
+
     &__grupo {
       padding: 4vh 0;
     }
+
     &__subtitulo {
       padding: 2vh 4vh 2vh 3vh;
       margin: 0 0 1.5vh 0;
     }
+
     &__texto {
       font-size: 1.02rem;
       line-height: 1.3rem;
@@ -783,26 +901,31 @@ ul {
         text-align: right;
       }
     }
+
     &__informacion {
       .descripcion {
         margin: 0;
       }
     }
+
     &__mapa {
       flex: 1 1;
       height: 40vh;
     }
+
     &__form {
       margin-top: 5vh;
       margin-bottom: 20vh;
       padding: 6vh;
     }
+
     &__input {
       flex: 0 0 100%;
       margin: 0 0 8vh 0;
       padding-bottom: 1vh;
       font-size: 0.95rem;
     }
+
     &__boton {
       flex: 0 0 100%;
       font-size: 1rem;
@@ -817,13 +940,16 @@ ul {
     .contenedor {
       padding: 7vh 0;
     }
+
     &__logo {
       flex: 2 1;
     }
+
     &__rrss {
       flex: 1;
       padding: 0 0 0 4vh;
     }
+
     &__circulo {
       margin-right: 5vh;
       width: 7vh;
@@ -834,13 +960,16 @@ ul {
         height: 1.5em;
       }
     }
+
     &__copy {
       flex: 3.6 1;
       padding: 0 4vh;
     }
+
     &__designers {
       flex: 1;
     }
+
     &__novanet {
       width: 19.5vh;
     }
@@ -867,9 +996,11 @@ ul {
         width: 20vh;
       }
     }
+
     &__nav {
       flex: 3 1 0;
     }
+
     &__link {
       font-size: 0.85rem;
       flex: 1 1;
@@ -885,6 +1016,7 @@ ul {
       text-align: right;
       padding: 0 2vh 0 0;
     }
+
     &__imagen {
       flex: 3 1 0;
       .gatsby-image-wrapper {
@@ -899,18 +1031,62 @@ ul {
       flex: 0 0 50%;
       padding: 2vh 2.5vh;
     }
+
     &__imagen {
       height: 13vh;
     }
+
     &__nombre {
       padding: 0.7vh 1.5vh;
     }
+
     &__vermas {
       padding-top: 0.5vh;
     }
+
     &__boton {
       img {
         width: 4.5vh;
+      }
+    }
+
+    &__regreso {
+      margin: 0 0 1vh 1vh;
+    }
+
+    &__col-izq {
+      flex: 0 0 50%;
+      order: 1;
+      margin-top: 0vh;
+    }
+
+    &__col-der {
+      order: 2;
+      flex: 0 0 50%;
+      margin-top: -3.5vh;
+    }
+
+    &__titulo {
+      padding: 1vh 2vh;
+    }
+
+    &__informacion {
+      margin: 0 2vh 0 0.7vh;
+      padding: 2vh 0;
+      .descripcion {
+        line-height: 1.3rem;
+      }
+    }
+
+    &__imagen-principal {
+      margin-bottom: 0.5vh;
+    }
+
+    &__compartir {
+      padding: 1vh;
+      &-link {
+        width: 2.5vh;
+        height: 2.5vh;
       }
     }
   }
@@ -920,17 +1096,21 @@ ul {
     .descripcion--grande {
       flex: 1 1;
     }
+
     &__contenido {
       margin-top: 3vh;
     }
+
     &__grupo {
       flex: 1 1;
       padding: 0 3vh 0 0;
     }
+
     &__subtitulo {
       padding: 0.6vh 1.5vh;
       margin: 0 0 1vh 0;
     }
+
     &__texto {
       padding-left: 0.5vh;
     }
@@ -945,12 +1125,15 @@ ul {
         text-align: right;
       }
     }
+
     &__form {
       padding: 2.5vh;
     }
+
     &__input {
       font-size: 1rem;
     }
+
     &__boton {
       font-size: 1.1rem;
     }
@@ -962,17 +1145,21 @@ ul {
       flex: 0.7 1;
       padding: 0 0 0 3vh;
     }
+
     &__circulo {
       margin-right: 2.5vh;
       width: 3vh;
       height: 3vh;
     }
+
     &__copy {
       flex: 1.8 1;
     }
+
     &__designers {
       flex: 0.5 1;
     }
+
     &__novanet {
       width: 7vh;
     }
@@ -986,11 +1173,11 @@ ul {
   }
 
   h1 {
-    font-size: 1.85rem;
+    font-size: 1.8rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding-bottom: 1vh;
   }
 
@@ -1018,6 +1205,7 @@ ul {
         width: 30vh;
       }
     }
+
     &__link {
       font-size: 1.02rem;
     }
@@ -1030,6 +1218,7 @@ ul {
       text-align: right;
       padding: 0 5vh 0 0;
     }
+
     &__imagen {
       flex: 3 1 0;
       .gatsby-image-wrapper {
@@ -1046,22 +1235,27 @@ ul {
       flex: 0 0 33.33%;
       padding: 3vh 2.5vh;
     }
+
     &__imagen {
       height: 18vh;
     }
+
     &__nombre {
       padding: 0.7vh 2vh;
       margin: -2.5vh -1vh 0 2.5vh;
     }
+
     &__vermas {
       padding-top: 1vh;
     }
+
     &__boton {
       img {
         padding: 0;
         width: 5vh;
       }
     }
+
     &__anterior,
     &__siguiente {
       padding: 1vh 1.5vh;
@@ -1090,6 +1284,7 @@ ul {
 
     &__titulo {
       padding: 1.5vh 3vh;
+      margin-right: 0;
     }
 
     &__informacion {
@@ -1119,13 +1314,16 @@ ul {
     &__contenido {
       margin-top: 5vh;
     }
+
     &__grupo {
       flex: 1 1;
       padding: 0 5vh 0 0;
     }
+
     &__subtitulo {
       padding: 0.7vh 2vh;
     }
+
     &__texto {
       padding-left: 1vh;
       font-size: 1.2rem;
@@ -1139,19 +1337,23 @@ ul {
     &__cabecera {
       margin-bottom: 10vh;
     }
+
     &__mapa {
       height: 30vh;
     }
+
     &__form {
       margin-top: 3vh;
       margin-bottom: 10vh;
       padding: 5vh 3vh;
     }
+
     &__input {
       flex: 2 1;
       margin: 0 1.5vh;
       font-size: 1.09rem;
     }
+
     &__boton {
       margin: 0 1.5vh;
       padding: 0.5vh;
@@ -1167,9 +1369,11 @@ ul {
     &__logo {
       flex: 1 1;
     }
+
     &__rrss {
       flex: 0.5 1;
     }
+
     &__circulo {
       width: 4.5vh;
       height: 4.5vh;
@@ -1177,9 +1381,11 @@ ul {
         margin-top: 0.5vh;
       }
     }
+
     &__copy {
       flex: 1.5 1;
     }
+
     &__novanet {
       width: 10.8vh;
     }
@@ -1211,9 +1417,11 @@ ul {
     &__imagen {
       flex: 1.5 1;
     }
+
     .descripcion--grande {
       flex: 2 1;
     }
+
     &__contenido {
       margin-top: 8vh;
     }
@@ -1232,9 +1440,11 @@ ul {
     &__logo {
       flex: 0.3 1;
     }
+
     &__rrss {
       flex: 0.2 1;
     }
+
     &__copy {
       flex: 0.6 1;
     }
