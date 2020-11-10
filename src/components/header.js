@@ -19,7 +19,7 @@ const Header = () => (
         <Link to="/" className="cabecera__link">
           Inicio
         </Link>
-        <Link to="/productos" className="cabecera__link">
+        <Link to="#productos" className="cabecera__link">
           Productos
         </Link>
         <Link to="#blog" className="cabecera__link">

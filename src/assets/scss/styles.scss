@@ -189,7 +189,7 @@ ul {
       display: block;
     }
   }
-
+/*
   &__paginacion {
     text-align: center;
     font-weight: 500;
@@ -216,7 +216,7 @@ ul {
       color: $azul1;
       background: $amarillo;
     }
-  }
+  }*/
 
   &__individual {
     @include flex;
@@ -503,7 +503,7 @@ ul {
         width: 7vh;
       }
     }
-
+/*
     &__paginacion {
       padding-top: 1vh;
     }
@@ -517,7 +517,7 @@ ul {
       margin: 0 0.4vh;
       padding: 0.5vh 1.5vh;
       font-size: 0.9rem;
-    }
+    }*/
 
     &__regreso {
       flex: 0 0 100%;
@@ -785,7 +785,7 @@ ul {
         width: 10vh;
       }
     }
-
+/*
     &__paginacion {
       padding-top: 2vh;
       padding-bottom: 2vh;
@@ -800,7 +800,7 @@ ul {
       margin: 0 0.4vh;
       padding: 1vh 3vh;
       font-size: 0.9rem;
-    }
+    }*/
 
     &__regreso {
       flex: 0 0 100%;
@@ -1255,7 +1255,7 @@ ul {
         width: 5vh;
       }
     }
-
+/*
     &__anterior,
     &__siguiente {
       padding: 1vh 1.5vh;
@@ -1264,7 +1264,7 @@ ul {
     &__pagina {
       padding: 1vh 2vh;
     }
-
+*/
     &__regreso {
       margin: 0 0 2vh 2vh;
       font-size: 1.05rem;

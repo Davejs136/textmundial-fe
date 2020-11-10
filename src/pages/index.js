@@ -49,7 +49,7 @@ const IndexPage = ({
           </li>
         ))}
       </ul>
-      <Link to="/productos" className="productos__boton">
+      <Link className="productos__boton">
         <span>Ver todos</span>
         <img src={flecha} alt="flecha boton" />
       </Link>
