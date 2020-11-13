@@ -119,7 +119,7 @@ const IndexPage = ({
             name="textarea"
             placeholder="Mensaje"
             rows="1"
-            cols="50"
+            cols="1"
             className="contacto__textarea"
           >
           </textarea>
