@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 // Imagen
-import flecha from "../assets/images/flecha.svg"
 import nosotros from "../assets/images/tm-sec3.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // @fortawesome libraries
@@ -24,11 +23,11 @@ const IndexPage = ({
   <Layout>
     <h1>Texmundial</h1>
     <section className="slider">
-      <h2 className="slider__titulo">
+      <p className="slider__texto">
         ¿Aún no se decide cuál tela le conviene para ese negocio que tiene en
         mente?
-      </h2>
-      <div className="slider__imagen">
+      </p>
+      <div className="slider__carrousel">
         <Img fluid={carousel.fluid} alt="tela de color x" />
       </div>
     </section>
@@ -38,21 +37,16 @@ const IndexPage = ({
       <ul className="productos__lista">
         {productos.map((producto, index) => (
           <li className="productos__items" key={producto.id}>
-            <Img
-              className="productos__imagen"
-              fluid={productosImg.edges[index].node.fluid}
-            />
-            <h3 className="productos__nombre">{producto.nombre}</h3>
-            <Link className="productos__vermas" to={producto.path}>
-              Ver producto
+            <Link to={producto.path}>
+              <Img
+                className="productos__imagen"
+                fluid={productosImg.edges[index].node.fluid}
+              />
+              <h4 className="productos__nombre">{producto.nombre}</h4>
             </Link>
           </li>
         ))}
       </ul>
-      <Link className="productos__boton">
-        <span>Ver todos</span>
-        <img src={flecha} alt="flecha boton" />
-      </Link>
     </section>
 
     <section className="nosotros">
@@ -94,36 +88,46 @@ const IndexPage = ({
         <div className="contacto__mapa"></div>
       </div>
 
-      <div className="contacto__informacion">
-        <p className="descripcion">
-          También puede consultarnos enviándonos un mensaje a WhatsApp{" "}
-          <a
-            className="contacto__whatsapp"
-            href="https://wa.me/584142702886"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <FontAwesomeIcon icon={["fab", "whatsapp"]} /> +58 414-270-28-86
-          </a>{" "}
-          o enviános un mensaje a través del siguiente formulario:
-        </p>
-      </div>
+      <div className="contacto__contenido">
+        <div className="contacto__informacion">
+          <p className="descripcion">
+            También puede consultarnos enviándonos un mensaje a WhatsApp{" "}
+            <a
+              className="contacto__whatsapp"
+              href="https://wa.me/584142702886"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={["fab", "whatsapp"]} /> +58 414-270-28-86
+            </a>{" "}
+            o enviános un mensaje a través del siguiente formulario:
+          </p>
+        </div>
 
-      <form className="contacto__form">
-        <input
-          type="text"
-          placeholder="Nombre completo"
-          className="contacto__input"
-        />
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          className="contacto__input"
-        />
-        <button type="submit" className="contacto__boton">
-          Enviar
-        </button>
-      </form>
+        <form className="contacto__form">
+          <input
+            type="text"
+            placeholder="Nombre completo"
+            className="contacto__input"
+          />
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            className="contacto__input"
+          />
+          <textarea
+            name="textarea"
+            placeholder="Mensaje"
+            rows="1"
+            cols="50"
+            className="contacto__textarea"
+          >
+          </textarea>
+          <button type="submit" className="contacto__boton">
+            Enviar información
+          </button>
+        </form>
+      </div>
     </section>
   </Layout>
 )

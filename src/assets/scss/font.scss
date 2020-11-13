@@ -38,6 +38,18 @@
   src: url("../font/Prompt/Prompt-Medium.ttf");
 }
 
+/* Prompt 600 - Black */
+@font-face {
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../font/Prompt/Prompt-Bold.ttf");
+}
+
+* {
+  font-family: "Prompt", sans-serif;
+}
+
 /* Prompt 900 - Black */
 @font-face {
   font-family: "Prompt";

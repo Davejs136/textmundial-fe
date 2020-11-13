@@ -38,20 +38,22 @@ const Footer = () => (
         </li>
       </ul>
       <div className="pie__copy">
-        <p>Distribuidora Texmundial C.A</p>
         <p>
-          RIF J-30189818-4. © Derechos reservados - {new Date().getFullYear()}
+          Distribuidora Texmundial C.A - RIF J-30189818-4. © Derechos reservados
+          - {new Date().getFullYear()}
         </p>
       </div>
       <div className="pie__designers">
-        <p className="pie__texto">Diseñado por:</p>
-        <a
-          href="http://novanet.studio/site/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img src={Novanet} alt="novanet-logo" className="pie__novanet" />
-        </a>
+        <p className="pie__texto">
+          Diseñado por:
+          <a
+            href="http://novanet.studio/site/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img src={Novanet} alt="novanet-logo" className="pie__novanet" />
+          </a>
+        </p>
       </div>
     </div>
   </footer>
