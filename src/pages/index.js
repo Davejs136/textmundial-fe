@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 // Imagen
-import nosotros from "../assets/images/tm-sec3.png"
+import nosotros from "../assets/images/tm-sec3.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // @fortawesome libraries
 import { library } from "@fortawesome/fontawesome-svg-core"

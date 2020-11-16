@@ -98,6 +98,7 @@ h4 {
 
 .descripcion--grande {
   font-weight: 500;
+  color: $azul1;
 }
 
 ul {
@@ -153,6 +154,11 @@ ul {
     z-index: 1;
     &:before {
       display: none;
+    }
+    &__carrousel {
+      .gatsby-image-wrapper {
+        border-radius: 20px;
+      }
     }
   }
 }
@@ -254,12 +260,8 @@ ul {
   &__imagen {
     img {
       @include w-full;
+      border-radius: 20px;
     }
-  }
-
-  .descripcion--grande {
-    color: $blanco1;
-    background: $azul1;
   }
 
   &__contenido {
@@ -370,17 +372,17 @@ ul {
   }
 
   h2 {
-    font-size: 1.35rem;
+    font-size: 1.32rem;
     padding-bottom: 1vh;
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     line-height: 1.4rem;
   }
 
   h4 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   .descripcion {
@@ -392,7 +394,7 @@ ul {
   .descripcion--grande {
     font-size: 1.15rem;
     line-height: 1.4rem;
-    padding: 2vh;
+    padding: 4vh 0;
   }
 
   /*--------Cabecera--------*/
@@ -431,6 +433,7 @@ ul {
       padding: 2vh;
       font-size: 1.1rem;
       line-height: 1.45rem;
+      margin: 0 2vh -4vh;
     }
 
     &__carrousel {
@@ -518,11 +521,15 @@ ul {
     }
 
     &__imagen {
-      flex: 1 1;
+      flex: 1.1 1;
     }
 
     &__subtitulo {
       padding: 0 2vh;
+    }
+
+    &__contenido {
+      margin-top: -4vh;
     }
 
     &__grupo {
@@ -530,8 +537,8 @@ ul {
     }
 
     &__texto {
-      font-size: 0.97rem;
-      line-height: 1.6rem;
+      font-size: 0.95rem;
+      line-height: 1.4rem;
       padding: 0 2vh;
     }
   }
@@ -689,6 +696,7 @@ ul {
       padding: 5vh;
       font-size: 1.32rem;
       line-height: 1.8rem;
+      margin: 0 4vh -8vh;
     }
 
     &__carrousel {
@@ -780,10 +788,6 @@ ul {
 
     &__imagen {
       flex: 0 0 100%;
-    }
-
-    .descripcion--grande {
-      padding: 5vh;
     }
 
     &__grupo {
@@ -882,8 +886,8 @@ ul {
 
 /*-------------------------------------------- Tablet Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
-  h4 {
-    font-size: 1.15rem;
+  h3 {
+    font-size: 1.18rem;
   }
 
   .descripcion {
@@ -894,6 +898,7 @@ ul {
   .descripcion--grande {
     font-size: 1.24rem;
     line-height: 1.7rem;
+    padding: 1vh 2vh;
   }
 
   /*--------Cabecera--------*/
@@ -929,7 +934,7 @@ ul {
       text-align: right;
       font-size: 1.3rem;
       padding: 2vh;
-      margin-right: -2vh;
+      margin:0 -2vh 0 0;
     }
 
     &__carrousel {
@@ -997,8 +1002,6 @@ ul {
   .nosotros {
     .descripcion--grande {
       flex: 1 1;
-      margin-left: -4vh;
-      padding: 1vh 2vh;
     }
 
     &__contenido {
@@ -1102,6 +1105,7 @@ ul {
   .descripcion--grande {
     font-size: 1.5rem;
     line-height: 1.9rem;
+    padding: 3vh 4.5vh;
   }
 
   /*--------Cabecera--------*/
@@ -1129,7 +1133,7 @@ ul {
     &__texto {
       flex: 0.9 1;
       padding: 3vh 4vh;
-      margin-right: -5vh;
+      margin: 0 -5vh 0 0;
       font-size: 1.75rem;
       line-height: 2.2rem;
       text-align: right;
@@ -1209,13 +1213,11 @@ ul {
     }
 
     &__imagen {
-      flex: 1 1;
+      flex: 1.13 1;
     }
 
     .descripcion--grande {
       flex: 1 1;
-      padding: 3vh 4vh;
-      margin-left: -5vh;
     }
 
     &__grupo {
@@ -1238,15 +1240,14 @@ ul {
     &__cabecera {
       margin-bottom: 7vh;
       .descripcion--grande {
-        flex: 0.9 1;
+        flex: 1.03 1;
         text-align: right;
-        padding-right: 5vh;
       }
     }
 
     &__mapa {
-      flex: 0.9 1;
-      height: 35vh;
+      flex: 1.15 1;
+      height: 30vh;
     }
 
     &__informacion {
@@ -1256,7 +1257,7 @@ ul {
 
     &__form {
       margin: 0;
-      flex: 1 1;
+      flex: 1.07 1;
     }
 
     &__input,
@@ -1353,10 +1354,10 @@ ul {
     }
   }
 
-  /*--------nosotros--------*/
-  .nosotros {
-    &__contenido {
-      margin-top: 8vh;
+  /*--------Contacto--------*/
+  .contacto {
+    &__mapa {
+      height: 35vh;
     }
   }
 
