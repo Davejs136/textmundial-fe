@@ -44,9 +44,9 @@ $blanco2: #edecec;
   align-items: center;
 }
 
-@mixin mascara {
+/*@mixin mascara {
   clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
-}
+}*/
 
 @mixin w-full {
   width: 100%;
@@ -54,6 +54,7 @@ $blanco2: #edecec;
 
 h1 {
   display: none;
+  font-weight: 600;
 }
 
 h2 {
@@ -82,12 +83,12 @@ h2 {
 }
 
 h3 {
-  font-weight: 600;
+  font-weight: 500;
   color: $azul1;
 }
 
 h4 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .descripcion {
@@ -96,7 +97,7 @@ h4 {
 }
 
 .descripcion--grande {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 ul {
@@ -145,10 +146,11 @@ ul {
   @include w-full;
   align-items: center;
   &__texto {
-    font-weight: 900;
+    font-weight: 500;
     border-bottom: none;
     color: $blanco1;
     background: $azul1;
+    z-index: 1;
     &:before {
       display: none;
     }
@@ -158,9 +160,11 @@ ul {
 /*--------Productos--------*/
 .productos {
   @include flex;
-
+  align-content: flex-start;
   &__items {
     a {
+      @include flex;
+      align-items: center;
       color: $azul1;
     }
   }
@@ -186,7 +190,6 @@ ul {
     text-transform: capitalize;
     color: $blanco1;
     background: $azul2;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 2% 100%);
   }
 
   &__informacion {
@@ -227,7 +230,7 @@ ul {
     @include flex;
     align-items: center;
     font-weight: 500;
-    background: $blanco2;
+    border-bottom: 2px solid $blanco2;
     &-link {
       border-radius: 50%;
       background: $azul1;
@@ -372,12 +375,12 @@ ul {
   }
 
   h3 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     line-height: 1.4rem;
   }
 
   h4 {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
 
   .descripcion {
@@ -444,16 +447,18 @@ ul {
     margin-bottom: 9vh;
 
     &__items {
-      flex: 0 0 50%;
-      padding: 4vh 2vh 2vh;
+      flex: 0 0 100%;
+      padding-top: 5vh;
     }
 
     &__nombre {
-      padding-top: 1vh;
+      padding-left: 2vh;
+      flex: 0 0 65%;
     }
 
     &__imagen {
-      height: 20vh;
+      height: 17.5vh;
+      flex: 0 0 35%;
     }
 
     &__regreso {
@@ -474,7 +479,7 @@ ul {
     }
 
     &__titulo {
-      padding: 1.5vh 3vh;
+      padding: 1.5vh 2vh;
       margin-right: -3vh;
     }
 
@@ -491,12 +496,8 @@ ul {
       }
     }
 
-    &__imagen-principal {
-      margin-bottom: 1vh;
-    }
-
     &__compartir {
-      padding: 1.5vh;
+      padding: 1.5vh 0;
       font-size: 0.9rem;
       &-link {
         width: 4vh;
@@ -529,8 +530,8 @@ ul {
     }
 
     &__texto {
-      font-size: 0.9rem;
-      line-height: 1.3rem;
+      font-size: 0.97rem;
+      line-height: 1.6rem;
       padding: 0 2vh;
     }
   }
@@ -638,7 +639,7 @@ ul {
   }
 
   h4 {
-    font-size: 1.07rem;
+    font-size: 1.13rem;
     line-height: 1.4rem;
   }
 
@@ -707,16 +708,18 @@ ul {
     }
 
     &__items {
-      flex: 0 0 33.333%;
-      padding: 4vh 6.5vh;
+      flex: 0 0 50%;
+      padding: 5vh 0;
     }
 
     &__imagen {
-      height: 41.95vh;
+      height: 29vh;
+      flex: 0 0 35%;
     }
 
     &__nombre {
-      padding-top: 1vh;
+      padding-left: 3vh;
+      flex: 0 0 65%;
     }
 
     &__regreso {
@@ -737,7 +740,7 @@ ul {
     }
 
     &__titulo {
-      padding: 3vh 8vh;
+      padding: 3vh 4vh;
       margin-right: -6vh;
     }
 
@@ -754,12 +757,8 @@ ul {
       }
     }
 
-    &__imagen-principal {
-      margin-bottom: 1vh;
-    }
-
     &__compartir {
-      padding: 3vh;
+      padding: 3vh 0;
       font-size: 1rem;
       &-link {
         width: 7vh;
@@ -832,7 +831,7 @@ ul {
 
     &__boton {
       flex: 0 0 100%;
-      font-size: 1rem;
+      font-size: 0.9rem;
       padding: 3vh;
       margin-bottom: 3vh;
     }
@@ -929,13 +928,12 @@ ul {
       flex: 2 1;
       text-align: right;
       font-size: 1.3rem;
-      padding: 2vh 4vh 2vh 2vh;
+      padding: 2vh;
       margin-right: -2vh;
     }
 
     &__carrousel {
-      flex: 3 1 0;
-      @include mascara;
+      flex: 2.2 1;
       .gatsby-image-wrapper {
         height: 22vh;
       }
@@ -946,17 +944,17 @@ ul {
   .productos {
     margin-top: 6vh;
     margin-bottom: 7vh;
-    &__lista {
-      margin-top: 2vh;
-    }
-
+    min-height: 64.3vh;
     &__items {
       flex: 0 0 50%;
-      padding: 2vh 2.5vh;
     }
 
     &__imagen {
-      height: 13vh;
+      height: 12.1vh;
+    }
+
+    &__nombre {
+      padding-left: 1vh;
     }
 
     &__regreso {
@@ -976,7 +974,7 @@ ul {
     }
 
     &__titulo {
-      padding: 1vh 2vh;
+      padding: 1vh;
     }
 
     &__informacion {
@@ -987,12 +985,7 @@ ul {
       }
     }
 
-    &__imagen-principal {
-      margin-bottom: 0.5vh;
-    }
-
     &__compartir {
-      padding: 1vh;
       &-link {
         width: 2.5vh;
         height: 2.5vh;
@@ -1005,11 +998,7 @@ ul {
     .descripcion--grande {
       flex: 1 1;
       margin-left: -4vh;
-      padding: 2vh 1vh 2vh 6vh;
-    }
-
-    &__imagen {
-      @include mascara;
+      padding: 1vh 2vh;
     }
 
     &__contenido {
@@ -1019,7 +1008,7 @@ ul {
     &__grupo {
       flex: 1 1;
       margin-top: 0;
-      margin-right: 3vh;
+      margin-right: 4vh;
     }
   }
 
@@ -1028,7 +1017,7 @@ ul {
     &__cabecera {
       margin-top: 1vh;
       .descripcion--grande {
-        flex: 0.8 1;
+        flex: 1 1;
         text-align: right;
       }
     }
@@ -1038,8 +1027,8 @@ ul {
     }
 
     &__informacion {
-      flex: 0.7 1;
-      padding-right: 2vh;
+      flex: 1 1;
+      padding-right: 3vh;
     }
 
     &__form {
@@ -1106,7 +1095,7 @@ ul {
   }
 
   h4 {
-    font-size: 1.23rem;
+    font-size: 1.3rem;
     line-height: 1.6rem;
   }
 
@@ -1138,16 +1127,15 @@ ul {
   .slider {
     margin-top: 12vh;
     &__texto {
-      flex: 0.8 1;
-      padding: 3vh 8vh 3vh 3vh;
+      flex: 0.9 1;
+      padding: 3vh 4vh;
       margin-right: -5vh;
-      font-size: 1.7rem;
+      font-size: 1.75rem;
       line-height: 2.2rem;
       text-align: right;
     }
 
     &__carrousel {
-      @include mascara;
       .gatsby-image-wrapper {
         height: 35vh;
       }
@@ -1158,17 +1146,20 @@ ul {
   .productos {
     margin-top: 10vh;
     margin-bottom: 7vh;
+    min-height: 50vh;
     &__items {
-      flex: 0 0 25%;
-      padding: 3vh 4vh;
+      flex: 0 0 33.333%;
+      padding: 3vh 0;
     }
 
     &__imagen {
-      height: 23.34vh;
+      height: 16.7vh;
+      flex: 0 0 40%;
     }
 
     &__nombre {
-      padding-top: 1vh;
+      padding-left: 1.5vh;
+      flex: 0 0 50%;
     }
 
     &__regreso {
@@ -1201,12 +1192,8 @@ ul {
       }
     }
 
-    &__imagen-principal {
-      margin-bottom: 0.5vh;
-    }
-
     &__compartir {
-      padding: 1.5vh 2vh;
+      padding: 1.5vh 0;
       &-link {
         width: 3.5vh;
         height: 3.5vh;
@@ -1223,12 +1210,11 @@ ul {
 
     &__imagen {
       flex: 1 1;
-      @include mascara;
     }
 
     .descripcion--grande {
       flex: 1 1;
-      padding: 4vh 4vh 4vh 8vh;
+      padding: 3vh 4vh;
       margin-left: -5vh;
     }
 
@@ -1260,7 +1246,7 @@ ul {
 
     &__mapa {
       flex: 0.9 1;
-      height: 40vh;
+      height: 35vh;
     }
 
     &__informacion {
@@ -1350,18 +1336,14 @@ ul {
   /*---------Slider----------*/
   .slider {
     &__texto {
-      padding: 4vh 8vh 4vh 4vh;
+      padding: 4vh 6vh;
     }
   }
 
   /*--------Productos--------*/
   .productos {
     &__items {
-      padding: 5vh 7.5vh;
-    }
-
-    &__imagen {
-      height: 25.56vh;
+      flex: 0 0 25%;
     }
 
     &__informacion {
@@ -1375,13 +1357,6 @@ ul {
   .nosotros {
     &__contenido {
       margin-top: 8vh;
-    }
-  }
-
-  /*--------Contacto--------*/
-  .contacto {
-    &__form {
-      flex: 1.2 1;
     }
   }
 
