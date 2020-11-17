@@ -9,29 +9,25 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 // add fas and fab to the library
 library.add(fab)
 
-const ProductoTemplate = ({ data, path }) => (
-  <Layout>
+const ProductoTemplate = ({ data }) => {
+  return (<Layout>
     <section className="productos">
-      {data.markdownRemark.frontmatter.productos
-        .filter(producto => producto.path === path)
-        .map(producto => (
-          <div key={producto.id} className="productos__individual">
-            <Link className="productos__regreso" to="/">
-              « Ir a inicio
-            </Link>
-            <div className="productos__col-izq">
-              <h1 className="productos__titulo">
-                {producto.nombre}
-              </h1>
-              <div className="productos__informacion">
-                <h3>Descripción</h3>
-                <p className="descripcion">{producto.descripcion}</p>
-              </div>
-              <span className="productos__precio">{producto.precio}</span>
-            </div>
+      <div className="productos__individual">
+        <Link className="productos__regreso" to="/">
+          « Ir a inicio
+        </Link>
+        <div className="productos__col-izq">
+          <h1 className="productos__titulo">{data.markdownRemark.frontmatter.productos.nombre}</h1>
+          <div className="productos__informacion">
+            <h3>Descripción</h3>
+            <p className="descripcion">{data.markdownRemark.frontmatter.productos.descripcion}</p>
+          </div>
+          <span className="productos__precio">{data.markdownRemark.frontmatter.productos.precio}</span>
+        </div>
+        {console.log(data)}
 
-            <div className="productos__col-der">
-              {data.images.edges
+        <div className="productos__col-der">
+          {/* {data.images.edges
                 .filter(image =>
                   image.node.fluid.src.includes(producto.imagenId)
                 )
@@ -41,68 +37,56 @@ const ProductoTemplate = ({ data, path }) => (
                     fluid={imagen.node.fluid}
                     key={producto.id}
                   />
-                ))}
-              <div className="productos__compartir">
-                Compartir
-                <div className="productos__compartir-link">
-                  <a
-                    href="https://www.instagram.com/texmundial/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <FontAwesomeIcon icon={["fab", "instagram"]} />
-                  </a>
-                </div>
-                <div className="productos__compartir-link">
-                  <a
-                    href="https://www.instagram.com/texmundial/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <FontAwesomeIcon icon={["fab", "twitter"]} />
-                  </a>
-                </div>
-                <div className="productos__compartir-link">
-                  <a
-                    href="https://wa.me/584142702886"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <FontAwesomeIcon icon={["fab", "whatsapp"]} />
-                  </a>
-                </div>
-              </div>
+                ))} */}
+          <div className="productos__compartir">
+            Compartir
+            <div className="productos__compartir-link">
+              <a
+                href="https://www.instagram.com/texmundial/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={["fab", "instagram"]} />
+              </a>
+            </div>
+            <div className="productos__compartir-link">
+              <a
+                href="https://www.instagram.com/texmundial/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={["fab", "twitter"]} />
+              </a>
+            </div>
+            <div className="productos__compartir-link">
+              <a
+                href="https://wa.me/584142702886"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={["fab", "whatsapp"]} />
+              </a>
             </div>
           </div>
-        ))}
+        </div>
+      </div>
     </section>
-  </Layout>
-)
+  </Layout>)
+}
 
 export default ProductoTemplate
 
 export const query = graphql`
-  query ProductoQuery {
+  query ProductoQuery  {
     markdownRemark {
       frontmatter {
         productos {
-          id
           path
           nombre
           descripcion
-          imagenId
         }
       }
     }
 
-    images: allImageSharp {
-      edges {
-        node {
-          fluid(maxWidth: 490) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
   }
 `

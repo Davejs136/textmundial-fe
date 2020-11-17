@@ -11,6 +11,7 @@ exports.createPages = async ({ actions, graphql }) => {
         frontmatter {
           productos {
             path
+            id
           }
         }
       }
@@ -22,13 +23,15 @@ exports.createPages = async ({ actions, graphql }) => {
     return
   }
 
-  console.log()
+  console.log(result)
 
   result.data.markdownRemark.frontmatter.productos.forEach(producto => {
     createPage({
       path: producto.path,
       component: productoTemplate,
-      context: {},
+      context: {
+        id: producto.id
+      },
     })
   })
 }

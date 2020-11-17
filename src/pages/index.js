@@ -16,8 +16,7 @@ const IndexPage = ({
     items: {
       frontmatter: { productos },
     },
-    carousel,
-    productosImg,
+    carousel
   },
 }) => (
   <Layout>
@@ -28,19 +27,19 @@ const IndexPage = ({
         mente?
       </p>
       <div className="slider__carrousel">
-        <Img fluid={carousel.fluid} alt="tela de color x" />
+        <Img fluid={carousel.childImageSharp.fluid} alt="tela de color x" />
       </div>
     </section>
 
     <section className="productos">
       <h2>Productos</h2>
       <ul className="productos__lista">
-        {productos.map((producto, index) => (
+        {productos.map(producto => (
           <li className="productos__items" key={producto.id}>
             <Link to={producto.path}>
               <Img
                 className="productos__imagen"
-                fluid={productosImg.edges[index].node.fluid}
+                fluid={producto.imagenId.childImageSharp.fluid}
               />
               <h4 className="productos__nombre">{producto.nombre}</h4>
             </Link>
@@ -121,8 +120,7 @@ const IndexPage = ({
             rows="1"
             cols="1"
             className="contacto__textarea"
-          >
-          </textarea>
+          ></textarea>
           <button type="submit" className="contacto__boton">
             Enviar información
           </button>
@@ -143,23 +141,20 @@ export const query = graphql`
           path
           nombre
           descripcion
-          imagenId
+          imagenId {
+            childImageSharp {
+              fluid(maxWidth: 490) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
-
-    carousel: imageSharp(fluid: { originalName: { eq: "tm-sec1.jpg" } }) {
-      fluid(maxWidth: 490) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-
-    productosImg: allImageSharp {
-      edges {
-        node {
-          fluid(maxWidth: 490) {
-            ...GatsbyImageSharpFluid
-          }
+    carousel: file(relativePath: { eq: "tm-sec1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 490) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
