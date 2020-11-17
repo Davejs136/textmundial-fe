@@ -11,14 +11,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 // add fas and fab to the library
 library.add(fab)
 
-const IndexPage = ({
-  data: {
-    items: {
-      frontmatter: { productos },
-    },
-    carousel
-  },
-}) => (
+const IndexPage = ({ data }) => (
   <Layout>
     <h1>Texmundial</h1>
     <section className="slider">
@@ -27,21 +20,26 @@ const IndexPage = ({
         mente?
       </p>
       <div className="slider__carrousel">
-        <Img fluid={carousel.childImageSharp.fluid} alt="tela de color x" />
+        <Img
+          fluid={data.carousel.childImageSharp.fluid}
+          alt="tela de color x"
+        />
       </div>
     </section>
-
     <section className="productos">
       <h2>Productos</h2>
       <ul className="productos__lista">
-        {productos.map(producto => (
-          <li className="productos__items" key={producto.id}>
-            <Link to={producto.path}>
+        {data.allMarkdownRemark.edges.map(item => (
+          <li className="productos__items" key={item.node.frontmatter.id}>
+            <Link to={`productos/${item.node.frontmatter.slug}`}>
               <Img
                 className="productos__imagen"
-                fluid={producto.imagenId.childImageSharp.fluid}
+                fluid={item.node.frontmatter.imagen.childImageSharp.fluid}
+                alt={item.node.frontmatter.nombre}
               />
-              <h4 className="productos__nombre">{producto.nombre}</h4>
+              <h4 className="productos__nombre">
+                {item.node.frontmatter.nombre}
+              </h4>
             </Link>
           </li>
         ))}
@@ -134,17 +132,19 @@ export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
-    items: markdownRemark {
-      frontmatter {
-        productos {
-          id
-          path
-          nombre
-          descripcion
-          imagenId {
-            childImageSharp {
-              fluid(maxWidth: 490) {
-                ...GatsbyImageSharpFluid
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___id] }) {
+      edges {
+        node {
+          frontmatter {
+            id
+            slug
+            nombre
+            descripcion
+            imagen {
+              childImageSharp {
+                fluid(maxWidth: 130) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }

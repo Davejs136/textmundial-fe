@@ -14,21 +14,27 @@ const Productos = () => (
             <img src={prodefault} alt="productos" />
           </div>
           <h3 className="productos__nombre">Lorem ipsum</h3>
-          <Link className="productos__vermas" to="/productos">Ver producto</Link>
+          <Link className="productos__vermas" to="/productos">
+            Ver producto
+          </Link>
         </li>
         <li className="productos__items">
-        <div className="productos__imagen gatsby-image-wrapper">
+          <div className="productos__imagen gatsby-image-wrapper">
             <img src={prodefault} alt="productos" />
           </div>
           <h3 className="productos__nombre">Sed ut perspiciatis</h3>
-          <Link className="productos__vermas" to="/productos">Ver producto</Link>
+          <Link className="productos__vermas" to="/productos">
+            Ver producto
+          </Link>
         </li>
         <li className="productos__items">
-        <div className="productos__imagen gatsby-image-wrapper">
+          <div className="productos__imagen gatsby-image-wrapper">
             <img src={prodefault} alt="productos" />
           </div>
           <h3 className="productos__nombre">Ut enim ad minima</h3>
-          <Link className="productos__vermas" to="/productos">Ver producto</Link>
+          <Link className="productos__vermas" to="/productos">
+            Ver producto
+          </Link>
         </li>
       </ul>
       <div className="productos__paginacion">
