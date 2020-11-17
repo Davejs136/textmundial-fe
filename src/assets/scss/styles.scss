@@ -88,7 +88,7 @@ h3 {
 }
 
 h4 {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .descripcion {
@@ -148,17 +148,11 @@ ul {
   align-items: center;
   &__texto {
     font-weight: 500;
-    border-bottom: none;
-    color: $blanco1;
-    background: $azul1;
-    z-index: 1;
-    &:before {
-      display: none;
-    }
-    &__carrousel {
-      .gatsby-image-wrapper {
-        border-radius: 20px;
-      }
+    color: $azul1;
+  }
+  &__carrousel {
+    .gatsby-image-wrapper {
+      border-radius: 20px;
     }
   }
 }
@@ -383,6 +377,7 @@ ul {
 
   h4 {
     font-size: 1.1rem;
+    line-height: 1.5rem;
   }
 
   .descripcion {
@@ -430,10 +425,9 @@ ul {
   .slider {
     margin-top: 8vh;
     &__texto {
-      padding: 2vh;
-      font-size: 1.1rem;
-      line-height: 1.45rem;
-      margin: 0 2vh -4vh;
+      padding: 0 0 3vh 0;
+      font-size: 1.3rem;
+      line-height: 1.6rem;
     }
 
     &__carrousel {
@@ -545,8 +539,8 @@ ul {
 
   /*--------Contacto--------*/
   .contacto {
-    margin-top: 11vh;
-    margin-bottom: 11vh;
+    margin-top: 9vh;
+    margin-bottom: 10vh;
     &__cabecera {
       margin-bottom: 4vh;
     }
@@ -646,7 +640,7 @@ ul {
   }
 
   h4 {
-    font-size: 1.13rem;
+    font-size: 1.11rem;
     line-height: 1.4rem;
   }
 
@@ -693,10 +687,9 @@ ul {
   .slider {
     margin-top: 20vh;
     &__texto {
-      padding: 5vh;
-      font-size: 1.32rem;
+      padding: 0 0 5vh 0;
+      font-size: 1.4rem;
       line-height: 1.8rem;
-      margin: 0 4vh -8vh;
     }
 
     &__carrousel {
@@ -864,8 +857,8 @@ ul {
       height: 7vh;
       svg {
         margin-top: 1vh;
-        width: 1.5em !important;
-        height: 1.5em;
+        width: 1.3em !important;
+        height: 1.3em;
       }
     }
 
@@ -932,9 +925,7 @@ ul {
     &__texto {
       flex: 2 1;
       text-align: right;
-      font-size: 1.3rem;
-      padding: 2vh;
-      margin:0 -2vh 0 0;
+      padding: 0 2vh;
     }
 
     &__carrousel {
@@ -948,7 +939,6 @@ ul {
   /*--------Productos--------*/
   .productos {
     margin-top: 6vh;
-    margin-bottom: 7vh;
     min-height: 64.3vh;
     &__items {
       flex: 0 0 50%;
@@ -1098,8 +1088,7 @@ ul {
   }
 
   h4 {
-    font-size: 1.3rem;
-    line-height: 1.6rem;
+    font-size: 1.25rem;
   }
 
   .descripcion--grande {
@@ -1132,8 +1121,7 @@ ul {
     margin-top: 12vh;
     &__texto {
       flex: 0.9 1;
-      padding: 3vh 4vh;
-      margin: 0 -5vh 0 0;
+      padding: 0 4vh;
       font-size: 1.75rem;
       line-height: 2.2rem;
       text-align: right;
@@ -1141,7 +1129,7 @@ ul {
 
     &__carrousel {
       .gatsby-image-wrapper {
-        height: 35vh;
+        height: 38vh;
       }
     }
   }
@@ -1236,7 +1224,7 @@ ul {
   /*--------Contacto--------*/
   .contacto {
     margin-top: 12vh;
-    margin-bottom: 15vh;
+    margin-bottom: 12vh;
     &__cabecera {
       margin-bottom: 7vh;
       .descripcion--grande {
@@ -1287,8 +1275,8 @@ ul {
     }
 
     &__circulo {
-      width: 4vh;
-      height: 4vh;
+      width: 3.5vh;
+      height: 3.5vh;
       svg {
         margin-top: 0.5vh;
       }
@@ -1337,7 +1325,7 @@ ul {
   /*---------Slider----------*/
   .slider {
     &__texto {
-      padding: 4vh 6vh;
+      padding: 0 6vh;
     }
   }
 
@@ -1364,17 +1352,12 @@ ul {
   /*--------Pie--------*/
   .pie {
     &__copy {
-      flex: 1.3 1;
-      padding: 0 1vh;
+      flex: 1.2 1;
+      padding: 0 3vh;
     }
 
     &__rrss {
       flex: 0.22 1;
-    }
-
-    &__copy {
-      flex: 1.2 1;
-      padding: 0 0 0 2vh;
     }
   }
 }
