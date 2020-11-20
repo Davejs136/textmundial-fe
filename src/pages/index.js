@@ -26,25 +26,6 @@ const IndexPage = ({ data }) => (
         />
       </div>
     </section>
-    <section className="productos">
-      <h2>Productos</h2>
-      <ul className="productos__lista">
-        {data.allMarkdownRemark.edges.map(item => (
-          <li className="productos__items" key={item.node.frontmatter.id}>
-            <Link to={`productos/${item.node.frontmatter.slug}`}>
-              <Img
-                className="productos__imagen"
-                fluid={item.node.frontmatter.imagen.childImageSharp.fluid}
-                alt={item.node.frontmatter.nombre}
-              />
-              <h4 className="productos__nombre">
-                {item.node.frontmatter.nombre}
-              </h4>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
 
     <section className="nosotros">
       <h2>Acerca de nosotros</h2>
@@ -74,6 +55,26 @@ const IndexPage = ({ data }) => (
           </p>
         </div>
       </div>
+    </section>
+
+    <section className="productos">
+      <h2>Productos</h2>
+      <ul className="productos__lista">
+        {data.allMarkdownRemark.edges.map(item => (
+          <li className="productos__items" key={item.node.frontmatter.id}>
+            <Link to={`productos/${item.node.frontmatter.slug}`}>
+              <Img
+                className="productos__imagen"
+                fluid={item.node.frontmatter.imagen.childImageSharp.fluid}
+                alt={item.node.frontmatter.nombre}
+              />
+              <h4 className="productos__nombre">
+                {item.node.frontmatter.nombre}
+              </h4>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <section className="contacto">
@@ -142,7 +143,7 @@ export const query = graphql`
             descripcion
             imagen {
               childImageSharp {
-                fluid(maxWidth: 130) {
+                fluid(maxWidth: 260) {
                   ...GatsbyImageSharpFluid
                 }
               }

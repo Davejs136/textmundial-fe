@@ -80,7 +80,7 @@ export const query = graphql`
         descripcion
         imagen {
           childImageSharp {
-            fluid(maxWidth: 490) {
+            fluid(maxWidth: 740) {
               ...GatsbyImageSharpFluid
             }
           }

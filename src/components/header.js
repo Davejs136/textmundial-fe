@@ -16,14 +16,14 @@ const Header = () => (
         </p>
       </div>
       <nav className="cabecera__nav">
-        <Link to="/" className="cabecera__link">
-          Inicio
+        <Link to="#nosotros" className="cabecera__link">
+          Nosotros
         </Link>
         <Link to="#productos" className="cabecera__link">
           Productos
         </Link>
-        <Link to="#blog" className="cabecera__link">
-          Blog
+        <Link to="#contacto" className="cabecera__link">
+          Contacto
         </Link>
       </nav>
     </div>
