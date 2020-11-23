@@ -450,17 +450,17 @@ ul {
     }
 
     &__contenedor-imagen {
-      flex: 0 0 30%;
+      flex: 0 0 35%;
     }
 
     &__imagen {
-      width: 15vh;
-      height: 15vh;
+      width: 17.5vh;
+      height: 17.5vh;
     }
 
     &__nombre {
-      flex: 0 0 70%;
-      padding: 2vh;
+      flex: 0 0 65%;
+      padding: 0 2vh;
     }
 
     &__regreso {
@@ -651,8 +651,8 @@ ul {
   }
 
   h4 {
-    font-size: 1.05rem;
-    line-height: 1.3rem;
+    font-size: 1.15rem;
+    line-height: 1.4rem;
   }
 
   .descripcion {
@@ -720,17 +720,17 @@ ul {
     }
 
     &__contenedor-imagen {
-      flex: 0 0 35%;
+      flex: 0 0 30%;
     }
 
     &__imagen {
-      width: 29vh;
-      height: 29vh;
+      width: 24.7vh;
+      height: 24.7vh;
     }
 
     &__nombre {
-      padding: 3vh;
-      flex: 0 0 65%;
+      padding: 0 2vh;
+      flex: 0 0 70%;
     }
 
     &__regreso {
@@ -966,7 +966,7 @@ ul {
     }
 
     &__nombre {
-      padding: 1.5vh;
+      padding: 1vh 0 1vh 1vh;
     }
 
     &__regreso {
@@ -975,7 +975,7 @@ ul {
 
     &__individual {
       margin-top: 7vh;
-      min-height: 63vh;
+      min-height: 67vh;
     }
 
     &__col-izq {
@@ -988,10 +988,6 @@ ul {
       order: 2;
       flex: 0 0 50%;
       margin-top: -3.5vh;
-    }
-
-    &__titulo {
-      padding: 1vh;
     }
 
     &__informacion {
@@ -1118,11 +1114,6 @@ ul {
     font-size: 1.4rem;
   }
 
-  h4 {
-    font-size: 1.15rem;
-    line-height: 1.4rem;
-  }
-
   .descripcion--grande {
     font-size: 1.5rem;
     line-height: 1.9rem;
@@ -1179,12 +1170,17 @@ ul {
     }
 
     &__imagen {
-      width: 15vh;
-      height: 15vh;
+      width: 17vh;
+      height: 17vh;
+    }
+
+    &__contenedor-imagen {
+      flex: 0 0 40%;
     }
 
     &__nombre {
-      padding: 1.5vh;
+      flex: 0 0 55%;
+      padding: 0 1vh;
     }
 
     &__regreso {
@@ -1342,6 +1338,11 @@ ul {
 
 /*-------------------------------------------- Desktop responsive --------------------------------------------*/
 @media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  h4 {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
   .contenedor {
     width: 1280px;
     margin: 0 auto;
@@ -1374,21 +1375,8 @@ ul {
 
   /*--------Productos--------*/
   .productos {
-    &__items {
-      flex: 0 0 25%;
-    }
-
-    &__contenedor-imagen {
-      flex: 0 0 40%;
-    }
-
-    &__imagen {
-      width: 16vh;
-      height: 16vh;
-    }
-
-    &__nombre {
-      flex: 0 0 50%;
+    &__lista {
+      margin-top: -1vh;
     }
 
     &__informacion {
@@ -1396,6 +1384,15 @@ ul {
         font-size: 1.1rem;
       }
     }
+
+    &__imagen {
+      width: 20vh;
+      height: 20vh;
+    }
+
+    &__nombre {
+      padding: 0;
+  }
 
     &__individual {
       min-height: 54vh;
