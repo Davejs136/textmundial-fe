@@ -63,14 +63,16 @@ const IndexPage = ({ data }) => (
         {data.allMarkdownRemark.edges.map(item => (
           <li className="productos__items" key={item.node.frontmatter.id}>
             <Link to={`productos/${item.node.frontmatter.slug}`}>
-              <Img
-                className="productos__imagen"
-                fluid={item.node.frontmatter.imagen.childImageSharp.fluid}
-                alt={item.node.frontmatter.nombre}
-              />
-              <h4 className="productos__nombre">
-                {item.node.frontmatter.nombre}
-              </h4>
+              <div className="productos__contenedor-imagen">
+                <Img
+                  className="productos__imagen"
+                  fluid={item.node.frontmatter.imagen.childImageSharp.fluid}
+                  alt={item.node.frontmatter.nombre}
+                />
+              </div>
+                <h4 className="productos__nombre">
+                  {item.node.frontmatter.nombre}
+                </h4>
             </Link>
           </li>
         ))}

@@ -175,7 +175,7 @@ ul {
   }
 
   &__imagen {
-    border-radius: 10px;
+    border-radius: 15px 0 0 15px;
   }
 
   &__individual {
@@ -184,7 +184,9 @@ ul {
   }
 
   &__nombre {
-    color: $azul1;
+    color: $blanco1;
+    background: $azul1;
+    border-radius: 0 15px 15px 0;
   }
 
   &__regreso {
@@ -196,6 +198,7 @@ ul {
     text-transform: capitalize;
     color: $blanco1;
     background: $azul2;
+    border-radius: 15px 0 0 15px;
   }
 
   &__informacion {
@@ -232,6 +235,10 @@ ul {
     display: none;
   }
 
+  &__imagen-principal {
+    border-radius: 0 15px 15px 0;
+  }
+
   &__compartir {
     @include flex;
     align-items: center;
@@ -264,7 +271,7 @@ ul {
   &__imagen {
     img {
       @include w-full;
-      border-radius: 20px;
+      border-radius: 15px;
     }
   }
 
@@ -289,7 +296,7 @@ ul {
 
   &__mapa {
     border: 1px solid $gris1;
-    border-radius: 20px;
+    border-radius: 15px;
   }
 
   &__contenido {
@@ -429,7 +436,7 @@ ul {
       font-size: 0.7rem;
       text-align: left;
       flex: 0 0 100%;
-      margin: 1vh 0 1vh 2vh;
+      margin: 0.7vh 0 0.7vh 2vh;
     }
   }
 
@@ -458,13 +465,19 @@ ul {
       padding-top: 7vh;
     }
 
-    &__nombre {
-      padding-left: 2vh;
-      flex: 0 0 60%;
+    &__contenedor-imagen {
+      flex: 0 0 40%;
     }
 
     &__imagen {
-      flex: 0 0 40%;
+      width: 20vh;
+      height: 20vh;
+    }
+
+    &__nombre {
+      flex: 0 0 60%;
+      padding: 2vh;
+      margin-left: -0.2vh;
     }
 
     &__regreso {
@@ -720,16 +733,22 @@ ul {
     margin-top: 17vh;
     &__items {
       flex: 0 0 50%;
-      padding-top: 8vh;
+      padding-top: 10vh;
+      padding-left: 2vh;
+      padding-right: 2vh;
+    }
+
+    &__contenedor-imagen {
+      flex: 0 0 35%;
     }
 
     &__imagen {
-      flex: 0 0 40%;
+      width: 28vh;
+      height: 28vh;
     }
 
     &__nombre {
-      padding-left: 3vh;
-      padding-right: 4vh;
+      padding: 3vh;
       flex: 0 0 60%;
     }
 
@@ -880,15 +899,15 @@ ul {
 
     &__copy {
       flex: 3.6 1;
-      padding: 0 4vh;
+      padding: 0 3vh;
     }
 
     &__designers {
-      flex: 1;
+      flex: 1.2 1;
     }
 
     &__novanet {
-      width: 19.5vh;
+      width: 22vh;
     }
   }
 }
@@ -958,10 +977,17 @@ ul {
     &__items {
       flex: 0 0 50%;
       padding-top: 5vh;
+      padding-left: 2vh;
+      padding-right: 2vh;
+    }
+
+    &__imagen {
+      width: 12vh;
+      height: 12vh;
     }
 
     &__nombre {
-      padding-left: 1vh;
+      padding: 1.5vh;
     }
 
     &__regreso {
@@ -1061,19 +1087,26 @@ ul {
 
   /*--------Pie--------*/
   .pie {
-    &__rrss {
+    &__logo {
       flex: 0.7 1;
-      padding: 0 0 0 3vh;
+      img {
+        padding-top: 0.5vh;
+      }
+    }
+    &__rrss {
+      flex: 0.6 1;
+      padding: 0 0 0 2vh;
     }
 
     &__circulo {
       margin-right: 2.5vh;
-      width: 3vh;
-      height: 3vh;
+      width: 2.5vh;
+      height: 2.5vh;
     }
 
     &__copy {
-      flex: 1.8 1;
+      flex: 2 1;
+      padding: 0;
     }
 
     &__designers {
@@ -1108,6 +1141,7 @@ ul {
 
   h4 {
     font-size: 1.15rem;
+    line-height: 1.4rem;
   }
 
   .descripcion--grande {
@@ -1162,15 +1196,22 @@ ul {
     margin-top: 12vh;
     &__items {
       flex: 0 0 33.333%;
+      padding-top: 7vh;
+    }
+
+    &__contenedor-imagen {
+      flex: 0 0 45%;
     }
 
     &__imagen {
-      flex: 0 0 50%;
+      width: 17vh;
+      height: 17vh;
     }
 
     &__nombre {
-      padding-left: 1.5vh;
-      flex: 0 0 50%;
+      padding: 1.5vh;
+      flex: 0 0 55%;
+      margin-left: -0.2vh;
     }
 
     &__regreso {
@@ -1288,7 +1329,7 @@ ul {
     font-size: 0.82rem;
     line-height: 1.3rem;
     &__logo {
-      flex: 0.5 1;
+      flex: 0.6 1;
     }
 
     &__circulo {
@@ -1297,7 +1338,7 @@ ul {
 
     &__rrss {
       padding: 0 0 0 3vh;
-      flex: 0.4 1;
+      flex: 0.35 1;
     }
 
     &__circulo {
@@ -1309,8 +1350,9 @@ ul {
     }
 
     &__copy {
-      flex: 2.3 1;
-      padding: 0 0 0 2vh;
+      flex: 2 1;
+      padding: 0 0 0 3vh;
+      font-size: 0.75rem;
     }
 
     &__novanet {
@@ -1318,8 +1360,9 @@ ul {
       width: 10vh;
     }
 
-    .pie__designers {
+    &__designers {
       flex: 0.8 1;
+      font-size: 0.75rem;
     }
   }
 }
@@ -1362,6 +1405,19 @@ ul {
       flex: 0 0 25%;
     }
 
+    &__contenedor-imagen {
+      flex: 0 0 50%;
+    }
+
+    &__imagen {
+      width: 18.2vh;
+      height: 18.2vh;
+    }
+
+    &__nombre {
+      flex: 0 0 50%;
+    }
+
     &__informacion {
       .descripcion {
         font-size: 1.1rem;
@@ -1382,9 +1438,21 @@ ul {
 
   /*--------Pie--------*/
   .pie {
+    &__logo {
+      flex: 0.3 1;
+    }
+
+    &__circulo {
+      margin-right: 3.5vh;
+    }
+
     &__copy {
-      flex: 1.2 1;
-      padding: 0 3vh;
+      flex: 0.97 1;
+      padding: 0;
+    }
+
+    &__designers {
+      flex: 1 1;
     }
 
     &__rrss {
