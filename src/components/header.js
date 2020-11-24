@@ -11,9 +11,6 @@ const Header = () => (
         <Link to="/">
           <img src={Logo} alt="logo" className="logo" />
         </Link>
-        <p className="cabecera__descripcion">
-          Distribuidores del mejor surtido en telas para trajes de baño
-        </p>
       </div>
       <nav className="cabecera__nav">
         <Link to="#nosotros" className="cabecera__link">

@@ -44,7 +44,7 @@ const Footer = () => (
         </p>
       </div>
       <div className="pie__designers">
-        <p className="pie__texto">
+        <p>
           Diseñado por:
           <a
             href="http://novanet.studio/site/"
