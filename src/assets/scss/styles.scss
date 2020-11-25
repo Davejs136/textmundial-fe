@@ -299,7 +299,6 @@ ul {
 
   &__boton {
     font-weight: 400;
-    text-align: left;
     cursor: pointer;
     color: $blanco;
     background: $azul1;
@@ -491,7 +490,7 @@ ul {
   .contacto {
     margin-top: -50vh;
     &__contenido {
-      padding-top: 2vh;
+      padding-top: 3vh;
     }
 
     h2 {
@@ -818,6 +817,172 @@ ul {
 
 /*-------------------------------------------- Tablet Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .descripcion {
+    line-height: 1.3rem;
+  }
+
+  .descripcion--grande {
+    padding: 0 3vh 0 0;
+    text-align: right;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  /*----------Cabecera----------*/
+  .cabecera {
+    background-size: 65vh;
+    &__logo {
+      flex: 0.3 1;
+    }
+    &__nav {
+      flex: 0.6 1;
+    }
+    &__link {
+      font-size: 0.9rem;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  /*----------Nosotros----------*/
+  .nosotros {
+    background-size: 90vh;
+    background-position: 140% 0;
+    .descripcion--grande {
+      flex: 0.75;
+    }
+    &__slider {
+      flex: 1;
+      img {
+        height: 20vh;
+      }
+    }
+  }
+
+  /*--------Productos--------*/
+  .productos {
+    margin-top: -15vh;
+    padding-bottom: 40vh;
+    background-position: 140% 100%;
+    background-size: 40vh;
+    &__items {
+      flex: 0 0 50%;  
+    }
+    &__contenedor-imagen {
+      padding: 0.3vh;
+    }
+    &__imagen {
+      width: 10.4vh;
+      height: 10.4vh;
+    }
+    &__nombre {
+      padding-left: 1vh;
+      padding-right: 2vh;
+    }
+  }
+
+  /*-------Ficha de productos individual--------*/
+  .ficha {
+    padding: 15vh 0;
+    background-size: 76vh;
+    background-position: -3vh -22vh;
+    &__regreso {
+      padding-left: 2vh;
+    }
+
+    &__informacion {
+      padding:2vh;
+    }
+
+    &__imagen-principal {
+      height: auto;
+    }
+
+    &__col-izq {
+      padding-right: 5vh;
+      min-height: 53vh;
+  }
+
+    &__col-der {
+      flex: 1;
+      margin-top: -2.5vh;
+    }
+
+    &__titulo {
+      padding: 2vh;
+    }
+
+    &__compartir {
+      padding: 2vh;
+      &-link {
+        width: 3vh;
+        height: 3vh;
+      }
+    }
+  }
+
+  /*--------Contacto--------*/
+  .contacto {
+    margin-top: -32vh;
+    .descripcion--grande {
+      flex: 0.6;
+    }
+
+    &__mapa {
+      flex: 1 1;
+      height: 20vh;
+    }
+  }
+
+  /*--------Formulario--------*/
+  .formulario {
+    &__informacion {
+      .descripcion {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+      }
+    }
+    &__input {
+      margin-bottom: 2vh;
+    }
+
+    &__input,
+    &__textarea,
+    &__boton {
+      flex: 0 0 48.5%;
+      padding: 1vh;
+    }
+  }
+
+  /*--------Pie--------*/
+  .pie {
+    font-size: 0.8rem;
+    background-size: 58vh;
+    &__logo {
+      flex: 0 0 25%;
+      padding-bottom: 2vh;
+    }
+
+    &__rrss {
+      padding-bottom: 2vh;
+    }
+
+    &__circulo {
+      width: 3vh;
+      height: 3vh;
+      margin-left: 3vh;
+      a {
+        svg {
+          margin-top:0.3vh;
+        }
+      }
+    }
+
+    &__novanet {
+      width: 8vh;
+      margin: 0 0 -0.7vh 0.4vh;
+    }
+  }
 }
 
 /*-------------------------------------------- Tablet Landscape --------------------------------------------*/
