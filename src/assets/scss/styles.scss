@@ -118,7 +118,7 @@ ul {
 /*--------Cabecera--------*/
 .cabecera {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
   background-repeat: no-repeat;
   @include w-full;
@@ -244,6 +244,7 @@ ul {
 
 /*--------Contacto--------*/
 .contacto {
+  z-index: 2;
   &__contenido {
     @include flex;
     @include w-full;
@@ -350,10 +351,6 @@ ul {
 
 /*-------------------------------------------- Tablet Landscape --------------------------------------------*/
 @media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-}
-
-/*-------------------------------------------- Desktop responsive --------------------------------------------*/
-@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
   h1 {
     font-size: 2rem;
   }
@@ -373,17 +370,7 @@ ul {
 
   .contenedor,
   .contenedor--pequeño {
-    margin: 0 auto;
-  }
-
-  .contenedor {
-    width: 1280px;
-    padding: 0 2vh;
-  }
-
-  .contenedor--pequeño {
-    width: 1130px;
-    padding: 8vh 4vh 8vh 6vh;
+    margin: 0 5vh;
   }
 
   .descripcion {
@@ -394,17 +381,17 @@ ul {
   .descripcion--grande {
     padding: 0 5vh 0 0;
     text-align: right;
-    font-size: 1.7rem;
-    line-height: 2.3rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
   }
 
   /*----------Cabecera----------*/
   .cabecera {
     padding-top: 4vh;
     padding-bottom: 4vh;
-    background-size: 138vh;
+    background-size: 111vh;
     &__logo {
-      flex: 0.2 1;
+      flex: 0.25 1;
     }
     &__nav {
       flex: 0.5 1;
@@ -419,8 +406,9 @@ ul {
   /*----------Nosotros----------*/
   .nosotros {
     padding: 25vh 0 35vh 0;
+    background-size: 120vh;
     .descripcion--grande {
-      flex: 0.6;
+      flex: 0.7;
     }
     &__slider {
       flex: 1;
@@ -433,9 +421,13 @@ ul {
   /*--------Productos--------*/
   .productos {
     margin-top: -20vh;
-    padding-bottom: 70vh;
+    padding-bottom: 60vh;
     background-position: bottom right;
     background-size: 50vh;
+    .contenedor--pequeño {
+      padding: 8vh 4vh 8vh 6vh;
+    }
+
     &__items {
       padding-top: 9vh;
       flex: 0 0 33.333333%;
@@ -458,7 +450,7 @@ ul {
   /*-------Ficha de productos individual--------*/
   .ficha {
     padding: 25vh 0;
-    background-size: 150vh;
+    background-size: 130vh;
     background-position: 0 -50vh;
     &__regreso {
       flex: 0 0 100%;
@@ -485,7 +477,7 @@ ul {
     }
 
     &__compartir {
-      padding: 3vh 5vh;
+      padding: 2vh 3vh;
       &-link {
         width: 4vh;
         height: 4vh;
@@ -496,7 +488,7 @@ ul {
 
   /*--------Contacto--------*/
   .contacto {
-    margin-top: -55vh;
+    margin-top: -45vh;
     .descripcion--grande {
       flex: 0.6;
     }
@@ -509,14 +501,14 @@ ul {
 
   /*--------Formulario--------*/
   .formulario {
-    margin-top: 15vh;
+    margin-top: 20vh;
     margin-bottom: 15vh;
     &__informacion {
-      flex: 0.65 1;
+      flex: 0.6 1;
       .descripcion {
         text-align: right;
-        font-size: 1.36rem;
-        line-height: 2rem;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
       }
     }
     &__form {
@@ -529,7 +521,7 @@ ul {
     &__input,
     &__textarea,
     &__boton {
-      flex: 0 0 48.5%;
+      flex: 0 0 48%;
       padding: 1vh 2vh;
       font-size: 0.9rem;
     }
@@ -542,7 +534,7 @@ ul {
     font-size: 0.8rem;
     background-size: 118vh;
     &__logo {
-      flex: 0 0 14%;
+      flex: 0 0 17%;
       padding-bottom: 2vh;
     }
 
@@ -564,17 +556,93 @@ ul {
     }
 
     &__copy {
-      flex: 0 0 42%;
+      flex: 0 0 55%;
     }
 
     &__designers {
-      flex: 0 0 17%;
-      margin: 0 0 0.6vh;
+      flex: 0 0 20%;
+      margin: 0 0 0.7vh;
     }
 
     &__novanet {
       width: 10vh;
-      margin: 0 0 -0.6vh 1vh;
+      margin: 0 0 -0.7vh 1vh;
+    }
+  }
+}
+
+/*-------------------------------------------- Desktop responsive --------------------------------------------*/
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .contenedor,
+  .contenedor--pequeño {
+    margin: 0 auto;
+  }
+
+  .contenedor {
+    width: 1280px;
+    padding: 0 2vh;
+  }
+
+  .contenedor--pequeño {
+    width: 1130px;
+    padding: 8vh 4vh 8vh 6vh;
+  }
+
+  /*----------Cabecera----------*/
+  .cabecera {
+    background-size: 138vh;
+    &__logo {
+      flex: 0.2 1;
+    }
+  }
+
+  /*----------Nosotros----------*/
+  .nosotros {
+    background-size: 152vh;
+    .descripcion--grande {
+      flex: 0.6;
+    }
+  }
+
+  /*--------Productos--------*/
+  .productos {
+    padding-bottom: 70vh;
+  }
+
+  /*-------Ficha de productos individual--------*/
+  .ficha {
+    background-size: 150vh;
+    &__compartir {
+      padding: 3vh 5vh;
+    }
+  }
+
+  /*--------Contacto--------*/
+  .contacto {
+    margin-top: -55vh;
+  }
+
+  /*--------Formulario--------*/
+  .formulario {
+    margin-top: 15vh;
+    &__informacion {
+      flex: 0.65 1;
+      .descripcion {
+        font-size: 1.36rem;
+        line-height: 2rem;
+      }
+    }
+  }
+
+  /*--------Pie--------*/
+  .pie {
+    background-size: 120vh;
+    &__logo {
+      flex: 0 0 14%;
+    }
+
+    &__copy {
+      flex: 0 0 42%;
     }
   }
 }
