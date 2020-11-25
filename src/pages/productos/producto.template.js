@@ -14,52 +14,54 @@ const ProductoTemplate = ({ data }) => {
   const { frontmatter } = markdownRemark
   return (
     <Layout>
-      <section className="productos">
-        <div className="productos__individual">
-          <Link className="productos__regreso" to="/">
-            « Ir a inicio
-          </Link>
-          <div className="productos__col-izq">
-            <h1 className="productos__titulo">{frontmatter.nombre}</h1>
-            <div className="productos__informacion">
-              <h3>Descripción</h3>
-              <p className="descripcion">{frontmatter.descripcion}</p>
+      <section className="ficha">
+        <div className="contenedor">
+          <div className="ficha__individual">
+            <Link className="ficha__regreso" to="/">
+              « Ir a inicio
+            </Link>
+            <div className="ficha__col-izq">
+              <h1 className="ficha__titulo">{frontmatter.nombre}</h1>
+              <div className="ficha__informacion">
+                <h3>Descripción</h3>
+                <p className="descripcion">{frontmatter.descripcion}</p>
+              </div>
             </div>
-          </div>
-          <div className="productos__col-der">
-            <Img
-              className="productos__imagen-principal"
-              fluid={frontmatter.imagen.childImageSharp.fluid}
-              alt={frontmatter.nombre}
-            />
-            <div className="productos__compartir">
-              Compartir
-              <div className="productos__compartir-link">
-                <a
-                  href="https://www.instagram.com/texmundial/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={["fab", "instagram"]} />
-                </a>
-              </div>
-              <div className="productos__compartir-link">
-                <a
-                  href="https://www.instagram.com/texmundial/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={["fab", "twitter"]} />
-                </a>
-              </div>
-              <div className="productos__compartir-link">
-                <a
-                  href="https://wa.me/584142702886"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={["fab", "whatsapp"]} />
-                </a>
+            <div className="ficha__col-der">
+              <Img
+                className="ficha__imagen-principal"
+                fluid={frontmatter.imagen.childImageSharp.fluid}
+                alt={frontmatter.nombre}
+              />
+              <div className="ficha__compartir">
+                Compartir
+                <div className="ficha__compartir-link">
+                  <a
+                    href="https://www.instagram.com/texmundial/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={["fab", "instagram"]} />
+                  </a>
+                </div>
+                <div className="ficha__compartir-link">
+                  <a
+                    href="https://www.instagram.com/texmundial/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={["fab", "twitter"]} />
+                  </a>
+                </div>
+                <div className="ficha__compartir-link">
+                  <a
+                    href="https://wa.me/584142702886"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={["fab", "whatsapp"]} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

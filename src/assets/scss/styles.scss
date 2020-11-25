@@ -88,17 +88,18 @@ h2 {
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 600;
   color: $azul1;
 }
 
 h4 {
-  font-weight: 400;
+  font-weight: 600;
+  color: $azul2;
 }
 
 .descripcion {
   font-weight: 300;
-  color: $gris2;
+  color: $gris3;
 }
 
 .descripcion--grande {
@@ -188,55 +189,35 @@ ul {
   &__imagen {
     border-radius: 50%;
   }
+}
 
+/*-------Ficha de productos individual--------*/
+.ficha {
+  @include flex;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
+  background-repeat: no-repeat;
   &__individual {
     @include flex;
   }
-
-  &__nombre {
-    font-weight: 600;
-    color: $azul2;
-  }
-
   &__regreso {
     font-weight: 500;
+    color: $amarillo;
   }
 
   &__titulo {
     display: block;
-    text-transform: capitalize;
     color: $blanco;
-    background: $azul2;
   }
 
   &__informacion {
+    background: $blanco;
+    border: $gris2 1px solid;
+    border-radius: 20px;
     position: relative;
-    h3 {
-      color: $azul1;
-      font-weight: 500;
-    }
+  }
 
-    &:before {
-      content: " ";
-      position: absolute;
-      z-index: -1;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border: 1px solid transparent;
-      -moz-border-image: -moz-linear-gradient(
-        to right,
-        #ffee00 0%,
-        #e14314 100%
-      );
-      -webkit-border-image: -webkit-linear-gradient(
-        to right,
-        #ffee00 0%,
-        #e14314 100%
-      );
-      border-image: linear-gradient(to right, #ffee00 0%, #e14314 100%);
-      border-image-slice: 1;
-    }
+  &__imagen-principal {
+    @include mascara;
   }
 
   &__precio {
@@ -246,8 +227,8 @@ ul {
   &__compartir {
     @include flex;
     align-items: center;
+    justify-content: flex-end;
     font-weight: 500;
-    border-bottom: 2px solid $blanco;
     &-link {
       border-radius: 50%;
       background: $azul1;
@@ -373,8 +354,21 @@ ul {
 
 /*-------------------------------------------- Desktop responsive --------------------------------------------*/
 @media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  h1 {
+    font-size: 2rem;
+  }
+
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1vh;
+  }
+
+  h4 {
+    font-size: 1.2rem;
   }
 
   .contenedor,
@@ -393,8 +387,8 @@ ul {
   }
 
   .descripcion {
-    font-size: 1.22rem;
-    line-height: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
   }
 
   .descripcion--grande {
@@ -447,7 +441,7 @@ ul {
       flex: 0 0 33.333333%;
     }
     &__contenedor-imagen {
-      flex: 0.7 1;
+      flex: 0.6 1;
       padding: 0.5vh;
     }
     &__imagen {
@@ -457,8 +451,46 @@ ul {
     &__nombre {
       flex: 1 1;
       padding-left: 1vh;
-      padding-right: 1vh;
-      font-size: 1.2rem;
+      padding-right: 4vh;
+    }
+  }
+
+  /*-------Ficha de productos individual--------*/
+  .ficha {
+    padding: 25vh 0;
+    background-size: 150vh;
+    background-position: 0 -50vh;
+    &__regreso {
+      flex: 0 0 100%;
+      padding-left: 3vh;
+    }
+
+    &__informacion {
+      padding: 3vh;
+    }
+
+    &__col-izq {
+      flex: 1;
+      padding-right: 6vh;
+      min-height: 48vh;
+    }
+
+    &__col-der {
+      flex: 1;
+      margin-top: -2.5vh;
+    }
+
+    &__titulo {
+      padding: 3vh;
+    }
+
+    &__compartir {
+      padding: 3vh 5vh;
+      &-link {
+        width: 4vh;
+        height: 4vh;
+        margin-left: 2vh;
+      }
     }
   }
 
@@ -579,6 +611,22 @@ ul {
     &__imagen {
       width: 11.7vh;
       height: 11.7vh;
+    }
+    .productos__nombre {
+      padding-right: 1vh;
+    }
+  }
+
+  /*-------Ficha de productos individual--------*/
+  .ficha {
+    padding: 18vh 0;
+    background-position: 0 -70vh;
+    &__compartir {
+      padding: 3vh 3vh;
+      &-link {
+        width: 3vh;
+        height: 3vh;
+      }
     }
   }
 
