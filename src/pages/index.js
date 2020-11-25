@@ -59,7 +59,7 @@ const IndexPage = ({ data }) => (
     <section className="contacto">
       <div className="contenedor--pequeño">
         <h2>Reciba nuestra asesoría</h2>
-        <div className="contacto__cabecera">
+        <div className="contacto__contenido">
           <p className="descripcion--grande">
             Atención personalizada sin ningún compromiso visitándonos en:
           </p>
