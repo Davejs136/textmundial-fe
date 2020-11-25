@@ -343,6 +343,241 @@ ul {
 
 /*-------------------------------------------- Mobile Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  h1 {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.45rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1vh;
+  }
+
+  h4 {
+    font-size: 1.15rem;
+  }
+
+  .contenedor,
+  .contenedor--pequeño {
+    margin: 0 2vh;
+  }
+
+  .descripcion {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  .descripcion--grande {
+    padding: 0 0 3vh 0;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+  /*----------Cabecera----------*/
+  .cabecera {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-size: 53vh;
+    &__logo {
+      flex: 0 0 55%;
+    }
+    &__nav {
+      flex: 0 0 90%;
+    }
+    &__link {
+      flex: 1 1;
+      font-size: 0.8rem;
+      margin-top: 2vh;
+      text-align: left;
+    }
+  }
+
+  /*----------Nosotros----------*/
+  .nosotros {
+    padding: 20vh 0 30vh 0;
+    background-size: 155vh;
+    .descripcion--grande {
+      flex: 0 0 100%;
+    }
+    &__slider {
+      flex: 0 0 100%;
+      img {
+        height: 28vh;
+      }
+    }
+  }
+
+  /*--------Productos--------*/
+  .productos {
+    margin-top: -20vh;
+    padding-bottom: 60vh;
+    background-position: 570% 100%;
+    background-size: 50vh;
+    .contenedor--pequeño {
+      padding: 4vh;
+    }
+
+    &__items {
+      padding-top: 6vh;
+      flex: 0 0 100%;
+    }
+    &__contenedor-imagen {
+      flex: 0.6 1;
+      padding: 0.5vh;
+    }
+    &__imagen {
+      width: 16vh;
+      height: 16vh;
+    }
+    &__nombre {
+      flex: 1 1;
+      padding-left: 2vh;
+    }
+  }
+
+  /*-------Ficha de productos individual--------*/
+  .ficha {
+    padding: 20vh 0 10vh 0;
+    background-size: 190vh;
+    background-position: 0 -50vh;
+    &__regreso {
+      flex: 0 0 100%;
+      font-size: 0.8rem;
+    }
+
+    &__informacion {
+      padding: 2.5vh 3vh;
+    }
+
+    &__col-izq {
+      flex: 1;
+    }
+
+    &__col-der {
+      flex: 0 0 100%;
+      margin-top: 5vh;
+    }
+
+    &__imagen-principal {
+      height: 30vh;
+    }
+
+    &__titulo {
+      padding: 3vh 0;
+    }
+
+    &__compartir {
+      padding: 2vh 3vh;
+      &-link {
+        width: 4.5vh;
+        height: 4.5vh;
+        margin-left: 2vh;
+        a {
+          svg {
+            width: 0.85em !important;
+            height: 0.85em;
+          }
+        }
+      }
+    }
+  }
+
+  /*--------Contacto--------*/
+  .contacto {
+    margin-top: -50vh;
+    &__contenido {
+      padding-top: 2vh;
+    }
+
+    h2 {
+      margin-right: 20vh;
+    }
+
+    .descripcion--grande {
+      flex: 0.7 1;
+    }
+
+    &__mapa {
+      flex: 0 0 100%;
+      height: 28vh;
+    }
+  }
+
+  /*--------Formulario--------*/
+  .formulario {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    &__informacion {
+      flex: 0 0 100%;
+      .descripcion {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+    &__form {
+      flex: 0 0 100%;
+      padding-top: 3vh;
+    }
+    &__input,
+    &__textarea,
+    &__boton {
+      flex: 0 0 100%;
+      padding: 1.5vh;
+      font-size: 0.9rem;
+      margin-bottom: 2vh;
+    }
+  }
+
+  /*--------Pie--------*/
+  .pie {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    background-size: 53vh;
+    &__logo {
+      flex: 0 0 45%;
+      padding-bottom: 3vh;
+    }
+
+    &__rrss {
+      flex: 0 0 55%;
+      padding-bottom: 3vh;
+    }
+
+    &__circulo {
+      width: 4vh;
+      height: 4vh;
+      margin-left: 3vh;
+      a {
+        svg {
+          width: 1.5em !important;
+          height: 1.5em;
+          margin-top: 0.5vh;
+        }
+      }
+    }
+
+    &__copy {
+      flex: 0 0 80%;
+    }
+
+    &__designers {
+      flex: 0 0 100%;
+      margin: 2vh 0 0 0;
+    }
+
+    &__novanet {
+      width: 11vh;
+      margin: 0 0 -0.7vh 1vh;
+    }
+  }
 }
 
 /*-------------------------------------------- Mobile Landscape --------------------------------------------*/
@@ -474,11 +709,11 @@ ul {
     }
 
     &__titulo {
-      padding: 3vh 5vh;
+      padding: 5vh;
     }
 
     &__compartir {
-      padding: 3vh 9vh;
+      padding: 4vh 9vh;
       &-link {
         width: 7vh;
         height: 7vh;
