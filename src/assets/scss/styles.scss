@@ -45,16 +45,12 @@ $blanco: #fff;
   flex: 3 0 0;
 }
 
-@mixin mascara {
-  clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
-}
-
 body {
   background-color: $gris1;
 }
 
 #___gatsby {
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDUzLjQgNzU3IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDUzLjQgNzU3IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiMwMDE4ODAiIHBvaW50cz0iMCw3NTcgMCwwIDEwNTMuNCwwIDkyMSw3NTcgIi8+DQo8L3N2Zz4NCg==);
   background-repeat: no-repeat;
 }
 
@@ -71,7 +67,8 @@ main {
 h1 {
   font-size: 1.8rem;
   display: none;
-  font-weight: 600;
+  font-weight: 900;
+  color: $azul1;
 }
 
 h2 {
@@ -102,12 +99,6 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: $azul1;
-}
-
-h4 {
   font-size: 1.2rem;
   font-weight: 600;
   color: $azul2;
@@ -116,6 +107,7 @@ h4 {
 .descripcion {
   font-weight: 300;
   color: $gris3;
+  line-height: 1.3rem;
 }
 
 .descripcion--grande {
@@ -142,9 +134,11 @@ ul {
       width: 100%;
     }
   }
+
   &__nav {
     @include flex;
   }
+
   &__link {
     color: $amarillo;
     font-weight: 400;
@@ -160,14 +154,16 @@ ul {
     @include flex;
     @include column-justify;
   }
+
   &__col-der {
     @include flex;
     @include column-justify;
     img {
       width: 100%;
-      @include mascara;
+      clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
     }
   }
+
   &__descripcion {
     color: $blanco;
     font-weight: 400;
@@ -204,9 +200,11 @@ ul {
     padding: 0.5vh;
     box-sizing: border-box;
   }
+
   &__imagen {
     border-radius: 50%;
   }
+
   &__nombre {
     @include col-3-4;
     padding: 0 1vh;
@@ -216,36 +214,31 @@ ul {
 /*-------Ficha de productos individual--------*/
 .ficha {
   @include flex;
-  align-items: flex-start;
+  align-items: center;
   &__individual {
     @include flex;
+    background: #fff;
+    border: #969696 1px solid;
+    border-radius: 20px;
+    margin: 0 auto;
   }
+
   &__regreso {
     font-weight: 500;
-    color: $amarillo;
-  }
-
-  &__titulo {
-    display: block;
-    color: $blanco;
-  }
-
-  &__informacion {
-    background: $blanco;
-    border: $gris2 1px solid;
-    border-radius: 20px;
-    position: relative;
+    color: $azul1;
   }
 
   &__imagen-principal {
-    @include mascara;
+    height: auto;
+    /*border: #969696 1px solid;
+    border-radius: 20px;*/
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
   }
 
   &__compartir {
     @include flex;
     align-items: center;
     font-weight: 500;
-    background: $gris1;
     &-link {
       border-radius: 50%;
       background: $azul1;
@@ -289,8 +282,8 @@ ul {
   }
 
   &__mapa {
-    @include mascara;
     background: $blanco;
+    clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
   }
 }
 
@@ -388,16 +381,23 @@ ul {
     margin: 0 auto;
   }
 
+  .descripcion {
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+  }
+
   /*--------Cabecera--------*/
   .cabecera {
     height: 15vh;
-    background-size: 67.3vw;
+    background-size: 67.5vw;
     img {
       width: 80%;
     }
+
     &__nav {
       width: 30vw;
     }
+
     &__link {
       flex: 1 0;
       align-self: center;
@@ -428,10 +428,12 @@ ul {
       width: 96%;
       padding: 6vh;
     }
+
     &__items {
       flex: 0 0 31.5%;
-      margin: 5vh 0 5vh 0;
+      margin: 7vh 0 0 0;
     }
+
     &__imagen {
       width: 15vh;
       height: 15vh;
@@ -443,34 +445,28 @@ ul {
     min-height: 65vh;
     &__regreso {
       font-size: 1rem;
-      flex: 0 100%;
     }
 
-    &__informacion {
+    &__titulo {
+      margin: 2vh 0 2.5vh 0;
+    }
+
+    &__individual {
       padding: 3vh;
-    }
-
-    &__imagen-principal {
-      height: auto;
+      width: 96%;
     }
 
     &__col-izq {
-      flex: 1;
+      flex: 1.5 0 0;
       padding-right: 7vh;
     }
 
     &__col-der {
-      flex: 1;
-    }
-
-    &__titulo {
-      padding: 3vh;
+      flex: 1 0 0;
     }
 
     &__compartir {
-      padding: 1.5vh;
-      margin: 0 4vh 0 0;
-      width: 40%;
+      padding: 2.5vh 1vh 0 0;
       &-link {
         width: 4vh;
         height: 4vh;
@@ -540,7 +536,7 @@ ul {
   .pie {
     min-height: 20vh;
     font-size: 0.8rem;
-    background-size: 60vw;
+    background-size: 60.4vw;
     &__logo {
       flex: 0 0 15%;
       padding-bottom: 2.5vh;
@@ -567,7 +563,7 @@ ul {
     }
 
     &__designers {
-      flex: 0 0 15%;
+      flex: 0 0 17%;
       p {
         margin-top: -0.5vh;
       }
@@ -576,6 +572,50 @@ ul {
     &__novanet {
       width: 10vh;
       margin: 0 0 -0.7vh 1vh;
+    }
+  }
+}
+
+/*-------------------------------------------- Desktop responsive --------------------------------------------*/
+@media only screen and (min-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
+  /*--------Principal--------*/
+  .principal {
+    height: 50vh;
+  }
+
+  /*--------Productos--------*/
+  .productos {
+    &__imagen {
+      width: 13vh;
+      height: 13vh;
+    }
+  }
+
+  /*-------Ficha de productos individual--------*/
+  .ficha {
+    &__compartir-link {
+      width: 3.5vh;
+      height: 3.5vh;
+      margin-left: 2vh;
+    }
+  }
+
+  /*--------Contacto--------*/
+  .contacto {
+    min-height: 45vh;
+  }
+
+  /*--------Pie--------*/
+  .pie {
+    background-size: 59.7vw;
+
+    &__circulo {
+      width: 3vh;
+      height: 3vh;
+    }
+
+    &__novanet {
+      width: 8vh;
     }
   }
 }

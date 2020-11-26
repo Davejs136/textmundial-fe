@@ -33,9 +33,9 @@ const IndexPage = ({ data }) => (
                     alt={item.node.frontmatter.nombre}
                   />
                 </div>
-                <h4 className="productos__nombre">
+                <h3 className="productos__nombre">
                   {item.node.frontmatter.nombre}
-                </h4>
+                </h3>
               </Link>
             </li>
           ))}

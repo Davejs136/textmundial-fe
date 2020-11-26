@@ -17,13 +17,12 @@ const ProductoTemplate = ({ data }) => {
       <section className="ficha">
         <div className="contenedor">
           <div className="ficha__individual">
-            <Link className="ficha__regreso" to="/">
-              « Ir a inicio
-            </Link>
             <div className="ficha__col-izq">
-              <h1 className="ficha__titulo">{frontmatter.nombre}</h1>
+              <Link className="ficha__regreso" to="/">
+                « Ir a inicio
+              </Link>
               <div className="ficha__informacion">
-                <h3>Descripción</h3>
+                <h2 className="ficha__titulo">{frontmatter.nombre}</h2>
                 <p className="descripcion">{frontmatter.descripcion}</p>
               </div>
             </div>
@@ -37,7 +36,7 @@ const ProductoTemplate = ({ data }) => {
                 Compartir
                 <div className="ficha__compartir-link">
                   <a
-                    href="https://www.instagram.com/texmundial/"
+                    href="#"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -46,7 +45,7 @@ const ProductoTemplate = ({ data }) => {
                 </div>
                 <div className="ficha__compartir-link">
                   <a
-                    href="https://www.instagram.com/texmundial/"
+                    href="#"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -55,7 +54,7 @@ const ProductoTemplate = ({ data }) => {
                 </div>
                 <div className="ficha__compartir-link">
                   <a
-                    href="https://wa.me/584142702886"
+                    href="#"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
