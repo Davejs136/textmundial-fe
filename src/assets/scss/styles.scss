@@ -32,36 +32,46 @@ $blanco: #fff;
   flex-wrap: wrap;
 }
 
-@mixin centro {
-  display: flex;
-  flex-wrap: wrap;
+@mixin column-justify {
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin col-1-4 {
+  flex: 1 0 0;
+}
+
+@mixin col-3-4 {
+  flex: 3 0 0;
 }
 
 @mixin mascara {
   clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
 }
 
-@mixin w-full {
-  width: 100%;
-}
-
 body {
   background-color: $gris1;
+}
+
+#___gatsby {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
+  background-repeat: no-repeat;
+  background-size: 60vw;
 }
 
 .contenedor,
 .contenedor--pequeño {
   @include flex;
-  align-items: center;
-  box-sizing: border-box;
 }
 
 h1 {
+  font-size: 1.6rem;
   display: none;
   font-weight: 600;
 }
 
 h2 {
+  font-size: 1.4rem;
   font-weight: 900;
   border-bottom: $azul2 3px solid;
   color: $azul2;
@@ -88,11 +98,13 @@ h2 {
 }
 
 h3 {
+  font-size: 1.3rem;
   font-weight: 600;
   color: $azul1;
 }
 
 h4 {
+  font-size: 1.2rem;
   font-weight: 600;
   color: $azul2;
 }
@@ -111,27 +123,21 @@ ul {
   @include flex;
 }
 
-.gatsby-image-wrapper {
-  @include w-full;
-}
-
 /*--------Cabecera--------*/
 .cabecera {
-  position: fixed;
-  z-index: 4;
+  @include flex;
+  @include column-justify;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
   background-repeat: no-repeat;
-  @include w-full;
+  background-size: 75vw;
   &__logo {
     img {
-      @include w-full;
+      width: 100%;
     }
   }
-
   &__nav {
     @include flex;
   }
-
   &__link {
     color: $amarillo;
     font-weight: 400;
@@ -139,35 +145,35 @@ ul {
   }
 }
 
-/*--------Slider--------*/
-.slider {
-  display: none;
-}
-
 /*--------nosotros--------*/
-.nosotros {
+.principal {
   @include flex;
-  align-items: center;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
-  background-repeat: no-repeat;
-  .descripcion--grande {
-    color: $blanco;
+  &__col-izq {
+    flex: 0 0 40%;
+    @include flex;
+    @include column-justify;
   }
-  &__slider {
+  &__col-der {
+    @include flex;
+    @include column-justify;
+    flex: 0 0 60%;
     img {
-      @include w-full;
+      width: 100%;
       @include mascara;
     }
   }
+  &__descripcion {
+    color: $blanco;
+    font-weight: 400;
+  }
 }
 
-/*--------Productos--------*/
 .productos {
   @include flex;
-  align-content: flex-start;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCA0MTAuMSA5OTAuMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDEwLjEgOTkwLjEiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBvbHlnb24gZmlsbD0iIzAwMTg4MCIgcG9pbnRzPSI0MTAuMSw5OTAuMSAwLDk5MC4xIDE4Mi4xLDAgNDEwLjEsOTMgIi8+DQo8L3N2Zz4NCg==);
-  background-repeat: no-repeat;
-  .contenedor--pequeño {
+  &__contenedor--interno {
+    margin: 0 auto;
+    width: 96%;
+    padding: 6vh;
     background: $blanco;
     border: $gris3 1px solid;
     border-radius: 20px;
@@ -182,1144 +188,97 @@ ul {
   }
 
   &__contenedor-imagen {
+    @include col-1-4;
     border: $gris3 solid 1px;
     border-radius: 50%;
+    padding: 0.5vh;
+    box-sizing: border-box;
   }
-
   &__imagen {
     border-radius: 50%;
+  }
+  &__nombre {
+    @include col-3-4;
+    padding: 0 1vh;
   }
 }
 
 /*-------Ficha de productos individual--------*/
 .ficha {
-  @include flex;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
-  background-repeat: no-repeat;
-  &__individual {
-    @include flex;
-  }
-  &__regreso {
-    font-weight: 500;
-    color: $amarillo;
-  }
-
-  &__titulo {
-    display: block;
-    color: $blanco;
-  }
-
-  &__informacion {
-    background: $blanco;
-    border: $gris2 1px solid;
-    border-radius: 20px;
-    position: relative;
-  }
-
-  &__imagen-principal {
-    @include mascara;
-  }
-
-  &__precio {
-    display: none;
-  }
-
-  &__compartir {
-    @include flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-weight: 500;
-    &-link {
-      border-radius: 50%;
-      background: $azul1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      a {
-        color: $amarillo;
-      }
-    }
-  }
 }
 
 /*--------Contacto--------*/
 .contacto {
-  z-index: 2;
-  &__contenido {
-    @include flex;
-    @include w-full;
-    align-items: center;
-    .descripcion--grande {
-      color: $azul1;
-    }
-  }
-
-  &__mapa {
-    @include mascara;
-    background: $blanco;
-  }
-}
-
-/*--------Formulario--------*/
-.formulario {
-  @include flex;
-  .contenedor {
-    align-items: flex-start;
-  }
-
-  &__informacion {
-    .descripcion {
-      color: $gris3;
-      font-weight: 400;
-    }
-  }
-
-  &__whatsapp {
-    color: $verde;
-  }
-
-  &__form {
-    @include flex;
-    @include w-full;
-    justify-content: space-between;
-  }
-
-  &__input,
-  &__textarea {
-    font-weight: 400;
-    color: $gris3;
-    border: $gris3 1px solid;
-    background: $blanco;
-    border-radius: 12px;
-    &::placeholder {
-      color: $gris3;
-      font-weight: 400;
-    }
-  }
-
-  &__boton {
-    font-weight: 400;
-    cursor: pointer;
-    color: $blanco;
-    background: $azul1;
-    border-radius: 12px;
-    border: none;
-  }
 }
 
 /*--------Pie--------*/
 .pie {
-  font-weight: 200;
-  color: $blanco;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
-  background-repeat: no-repeat;
-  @include flex;
-  &__logo {
-    img {
-      @include w-full;
-    }
-  }
-
-  &__rrss {
-    .pie__circulo {
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-
-  &__circulo {
-    border-radius: 50%;
-    background: $amarillo;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    a {
-      color: $azul1;
-    }
-  }
 }
 
 /*-------------------------------------------- Mobile Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
-  h1 {
-    font-size: 1.6rem;
-    line-height: 2.1rem;
-  }
-
-  h2 {
-    font-size: 1.45rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1vh;
-  }
-
-  h4 {
-    font-size: 1.15rem;
-  }
-
-  .contenedor,
-  .contenedor--pequeño {
-    margin: 0 2vh;
-  }
-
-  .descripcion {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-  }
-
-  .descripcion--grande {
-    padding: 0 0 3vh 0;
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-  }
-
-  /*----------Cabecera----------*/
-  .cabecera {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    background-size: 53vh;
-    &__logo {
-      flex: 0 0 55%;
-    }
-    &__nav {
-      flex: 0 0 90%;
-    }
-    &__link {
-      flex: 1 1;
-      font-size: 0.8rem;
-      margin-top: 2vh;
-      text-align: left;
-    }
-  }
-
-  /*----------Nosotros----------*/
-  .nosotros {
-    padding: 20vh 0 30vh 0;
-    background-size: 155vh;
-    .descripcion--grande {
-      flex: 0 0 100%;
-    }
-    &__slider {
-      flex: 0 0 100%;
-      img {
-        height: 28vh;
-      }
-    }
-  }
-
-  /*--------Productos--------*/
-  .productos {
-    margin-top: -20vh;
-    padding-bottom: 60vh;
-    background-position: 570% 100%;
-    background-size: 50vh;
-    .contenedor--pequeño {
-      padding: 4vh;
-    }
-
-    &__items {
-      padding-top: 6vh;
-      flex: 0 0 100%;
-    }
-    &__contenedor-imagen {
-      flex: 0.6 1;
-      padding: 0.5vh;
-    }
-    &__imagen {
-      width: 16vh;
-      height: 16vh;
-    }
-    &__nombre {
-      flex: 1 1;
-      padding-left: 2vh;
-    }
-  }
-
-  /*-------Ficha de productos individual--------*/
-  .ficha {
-    padding: 20vh 0 10vh 0;
-    background-size: 190vh;
-    background-position: 0 -50vh;
-    &__regreso {
-      flex: 0 0 100%;
-      font-size: 0.8rem;
-    }
-
-    &__informacion {
-      padding: 2.5vh 3vh;
-    }
-
-    &__col-izq {
-      flex: 1;
-    }
-
-    &__col-der {
-      flex: 0 0 100%;
-      margin-top: 5vh;
-    }
-
-    &__imagen-principal {
-      height: 30vh;
-    }
-
-    &__titulo {
-      padding: 3vh 0;
-    }
-
-    &__compartir {
-      padding: 2vh 3vh;
-      &-link {
-        width: 4.5vh;
-        height: 4.5vh;
-        margin-left: 2vh;
-        a {
-          svg {
-            width: 0.85em !important;
-            height: 0.85em;
-          }
-        }
-      }
-    }
-  }
-
-  /*--------Contacto--------*/
-  .contacto {
-    margin-top: -50vh;
-    &__contenido {
-      padding-top: 3vh;
-    }
-
-    h2 {
-      margin-right: 20vh;
-    }
-
-    .descripcion--grande {
-      flex: 0.7 1;
-    }
-
-    &__mapa {
-      flex: 0 0 100%;
-      height: 28vh;
-    }
-  }
-
-  /*--------Formulario--------*/
-  .formulario {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    &__informacion {
-      flex: 0 0 100%;
-      .descripcion {
-        text-align: left;
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
-    }
-    &__form {
-      flex: 0 0 100%;
-      padding-top: 3vh;
-    }
-    &__input,
-    &__textarea,
-    &__boton {
-      flex: 0 0 100%;
-      padding: 1.5vh;
-      font-size: 0.9rem;
-      margin-bottom: 2vh;
-    }
-  }
-
-  /*--------Pie--------*/
-  .pie {
-    padding-top: 3vh;
-    padding-bottom: 3vh;
-    font-size: 0.7rem;
-    line-height: 1rem;
-    background-size: 53vh;
-    &__logo {
-      flex: 0 0 45%;
-      padding-bottom: 3vh;
-    }
-
-    &__rrss {
-      flex: 0 0 55%;
-      padding-bottom: 3vh;
-    }
-
-    &__circulo {
-      width: 4vh;
-      height: 4vh;
-      margin-left: 3vh;
-      a {
-        svg {
-          width: 1.5em !important;
-          height: 1.5em;
-          margin-top: 0.5vh;
-        }
-      }
-    }
-
-    &__copy {
-      flex: 0 0 80%;
-    }
-
-    &__designers {
-      flex: 0 0 100%;
-      margin: 2vh 0 0 0;
-    }
-
-    &__novanet {
-      width: 11vh;
-      margin: 0 0 -0.7vh 1vh;
-    }
-  }
 }
 
 /*-------------------------------------------- Mobile Landscape --------------------------------------------*/
 @media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-  h1 {
-    font-size: 1.7rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1vh;
-  }
-
-  h4 {
-    font-size: 1rem;
-  }
-
-  .contenedor,
-  .contenedor--pequeño {
-    margin: 0 5vh;
-  }
-
-  .descripcion {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-  }
-
-  .descripcion--grande {
-    padding: 0 0 8vh 8vh;
-    text-align: left;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-  }
-
-  /*----------Cabecera----------*/
-  .cabecera {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    background-size: 160vh;
-    &__logo {
-      flex: 0.25 1;
-    }
-    &__nav {
-      flex: 0.6 1;
-      margin-left: 4vh;
-    }
-    &__link {
-      flex: 1 1;
-      font-size: 0.75rem;
-    }
-  }
-
-  /*----------Nosotros----------*/
-  .nosotros {
-    padding: 25vh 0 35vh 0;
-    background-size: 175vh;
-    .descripcion--grande {
-      flex: 0.7;
-    }
-    &__slider {
-      flex: 0 0 100%;
-      img {
-        height: 45vh;
-      }
-    }
-  }
-
-  /*--------Productos--------*/
-  .productos {
-    margin-top: -20vh;
-    padding-bottom: 60vh;
-    background-position: bottom right;
-    background-size: 50vh;
-    .contenedor--pequeño {
-      padding: 8vh 4vh 8vh 6vh;
-    }
-
-    &__items {
-      padding-top: 12vh;
-      flex: 0 0 50%;
-    }
-    &__contenedor-imagen {
-      flex: 0.5 1;
-      padding: 1vh;
-    }
-    &__imagen {
-      width: 23.2vh;
-      height: 23.2vh;
-    }
-    &__nombre {
-      flex: 1 1;
-      padding-left: 2vh;
-      padding-right: 5vh;
-    }
-  }
-
-  /*-------Ficha de productos individual--------*/
-  .ficha {
-    padding: 30vh 0 15vh 0;
-    background-size: 180vh;
-    background-position: 0 -50vh;
-    &__regreso {
-      flex: 0 0 100%;
-      padding-left: 5vh;
-      font-size: 0.7rem;
-    }
-
-    &__informacion {
-      padding: 5vh;
-    }
-
-    &__col-izq {
-      flex: 1;
-      padding-right: 6vh;
-      min-height: 48vh;
-    }
-
-    &__col-der {
-      flex: 0 0 95%;
-      margin-top: 10vh;
-    }
-
-    &__imagen-principal {
-      height: 60vh;
-    }
-
-    &__titulo {
-      padding: 5vh;
-    }
-
-    &__compartir {
-      padding: 4vh 9vh;
-      &-link {
-        width: 7vh;
-        height: 7vh;
-        margin-left: 4vh;
-        a {
-          svg {
-            width: 0.85em !important;
-            height: 0.85em;
-          }
-        }
-      }
-    }
-  }
-
-  /*--------Contacto--------*/
-  .contacto {
-    margin-top: -45vh;
-
-    &__contenido {
-      padding-top: 6vh;
-    }
-
-    .descripcion--grande {
-      flex: 0.7;
-    }
-
-    &__mapa {
-      flex: 0 0 100%;
-      height: 45vh;
-    }
-  }
-
-  /*--------Formulario--------*/
-  .formulario {
-    margin-top: 20vh;
-    margin-bottom: 15vh;
-    &__informacion {
-      flex: 1 1;
-      .descripcion {
-        text-align: right;
-        font-size: 1.1rem;
-        line-height: 1.7rem;
-      }
-    }
-    &__form {
-      flex: 1 1;
-      padding-left: 5vh;
-    }
-    &__input,
-    &__textarea,
-    &__boton {
-      flex: 0 0 100%;
-      padding: 2vh 4vh;
-      font-size: 0.9rem;
-      margin-bottom: 5vh;
-    }
-  }
-
-  /*--------Pie--------*/
-  .pie {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    font-size: 0.7rem;
-    background-size: 148vh;
-    &__logo {
-      flex: 0 0 20%;
-      padding-bottom: 4vh;
-    }
-
-    &__rrss {
-      flex: 0 0 50%;
-      padding-bottom: 4vh;
-    }
-
-    &__circulo {
-      width: 6vh;
-      height: 6vh;
-      margin-left: 5vh;
-      a {
-        svg {
-          width: 1.3em !important;
-          height: 1.3em;
-        }
-      }
-    }
-
-    &__copy {
-      flex: 0 0 80%;
-    }
-
-    &__designers {
-      flex: 0 0 80%;
-      margin: 3vh 0 0 0;
-    }
-
-    &__novanet {
-      width: 17vh;
-      margin: 0 0 -1vh 1vh;
-    }
-  }
 }
 
 /*-------------------------------------------- Tablet Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
-  .descripcion {
-    line-height: 1.3rem;
-  }
-
-  .descripcion--grande {
-    padding: 0 3vh 0 0;
-    text-align: right;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  /*----------Cabecera----------*/
-  .cabecera {
-    background-size: 65vh;
-    &__logo {
-      flex: 0.3 1;
-    }
-    &__nav {
-      flex: 0.6 1;
-    }
-    &__link {
-      font-size: 0.9rem;
-      text-align: center;
-      margin: 0;
-    }
-  }
-
-  /*----------Nosotros----------*/
-  .nosotros {
-    background-size: 90vh;
-    background-position: 140% 0;
-    .descripcion--grande {
-      flex: 0.75;
-    }
-    &__slider {
-      flex: 1;
-      img {
-        height: 20vh;
-      }
-    }
-  }
-
-  /*--------Productos--------*/
-  .productos {
-    margin-top: -15vh;
-    padding-bottom: 40vh;
-    background-position: 140% 100%;
-    background-size: 40vh;
-    &__items {
-      flex: 0 0 50%;  
-    }
-    &__contenedor-imagen {
-      padding: 0.3vh;
-    }
-    &__imagen {
-      width: 10.4vh;
-      height: 10.4vh;
-    }
-    &__nombre {
-      padding-left: 1vh;
-      padding-right: 2vh;
-    }
-  }
-
-  /*-------Ficha de productos individual--------*/
-  .ficha {
-    padding: 15vh 0;
-    background-size: 76vh;
-    background-position: -3vh -22vh;
-    &__regreso {
-      padding-left: 2vh;
-    }
-
-    &__informacion {
-      padding:2vh;
-    }
-
-    &__imagen-principal {
-      height: auto;
-    }
-
-    &__col-izq {
-      padding-right: 5vh;
-      min-height: 53vh;
-  }
-
-    &__col-der {
-      flex: 1;
-      margin-top: -2.5vh;
-    }
-
-    &__titulo {
-      padding: 2vh;
-    }
-
-    &__compartir {
-      padding: 2vh;
-      &-link {
-        width: 3vh;
-        height: 3vh;
-      }
-    }
-  }
-
-  /*--------Contacto--------*/
-  .contacto {
-    margin-top: -32vh;
-    .descripcion--grande {
-      flex: 0.6;
-    }
-
-    &__mapa {
-      flex: 1 1;
-      height: 20vh;
-    }
-  }
-
-  /*--------Formulario--------*/
-  .formulario {
-    &__informacion {
-      .descripcion {
-        font-size: 1.2rem;
-        line-height: 1.6rem;
-      }
-    }
-    &__input {
-      margin-bottom: 2vh;
-    }
-
-    &__input,
-    &__textarea,
-    &__boton {
-      flex: 0 0 48.5%;
-      padding: 1vh;
-    }
-  }
-
-  /*--------Pie--------*/
-  .pie {
-    font-size: 0.8rem;
-    background-size: 58vh;
-    &__logo {
-      flex: 0 0 25%;
-      padding-bottom: 2vh;
-    }
-
-    &__rrss {
-      padding-bottom: 2vh;
-    }
-
-    &__circulo {
-      width: 3vh;
-      height: 3vh;
-      margin-left: 3vh;
-      a {
-        svg {
-          margin-top:0.3vh;
-        }
-      }
-    }
-
-    &__novanet {
-      width: 8vh;
-      margin: 0 0 -0.7vh 0.4vh;
-    }
-  }
 }
-
 /*-------------------------------------------- Tablet Landscape --------------------------------------------*/
 @media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.7rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  h4 {
-    font-size: 1.2rem;
-  }
-
-  .descripcion {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-  }
-
-  .descripcion--grande {
-    padding: 0 5vh 0 0;
-    text-align: right;
-    font-size: 1.6rem;
-    line-height: 2.2rem;
-  }
-
-  /*----------Cabecera----------*/
-  .cabecera {
-    background-size: 111vh;
-    &__nav {
-      flex: 0.5 1;
-    }
-    &__link {
-      font-size: 1rem;
-    }
-  }
-
-  /*----------Nosotros----------*/
-  .nosotros {
-    background-size: 120vh;
-    &__slider {
-      flex: 1;
-      img {
-        height: 33vh;
-      }
-    }
-  }
-
-  /*--------Productos--------*/
-  .productos {
-    &__items {
-      padding-top: 9vh;
-      flex: 0 0 33.333333%;
-    }
-    &__contenedor-imagen {
-      padding: 0.5vh;
-    }
-    &__imagen {
-      width: 16vh;
-      height: 16vh;
-    }
-    &__nombre {
-      padding-left: 1vh;
-      padding-right: 4vh;
-    }
-  }
-
-  /*-------Ficha de productos individual--------*/
-  .ficha {
-    padding: 25vh 0;
-    background-size: 130vh;
-    background-position: 0 -35vh;
-    &__regreso {
-      padding-left: 3vh;
-      font-size: 1rem;
-    }
-
-    &__informacion {
-      padding: 3vh;
-    }
-
-    &__imagen-principal {
-      height: auto;
-    }
-
-    &__col-der {
-      flex: 1;
-      margin-top: -2.5vh;
-    }
-
-    &__titulo {
-      padding: 3vh;
-    }
-
-    &__compartir {
-      padding: 2vh 3vh;
-      &-link {
-        width: 4vh;
-        height: 4vh;
-        margin-left: 2vh;
-        a {
-          svg {
-            width: 0.95em !important;
-            height: 0.95em;
-          }
-        }
-      }
-    }
-  }
-
-  /*--------Contacto--------*/
-  .contacto {
-    &__contenido {
-      padding-top: 0;
-    }
-    .descripcion--grande {
-      flex: 0.6;
-    }
-
-    &__mapa {
-      flex: 1;
-      height: 33vh;
-    }
-  }
-
-  /*--------Formulario--------*/
-  .formulario {
-    &__informacion {
-      flex: 0.6 1;
-      .descripcion {
-        font-size: 1.2rem;
-        line-height: 1.6rem;
-      }
-    }
-    &__input {
-      margin-bottom: 3vh;
-    }
-
-    &__textarea,
-    &__boton {
-      margin-bottom: 0;
-    }
-
-    &__input,
-    &__textarea,
-    &__boton {
-      flex: 0 0 48%;
-      padding: 1vh 2vh;
-    }
-  }
-
-  /*--------Pie--------*/
-  .pie {
-    font-size: 0.8rem;
-    background-size: 108vh;
-    &__logo {
-      flex: 0 0 17%;
-      padding-bottom: 2vh;
-    }
-
-    &__rrss {
-      padding-bottom: 2vh;
-    }
-
-    &__circulo {
-      width: 4vh;
-      height: 4vh;
-      margin-left: 3vh;
-    }
-
-    &__copy {
-      flex: 0 0 55%;
-    }
-
-    &__designers {
-      flex: 0 0 20%;
-      margin: 0 0 0.7vh;
-    }
-
-    &__novanet {
-      width: 10vh;
-      margin: 0 0 -0.7vh 1vh;
-    }
-  }
 }
 
 /*-------------------------------------------- Desktop responsive --------------------------------------------*/
 @media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
-  .contenedor,
-  .contenedor--pequeño {
-    margin: 0 auto;
+  main {
+    margin-top: 15vh;
   }
-
   .contenedor {
     width: 1280px;
-    padding: 0 2vh;
+    margin: 0 auto;
   }
-
-  .contenedor--pequeño {
-    width: 1130px;
-    padding: 8vh 4vh 8vh 6vh;
-  }
-
-  /*----------Cabecera----------*/
   .cabecera {
-    background-size: 138vh;
-    &__logo {
-      flex: 0.2 1;
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    img {
+      width: 80%;
+    }
+    &__nav {
+      width: 30vw;
+    }
+    &__link {
+      flex: 1 0;
+      align-self: center;
     }
   }
-
-  /*----------Nosotros----------*/
-  .nosotros {
-    background-size: 152vh;
-    .descripcion--grande {
-      flex: 0.6;
+  .principal {
+    height: 60vh;
+    &__descripcion {
+      text-align: right;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
     }
   }
-
-  /*--------Productos--------*/
   .productos {
-    padding-bottom: 70vh;
-  }
-
-  /*-------Ficha de productos individual--------*/
-  .ficha {
-    background-size: 145vh;
-    &__compartir {
-      padding: 3vh 5vh;
+    &__lista {
+      @include flex;
+      justify-content: flex-start;
     }
-  }
-
-  /*--------Contacto--------*/
-  .contacto {
-    margin-top: -55vh;
-  }
-
-  /*--------Formulario--------*/
-  .formulario {
-    margin-top: 15vh;
-    &__informacion {
-      flex: 0.65 1;
-      .descripcion {
-        font-size: 1.36rem;
-        line-height: 2rem;
-      }
-    }
-  }
-
-  /*--------Pie--------*/
-  .pie {
-    background-size: 120vh;
-    &__logo {
-      flex: 0 0 14%;
-    }
-
-    &__copy {
-      flex: 0 0 42%;
-    }
-  }
-}
-
-/*-------------------------------------------- Desktop responsive --------------------------------------------*/
-@media only screen and (min-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
-  /*----------Cabecera----------*/
-  .cabecera {
-    background-size: 110vh;
-  }
-
-  /*----------Nosotros----------*/
-  .nosotros {
-    padding: 18vh 0;
-    background-size: 120vh;
-    .descripcion--grande {
-      flex: 0.6;
-    }
-    &__slider {
-      flex: 1;
-      img {
-        height: 24vh;
-      }
-    }
-  }
-
-  /*--------Productos--------*/
-  .productos {
-    margin-top: -15vh;
-    padding-bottom: 50vh;
     &__items {
-      padding-top: 7vh;
+      flex: 0 0 31.5%;
+      margin: 5vh 0 5vh 0;
     }
     &__imagen {
-      width: 11.7vh;
-      height: 11.7vh;
+      width: 15vh;
+      height: 15vh;
     }
-    .productos__nombre {
-      padding-right: 1vh;
-    }
-  }
+    &__nombre {
 
-  /*-------Ficha de productos individual--------*/
-  .ficha {
-    padding: 18vh 0;
-    background-position: 0 -70vh;
-    &__compartir {
-      padding: 3vh 3vh;
-      &-link {
-        width: 3vh;
-        height: 3vh;
-      }
-    }
-  }
-
-  /*--------Contacto--------*/
-  .contacto {
-    margin-top: -45vh;
-    &__mapa {
-      height: 24vh;
-    }
-  }
-
-  /*--------Pie--------*/
-  .pie {
-    background-size: 108vh;
-    &__circulo {
-      width: 3vh;
-      height: 3vh;
-    }
-
-    &__novanet {
-      width: 8vh;
     }
   }
 }

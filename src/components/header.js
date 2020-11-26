@@ -1,7 +1,5 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-// Imagen
 import Logo from "../assets/images/tm-logo.svg"
 
 const Header = () => (
@@ -9,7 +7,7 @@ const Header = () => (
     <div className="contenedor">
       <div className="cabecera__logo">
         <Link to="/">
-          <img src={Logo} alt="logo" className="logo" />
+          <img src={Logo} alt="logo" />
         </Link>
       </div>
       <nav className="cabecera__nav">
@@ -27,12 +25,5 @@ const Header = () => (
   </header>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
