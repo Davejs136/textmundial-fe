@@ -15,8 +15,7 @@ const IndexPage = ({ data }) => (
         </p>
       </div>
       <div className="principal__col-der">
-          <img src={principal} alt="otra imagen" />
-
+        <img src={principal} alt="otra imagen" />
       </div>
     </section>
 
@@ -45,21 +44,24 @@ const IndexPage = ({ data }) => (
     </section>
 
     <section className="contacto contenedor">
-      <div className="contenedor--pequeño">
+      <div className="contacto__contenido">
         <h2>Reciba nuestra asesoría</h2>
-        <div className="contacto__contenido">
-          <p className="descripcion--grande">
-            Atención personalizada sin ningún compromiso visitándonos en:
-          </p>
-          <div className="contacto__mapa"></div>
+        <div className="contacto__columnas">
+          <div className="contacto__col-izq">
+            <p className="contacto__descripcion">
+              Atención personalizada sin ningún compromiso visitándonos en:
+            </p>
+          </div>
+          <div className="contacto__col-der">
+            <div className="contacto__mapa"></div>
+          </div>
         </div>
-      </div>
+        </div>
     </section>
 
     <section className="formulario contenedor">
-      <div className="contenedor">
         <div className="formulario__informacion">
-          <p className="descripcion">
+          <p className="formulario__descripcion">
             Consúltenos enviándonos un mensaje a WhatsApp{" "}
             <a
               className="formulario__whatsapp"
@@ -95,7 +97,6 @@ const IndexPage = ({ data }) => (
             Enviar mensaje
           </button>
         </form>
-      </div>
     </section>
   </Layout>
 )
