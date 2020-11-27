@@ -9,13 +9,15 @@ const IndexPage = ({ data }) => (
   <Layout>
     <h1>Texmundial</h1>
     <section className="principal contenedor">
-      <div className="principal__col-izq">
-        <p className="principal__descripcion">
-          Somos distribuidores del mejor surtido de telas para trajes de baño
-        </p>
-      </div>
-      <div className="principal__col-der">
-        <img src={principal} alt="otra imagen" />
+      <div className="principal__columnas">
+        <div className="principal__col-izq">
+          <p className="principal__descripcion">
+            Somos distribuidores del mejor surtido de telas para trajes de baño
+          </p>
+        </div>
+        <div className="principal__col-der">
+          <img src={principal} alt="otra imagen" />
+        </div>
       </div>
     </section>
 
@@ -56,7 +58,7 @@ const IndexPage = ({ data }) => (
             <div className="contacto__mapa"></div>
           </div>
         </div>
-        </div>
+      </div>
     </section>
 
     <section className="formulario contenedor">
@@ -98,7 +100,7 @@ const IndexPage = ({ data }) => (
             Enviar mensaje
           </button>
         </form>
-        </div>
+      </div>
     </section>
   </Layout>
 )
