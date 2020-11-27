@@ -60,6 +60,7 @@ const IndexPage = ({ data }) => (
     </section>
 
     <section className="formulario contenedor">
+      <div className="formulario__contenido">
         <div className="formulario__informacion">
           <p className="formulario__descripcion">
             Consúltenos enviándonos un mensaje a WhatsApp{" "}
@@ -97,6 +98,7 @@ const IndexPage = ({ data }) => (
             Enviar mensaje
           </button>
         </form>
+        </div>
     </section>
   </Layout>
 )

@@ -36,7 +36,7 @@ const ProductoTemplate = ({ data }) => {
                 Compartir
                 <div className="ficha__compartir-link">
                   <a
-                    href="#"
+                    href="/"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -45,7 +45,7 @@ const ProductoTemplate = ({ data }) => {
                 </div>
                 <div className="ficha__compartir-link">
                   <a
-                    href="#"
+                    href="/"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
@@ -54,7 +54,7 @@ const ProductoTemplate = ({ data }) => {
                 </div>
                 <div className="ficha__compartir-link">
                   <a
-                    href="#"
+                    href="/"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
