@@ -1,29 +1,51 @@
-import { Link } from "gatsby"
 import React from "react"
-import Logo from "../assets/images/tm-logo.svg"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import { StaticQuery, graphql } from "gatsby"
 
 const Header = () => (
-  <header className="cabecera">
-    <div className="contenedor">
-      <div className="cabecera__logo">
-        <Link to="/">
-          <img src={Logo} alt="logo" />
-        </Link>
-      </div>
-      <nav className="cabecera__nav">
-        <Link to="#nosotros" className="cabecera__link">
-          Nosotros
-        </Link>
-        <Link to="#productos" className="cabecera__link">
-          Productos
-        </Link>
-        <Link to="#contacto" className="cabecera__link">
-          Contacto
-        </Link>
-      </nav>
-    </div>
-  </header>
+  <StaticQuery
+    query={graphql`
+      query {
+        logo: file(relativePath: { eq: "tm-logo.svg" }) {
+          publicURL
+        }
+      }
+    `}
+    render={data => (
+      <header className="cabecera">
+        <div className="contenedor">
+          <div className="cabecera__logo">
+            <button
+              className="cabecera__link"
+              onClick={() => scrollTo("#Principal")}
+            >
+              <img src={data.logo.publicURL} alt="logo" />
+            </button>
+          </div>
+          <nav className="cabecera__nav">
+            <button
+              className="cabecera__link"
+              onClick={() => scrollTo("#Productos")}
+            >
+              Productos
+            </button>
+            <button
+              className="cabecera__link"
+              onClick={() => scrollTo("#Contacto")}
+            >
+              Nosotros
+            </button>
+            <button
+              className="cabecera__link"
+              onClick={() => scrollTo("#Formulario")}
+            >
+              Contacto
+            </button>
+          </nav>
+        </div>
+      </header>
+    )}
+  />
 )
-
 
 export default Header

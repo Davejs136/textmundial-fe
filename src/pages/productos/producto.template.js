@@ -2,6 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // @fortawesome libraries
 import { library } from "@fortawesome/fontawesome-svg-core"
@@ -14,6 +15,11 @@ const ProductoTemplate = ({ data }) => {
   const { frontmatter } = markdownRemark
   return (
     <Layout>
+      <SEO
+        title={frontmatter.nombre}
+        description={frontmatter.descripcion}
+        image={frontmatter.imagen.childImageSharp.fluid}
+      />
       <section className="ficha">
         <div className="contenedor">
           <div className="ficha__individual">
@@ -35,29 +41,17 @@ const ProductoTemplate = ({ data }) => {
               <div className="ficha__compartir">
                 Compartir
                 <div className="ficha__compartir-link">
-                  <a
-                    href="/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
+                  <a href="/" rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon icon={["fab", "instagram"]} />
                   </a>
                 </div>
                 <div className="ficha__compartir-link">
-                  <a
-                    href="/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
+                  <a href="/" rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon icon={["fab", "twitter"]} />
                   </a>
                 </div>
                 <div className="ficha__compartir-link">
-                  <a
-                    href="/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
+                  <a href="/" rel="noopener noreferrer" target="_blank">
                     <FontAwesomeIcon icon={["fab", "whatsapp"]} />
                   </a>
                 </div>

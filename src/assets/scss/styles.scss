@@ -45,6 +45,13 @@ $blanco: #fff;
   flex: 3 0 0;
 }
 
+@mixin contenedor-blanco {
+  margin: 0 auto;
+  background: $blanco;
+  border: $gris3 1px solid;
+  border-radius: 15px;
+}
+
 body {
   background-color: $gris1;
 }
@@ -69,7 +76,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 900;
   border-bottom: $azul2 3px solid;
   color: $azul2;
@@ -96,7 +103,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: $azul2;
 }
@@ -120,12 +127,13 @@ ul {
   @include flex;
   @include column-justify;
   width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
-  background-repeat: no-repeat;
+  background-color: $azul2;
   position: fixed;
   z-index: 3;
   top: 0;
   &__logo {
+    background-color: transparent;
+    border: 0;
     img {
       width: 100%;
     }
@@ -136,19 +144,23 @@ ul {
   }
 
   &__link {
+    cursor: pointer;
     color: $amarillo;
     font-weight: 400;
     align-self: center;
+    background-color: transparent;
+    border: 0;
   }
 }
 
-/*--------nosotros--------*/
+/*--------Principal--------*/
 .principal {
   align-items: center;
   &__columnas {
     @include flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
   &__col-der {
     img {
@@ -163,21 +175,40 @@ ul {
   }
 }
 
+/*--------nosotros--------*/
+.nosotros {
+  @include flex;
+  h2 {
+    display: none;
+  }
+  &__contenedor--interno {
+    @include contenedor-blanco;
+    height: fit-content;
+  }
+  &__contenido {
+    @include flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &__columnas {
+    @include flex;
+  }
+  &__col-der,
+  &__col-izq {
+    @include flex;
+  }
+}
+
 /*--------producto--------*/
 .productos {
   @include flex;
   &__contenedor--interno {
-    margin: 0 auto;
-    background: $blanco;
-    border: $gris3 1px solid;
-    border-radius: 20px;
+    @include contenedor-blanco;
   }
-
   &__lista {
     @include flex;
     justify-content: flex-start;
   }
-
   &__items {
     a {
       @include flex;
@@ -185,14 +216,12 @@ ul {
       color: $azul1;
     }
   }
-
   &__contenedor-imagen {
     border: $gris3 solid 1px;
     border-radius: 50%;
     padding: 0.5vh;
     box-sizing: border-box;
   }
-
   &__imagen {
     border-radius: 50%;
   }
@@ -206,7 +235,7 @@ ul {
     @include flex;
     background: #fff;
     border: #969696 1px solid;
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 0 auto;
   }
 
@@ -262,11 +291,6 @@ ul {
     color: $azul1;
     font-weight: 400;
   }
-
-  &__mapa {
-    background: $blanco;
-    clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
-  }
 }
 
 /*--------Formulario--------*/
@@ -281,7 +305,7 @@ ul {
   }
   &__descripcion {
     color: $gris3;
-    font-weight: 400;
+    font-weight: 300;
   }
 
   &__whatsapp {
@@ -339,11 +363,11 @@ ul {
 /*-------------------------------------------- Mobile Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 
   .descripcion {
@@ -352,13 +376,13 @@ ul {
   }
 
   #___gatsby {
-    background-size: 95vw;
+    background-size: 104vw;
   }
 
   main {
-    margin-top: 15vh;
+    margin-top: 13vh;
     background-size: 65vw;
-    background-position: 195% 83%;
+    background-position: 130% 82%;
   }
 
   .contenedor {
@@ -367,62 +391,75 @@ ul {
 
   /*--------Cabecera--------*/
   .cabecera {
-    height: 15vh;
-    background-size: 100vw;
+    height: 13vh;
     &__logo {
-      flex: 0 0 50%;
+      width: 40%;
+      margin: 0 auto;
     }
 
     &__nav {
       padding-top: 2vh;
-      flex: 0 0 100%;
+      width: 100%;
     }
 
     &__link {
-      flex: 1 0;
+      flex: 0 0 31.5%;
       font-size: 0.7rem;
-      text-align: left;
+      text-align: center;
     }
   }
 
   /*--------Principal--------*/
   .principal {
-    height: 60vh;
+    height: 50vh;
     &__descripcion {
-      text-align: left;
+      text-align: center;
       font-size: 1.25rem;
       line-height: 1.8rem;
     }
 
     &__col-izq {
-      flex: 0 0 90%;
       margin-bottom: 5vh;
+    }
+    &__col-der {
+      width: 100%;
+      .gatsby-image-wrapper {
+        width: 100%;
+      }
     }
   }
 
   /*--------Productos--------*/
   .productos {
     &__contenedor--interno {
-      padding: 4vh 3vh 5vh 3vh;
+      padding: 3vh;
+    }
+    &__lista {
+      @include flex;
+      justify-content: space-between;
     }
 
     &__items {
-      flex: 0 0 100%;
+      flex: 0 0 50%;
       margin: 7vh 0 0 0;
     }
 
     &__contenedor-imagen {
-      flex: 1.5 0;
+      width: 17.25vh;
+      height: 17.25vh;
+      margin: 0 auto;
     }
 
     &__nombre {
       @include col-3-4;
-      padding: 0 2vh;
+      padding: 1.5vh 2vh;
+      text-align: center;
     }
 
     &__imagen {
-      width: 15vh;
-      height: 15vh;
+      width: 16vh;
+      height: 16vh;
+      margin: 0 auto;
     }
   }
 
@@ -465,9 +502,21 @@ ul {
     }
   }
 
+  /*--------Nosotros--------*/
+  .nosotros {
+    min-height: 45vh;
+    &__contenedor--interno {
+      padding: 2vh;
+    }
+    &__col-izq,
+    &__col-der {
+      width: 100%;
+    }
+  }
+
   /*--------Contacto--------*/
   .contacto {
-    min-height: 65vh;
+    min-height: 50vh;
     padding: 0 1vh;
     &__contenido {
       h2 {
@@ -530,22 +579,22 @@ ul {
 
   /*--------Pie--------*/
   .pie {
-    min-height: 25vh;
-    font-size: 0.7rem;
+    min-height: 20vh;
+    font-size: 0.65rem;
     line-height: 1.2rem;
     background-size: 100vw;
     &__logo {
-      flex: 0 0 40%;
-      padding-bottom: 2.5vh;
+      flex: 0 0 35%;
+      padding-bottom: 0.5vh;
     }
 
     &__rrss {
-      flex: 0 0 50%;
+      flex: 0 0 65%;
     }
 
     &__circulo {
-      width: 4vh;
-      height: 4vh;
+      width: 3.5vh;
+      height: 3.5vh;
       margin-left: 3vh;
       a {
         svg {
@@ -555,21 +604,16 @@ ul {
         }
       }
     }
-
     &__copy {
       flex: 0 0 90%;
-      padding-bottom: 3vh;
+      margin-bottom: 0.5vh;
     }
-
     &__designers {
       flex: 0 0 90%;
-      p {
-        margin-top: -0.5vh;
-      }
     }
 
     &__novanet {
-      width: 11vh;
+      width: 9vh;
       margin: 0 0 -0.7vh 1vh;
     }
   }
@@ -609,7 +653,7 @@ ul {
     height: 20vh;
     background-size: 85vw;
     &__logo {
-      flex: 0 0 30%;
+      flex: 0 0 22%;
     }
 
     &__nav {
@@ -625,7 +669,7 @@ ul {
 
   /*--------Principal--------*/
   .principal {
-    height: 85vh;
+    min-height: 85vh;
     &__descripcion {
       text-align: right;
       font-size: 1.25rem;
@@ -641,16 +685,24 @@ ul {
     }
   }
 
-  /*--------Productos--------*/
-  .productos {
+  /*--------nosotros--------*/
+  .nosotros {
     &__contenedor--interno {
       width: 96%;
       padding: 6vh;
     }
+  }
+
+  /*--------Productos--------*/
+  .productos {
+    &__contenedor--interno {
+      width: 96%;
+      padding: 9vh;
+    }
 
     &__items {
       flex: 0 0 50%;
-      margin: 10vh 0 0 0;
+      margin: 7vh 0 0 0;
     }
 
     &__contenedor-imagen {
@@ -689,7 +741,7 @@ ul {
     }
 
     &__col-der {
-      flex: 1 0 0;
+      flex: 0 90%;
     }
 
     &__compartir {
@@ -773,12 +825,12 @@ ul {
 
   /*--------Pie--------*/
   .pie {
-    min-height: 35vh;
+    min-height: 28vh;
     font-size: 0.7rem;
     background-size: 80vw;
     &__logo {
-      flex: 0 0 25%;
-      padding-bottom: 4vh;
+      flex: 0 0 20%;
+      padding-bottom: 2vh;
     }
 
     &__rrss {
@@ -786,8 +838,8 @@ ul {
     }
 
     &__circulo {
-      width: 7.5vh;
-      height: 7.5vh;
+      width: 6vh;
+      height: 6vh;
       margin-left: 5vh;
       a {
         svg {
@@ -799,7 +851,7 @@ ul {
 
     &__copy {
       flex: 0 0 80%;
-      padding-bottom: 3.5vh;
+      padding-bottom: 2vh;
     }
 
     &__designers {
@@ -819,7 +871,7 @@ ul {
 /*-------------------------------------------- Tablet Portrait --------------------------------------------*/
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.35rem;
   }
 
   h3 {
@@ -827,7 +879,8 @@ ul {
   }
 
   .descripcion {
-    line-height: 1.3rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
   }
 
   #___gatsby {
@@ -839,17 +892,13 @@ ul {
     background-position: 195% 75%;
   }
 
-  .descripcion {
-    line-height: 1.5rem;
-    font-size: 1.1rem;
-  }
-
   /*--------Cabecera--------*/
   .cabecera {
     height: 10vh;
     background-size: 80vw;
     &__logo {
-      flex: 0 0 25%;
+      flex: 0 0 20%;
+      margin: 0;
     }
 
     &__nav {
@@ -888,20 +937,32 @@ ul {
 
     &__nombre {
       padding: 0 1vh;
+      text-align: left;
     }
 
     &__imagen {
-      width: 11vh;
-      height: 11vh;
+      width: 12vh;
+      height: 12vh;
+    }
+
+    &__contenedor-imagen {
+      width: 13.25vh;
+      height: 13.25vh;
     }
   }
 
   /*-------Ficha de productos individual--------*/
   .ficha {
-    min-height: 73vh;
+    min-height: 75vh;
     &__col-izq {
       flex: 1 0;
       padding: 0 3vh 0 0;
+    }
+    &__col-der {
+      flex: 1 0;
+    }
+    &__titulo {
+      margin: 1vh 0;
     }
 
     &__compartir {
@@ -913,11 +974,21 @@ ul {
     }
   }
 
+  /*-------Nosotros--------*/
+  .nosotros {
+    min-height: 25vh;
+    &__col-izq {
+      margin-bottom: 1vh;
+    }
+  }
+
   /*--------Contacto--------*/
   .contacto {
     min-height: 35vh;
     &__contenido {
-      h2 {margin-right:0;}
+      h2 {
+        margin-right: 0;
+      }
     }
     &__columnas {
       padding-top: 0;
@@ -955,17 +1026,17 @@ ul {
 
   /*--------Pie--------*/
   .pie {
-    min-height: 17vh;
+    min-height: 15vh;
     font-size: 0.8rem;
-    background-size: 69vw;
+    background-size: 90vw;
     &__logo {
-      flex: 0 0 21%;
-      padding-bottom: 1.5vh;
+      flex: 0 0 18%;
+      padding-bottom: 1vh;
     }
 
     &__circulo {
-      width: 2.5vh;
-      height: 2.5vh;
+      width: 2.25vh;
+      height: 2.25vh;
       a {
         svg {
           margin-top: 0.2vh;
@@ -977,7 +1048,7 @@ ul {
 
     &__copy {
       flex: 0 0 45%;
-      padding-bottom: 2vh;
+      padding-bottom: 0.4vh;
     }
 
     &__novanet {
@@ -989,32 +1060,33 @@ ul {
 
 /*-------------------------------------------- Tablet Landscape --------------------------------------------*/
 @media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
   #___gatsby {
     background-size: 68vw;
   }
 
+  .container {
+    @include flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
   main {
-    margin-top: 15vh;
+    margin-top: 12.5vh;
   }
 
   .contenedor {
     margin: 0 2vh;
   }
 
+  .descripcion {
+    font-size: 1rem;
+  }
   /*--------Cabecera--------*/
   .cabecera {
-    height: 15vh;
+    height: 12.5vh;
     background-size: 70vw;
     &__logo {
-      flex: 0 0 25%;
+      flex: 0 0 16%;
     }
 
     &__nav {
@@ -1028,7 +1100,18 @@ ul {
 
   /*--------Principal--------*/
   .principal {
-    height: 55vh;
+    min-height: 50vh;
+    &__descripcion {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  /*--------Nosotros--------*/
+  .nosotros {
+    min-height: 35vh;
+    &__contenedor--interno {
+    }
     &__descripcion {
       font-size: 1.6rem;
       line-height: 2.2rem;
@@ -1037,11 +1120,8 @@ ul {
 
   /*--------Productos--------*/
   .productos {
-    &__items {
-      margin: 7vh 0 0 0;
-    }
-
     &__nombre {
+      font-size: 1.1rem;
       padding: 0 1vh;
     }
 
@@ -1053,7 +1133,7 @@ ul {
 
   /*-------Ficha de productos individual--------*/
   .ficha {
-    min-height: 65vh;
+    min-height: 72.5vh;
     &__regreso {
       font-size: 1rem;
     }
@@ -1063,8 +1143,12 @@ ul {
     }
 
     &__col-izq {
-      flex: 1.5 0 0;
+      flex: 0 0 55%;
       padding: 0 7vh 0 0;
+    }
+
+    &__col-der {
+      flex: 0 0 45%;
     }
 
     &__compartir {
@@ -1091,13 +1175,13 @@ ul {
     }
 
     &__mapa {
-      height: 33vh;
+      height: 40vh;
     }
   }
 
   /*--------Formulario--------*/
   .formulario {
-    min-height: 40vh;
+    min-height: 35vh;
     padding: 0 5vh;
     &__informacion {
       flex: 0 0 39%;
@@ -1122,22 +1206,20 @@ ul {
 
   /*--------Pie--------*/
   .pie {
-    min-height: 20vh;
+    min-height: 15vh;
     font-size: 0.8rem;
-    background-size: 59.5vw;
+    background-size: 68vw;
     &__logo {
-      flex: 0 0 15%;
-      padding-bottom: 2.5vh;
+      flex: 0 0 12.5%;
     }
 
     &__circulo {
-      width: 3.5vh;
-      height: 3.5vh;
+      width: 3.25vh;
+      height: 3.25vh;
       margin-left: 3vh;
     }
 
     &__copy {
-      padding-bottom: 2.5vh;
     }
 
     &__novanet {
@@ -1149,11 +1231,11 @@ ul {
 /*-------------------------------------------- Desktop responsive --------------------------------------------*/
 @media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
   #___gatsby {
-    background-size: 66vw;
+    background-size: 66.1vw;
   }
 
   main {
-    margin-top: 15vh;
+    margin-top: 12.5vh;
     background-size: 25vw;
     background-position: 100% 75%;
   }
@@ -1167,19 +1249,29 @@ ul {
   .cabecera {
     background-size: 67.5vw;
     img {
-      width: 80%;
+      width: 70%;
     }
   }
 
   /*--------Principal--------*/
   .principal {
     height: 65vh;
+    &__col-der {
+      padding: 6vh;
+    }
   }
 
   /*--------Productos--------*/
   .productos {
     &__items {
       flex: 0 0 31.5%;
+    }
+  }
+
+  .nosotros {
+    &__col-der,
+    &__col-izq {
+      flex: 0 49.5%;
     }
   }
 
@@ -1194,8 +1286,10 @@ ul {
   /*--------Pie--------*/
   .pie {
     background-size: 60.4vw;
+    margin-top: auto;
+
     &__copy {
-      flex: 0 0 42%;
+      flex: 0 0 40%;
       padding-bottom: 0;
     }
 
