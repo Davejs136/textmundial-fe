@@ -1,0 +1,143 @@
+
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.cabecera {
+  @include flex;
+  @include column-justify;
+  width: 100%;
+  background-color: $azul2;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  &__logo {
+    background-color: transparent;
+    border: 0;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    @include flex;
+  }
+
+  &__link {
+    cursor: pointer;
+    color: $amarillo;
+    font-weight: 400;
+    align-self: center;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .cabecera {
+    height: 13vh;
+    &__logo {
+      width: 40%;
+      margin: 0 auto;
+    }
+
+    &__nav {
+      padding-top: 2vh;
+      width: 100%;
+    }
+
+    &__link {
+      flex: 0 0 31.5%;
+      font-size: 0.7rem;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .cabecera {
+    height: 20vh;
+    background-size: 85vw;
+    &__logo {
+      flex: 0 0 22%;
+    }
+
+    &__nav {
+      flex: 0 0 50%;
+    }
+
+    &__link {
+      flex: 1 0;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .cabecera {
+    height: 10vh;
+    background-size: 80vw;
+    &__logo {
+      flex: 0 0 20%;
+      margin: 0;
+    }
+
+    &__nav {
+      flex: 0 0 55%;
+      padding-top: 0;
+    }
+
+    &__link {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .cabecera {
+    height: 10vh;
+    background-size: 80vw;
+    &__logo {
+      flex: 0 0 20%;
+      margin: 0;
+    }
+
+    &__nav {
+      flex: 0 0 55%;
+      padding-top: 0;
+    }
+
+    &__link {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .cabecera {
+    height: 12.5vh;
+    background-size: 70vw;
+    &__logo {
+      flex: 0 0 16%;
+    }
+
+    &__nav {
+      flex: 0 0 40%;
+    }
+
+    &__link {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .cabecera {
+    background-size: 67.5vw;
+    img {
+      width: 70%;
+    }
+  }
+}

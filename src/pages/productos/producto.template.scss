@@ -1,0 +1,188 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.ficha {
+  @include flex;
+  align-items: center;
+  &__individual {
+    @include flex;
+    background: #fff;
+    border: #969696 1px solid;
+    border-radius: 15px;
+    margin: 0 auto;
+  }
+
+  &__regreso {
+    font-weight: 500;
+    color: $azul1;
+  }
+
+  &__imagen-principal {
+    height: auto;
+    /*border: #969696 1px solid;
+     border-radius: 20px;*/
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+  }
+
+  &__compartir {
+    @include flex;
+    align-items: center;
+    font-weight: 500;
+    &-link {
+      border-radius: 50%;
+      background: $azul1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        color: $amarillo;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .ficha {
+    min-height: 105vh;
+    &__regreso {
+      font-size: 0.8rem;
+    }
+
+    &__titulo {
+      margin: 2vh 0;
+    }
+
+    &__individual {
+      padding: 3vh;
+    }
+
+    &__col-izq {
+      padding: 0 0 3vh 0;
+    }
+
+    &__col-der {
+      flex: 1 0 0;
+    }
+
+    &__compartir {
+      padding: 2.5vh 0 0 0;
+      &-link {
+        width: 4vh;
+        height: 4vh;
+        margin-left: 3vh;
+        a {
+          svg {
+            width: 0.9em !important;
+            height: 0.9em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .ficha {
+    min-height: 185vh;
+    &__regreso {
+      font-size: 0.8rem;
+    }
+
+    &__titulo {
+      margin: 2vh 0 2.5vh 0;
+    }
+
+    &__individual {
+      padding: 5vh;
+      width: 96%;
+    }
+
+    &__col-izq {
+      padding: 0 0 7vh 0;
+    }
+
+    &__col-der {
+      flex: 0 90%;
+    }
+
+    &__compartir {
+      padding: 4.5vh 0 0 0;
+      &-link {
+        width: 7.5vh;
+        height: 7.5vh;
+        margin-left: 5vh;
+        a {
+          svg {
+            width: 0.95em !important;
+            height: 0.95em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .ficha {
+    min-height: 75vh;
+    &__col-izq {
+      flex: 1 0;
+      padding: 0 3vh 0 0;
+    }
+    &__col-der {
+      flex: 1 0;
+    }
+    &__titulo {
+      margin: 1vh 0;
+    }
+
+    &__compartir {
+      padding: 1.5vh 0 0;
+      &-link {
+        width: 3vh;
+        height: 3vh;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .ficha {
+    min-height: 72.5vh;
+    &__regreso {
+      font-size: 1rem;
+    }
+
+    &__individual {
+      padding: 3vh;
+    }
+
+    &__col-izq {
+      flex: 0 0 55%;
+      padding: 0 7vh 0 0;
+    }
+
+    &__col-der {
+      flex: 0 0 45%;
+    }
+
+    &__compartir {
+      padding: 2.5vh 1vh 0 0;
+      &-link {
+        width: 4vh;
+        height: 4vh;
+        margin-left: 2vh;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
+  .ficha {
+    &__compartir-link {
+      width: 3.5vh;
+      height: 3.5vh;
+      margin-left: 2vh;
+    }
+  }
+}

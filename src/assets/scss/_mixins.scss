@@ -1,0 +1,31 @@
+
+
+@mixin flex {
+   display: flex;
+   flex-wrap: wrap;
+ }
+ 
+ @mixin column-justify {
+   flex-direction: column;
+   justify-content: center;
+ }
+ 
+ @mixin col-1-4 {
+   flex: 1 0 0;
+ }
+ 
+ @mixin col-3-4 {
+   flex: 3 0 0;
+ }
+ 
+ @mixin contenedor-blanco {
+   margin: 0 auto;
+   background: $blanco;
+   border: $gris3 1px solid;
+   border-radius: 15px;
+ }
+ 
+ @mixin table-cell-50 {
+   display: table-cell;
+   width: 50%;
+ }

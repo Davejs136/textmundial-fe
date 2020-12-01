@@ -1,6 +1,7 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import { StaticQuery, graphql } from "gatsby"
+import "./header.scss"
 
 const Header = () => (
   <StaticQuery
@@ -31,7 +32,7 @@ const Header = () => (
             </button>
             <button
               className="cabecera__link"
-              onClick={() => scrollTo("#Contacto")}
+              onClick={() => scrollTo("#Mapa")}
             >
               Nosotros
             </button>

@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // @fortawesome libraries
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
+import "./producto.template.scss"
 // add fas and fab to the library
 library.add(fab)
 

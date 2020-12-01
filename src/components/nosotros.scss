@@ -1,0 +1,77 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.nosotros {
+  @include flex;
+  h2 {
+    display: none;
+  }
+  &__contenedor--interno {
+    @include contenedor-blanco;
+    height: fit-content;
+  }
+  &__contenido {
+    @include flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &__columnas {
+    @include flex;
+  }
+  &__col-der,
+  &__col-izq {
+    @include flex;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .nosotros {
+    min-height: 45vh;
+    &__contenedor--interno {
+      padding: 2vh;
+    }
+    &__col-izq,
+    &__col-der {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .nosotros {
+    &__contenedor--interno {
+      width: 96%;
+      padding: 6vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .nosotros {
+    min-height: 25vh;
+    &__col-izq {
+      margin-bottom: 1vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .nosotros {
+    min-height: 35vh;
+    &__contenedor--interno {
+    }
+    &__descripcion {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .nosotros {
+    &__col-der,
+    &__col-izq {
+      flex: 0 49.5%;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.mapa {
+  align-items: flex-end;
+  &__contenido {
+    width: 100%;
+  }
+
+  &__columnas {
+    @include flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__col-izq,
+  &__col-der {
+    @include flex;
+    @include column-justify;
+  }
+
+  &__descripcion {
+    color: $azul1;
+    font-weight: 400;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .mapa {
+    min-height: 50vh;
+    padding: 0 1vh;
+    &__contenido {
+      h2 {
+        margin-right: 15vh;
+      }
+    }
+    &__columnas {
+      padding-top: 4vh;
+    }
+
+    &__col-izq {
+      flex: 0 0 75%;
+    }
+
+    &__col-der {
+      flex: 0 0 100%;
+      padding-top: 4vh;
+    }
+
+    &__descripcion {
+      text-align: left;
+      font-size: 1.25rem;
+      line-height: 1.8rem;
+    }
+
+    &__mapa {
+      height: 20vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .mapa {
+    min-height: 65vh;
+    padding: 0 5vh;
+    &__columnas {
+      padding-top: 7vh;
+    }
+
+    &__col-izq {
+      flex: 0 0 40%;
+    }
+
+    &__col-der {
+      flex: 0 0 58%;
+    }
+
+    &__descripcion {
+      text-align: right;
+      font-size: 1.25rem;
+      line-height: 1.8rem;
+    }
+
+    &__mapa {
+      height: 42.5vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .mapa {
+    min-height: 35vh;
+    &__contenido {
+      h2 {
+        margin-right: 0;
+      }
+    }
+    &__columnas {
+      padding-top: 0;
+    }
+
+    &__descripcion {
+      text-align: right;
+    }
+
+    &__col-izq {
+      flex: 0 0 40%;
+    }
+
+    &__col-der {
+      flex: 0 0 58%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .mapa {
+    min-height: 50vh;
+    padding: 0 5vh;
+    &__columnas {
+      padding-top: 0;
+    }
+
+    &__descripcion {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+
+    &__mapa {
+      height: 40vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
+  .mapa {
+    min-height: 45vh;
+    &__mapa {
+      height: 28vh;
+    }
+  }
+}

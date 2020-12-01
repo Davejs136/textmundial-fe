@@ -1,0 +1,146 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.productos {
+  @include flex;
+  &__contenedor--interno {
+    @include contenedor-blanco;
+  }
+  &__lista {
+    @include flex;
+    justify-content: flex-start;
+  }
+  &__items {
+    a {
+      @include flex;
+      align-items: center;
+      color: $azul1;
+    }
+  }
+  &__contenedor-imagen {
+    border: $gris3 solid 1px;
+    border-radius: 50%;
+    padding: 0.5vh;
+    box-sizing: border-box;
+  }
+  &__imagen {
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .productos {
+    &__contenedor--interno {
+      padding: 3vh;
+    }
+    &__lista {
+      @include flex;
+      justify-content: space-between;
+    }
+
+    &__items {
+      flex: 0 0 50%;
+      margin: 7vh 0 0 0;
+    }
+
+    &__contenedor-imagen {
+      width: 17.25vh;
+      height: 17.25vh;
+      margin: 0 auto;
+    }
+
+    &__nombre {
+      @include col-3-4;
+      padding: 1.5vh 2vh;
+      text-align: center;
+    }
+
+    &__imagen {
+      width: 16vh;
+      height: 16vh;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .productos {
+    &__contenedor--interno {
+      width: 96%;
+      padding: 9vh;
+    }
+
+    &__items {
+      flex: 0 0 50%;
+      margin: 7vh 0 0 0;
+    }
+
+    &__contenedor-imagen {
+      flex: 1.2 0;
+    }
+
+    &__nombre {
+      @include col-3-4;
+      padding: 0 2vh;
+    }
+
+    &__imagen {
+      width: 22vh;
+      height: 22vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .productos {
+    &__items {
+      flex: 0 0 50%;
+    }
+
+    &__nombre {
+      padding: 0 1vh;
+      text-align: left;
+    }
+
+    &__imagen {
+      width: 12vh;
+      height: 12vh;
+    }
+
+    &__contenedor-imagen {
+      width: 13.25vh;
+      height: 13.25vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .productos {
+    &__nombre {
+      font-size: 1.1rem;
+      padding: 0 1vh;
+    }
+
+    &__imagen {
+      width: 15vh;
+      height: 15vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .productos {
+    &__items {
+      flex: 0 0 31.5%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .productos {
+    &__imagen {
+      width: 13vh;
+      height: 13vh;
+    }
+  }
+}
