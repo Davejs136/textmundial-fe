@@ -23,11 +23,11 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    // Products MD files and images
+    // MD Productos e imágenes
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
+        name: `productos`,
         path: `${__dirname}/src/pages/productos/items`,
       },
     },
@@ -69,6 +69,12 @@ module.exports = {
       resolve: "gatsby-plugin-sass",
       otions: {
         useResolveUrlLoader: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaultQuality: 100,
       },
     },
   ],

@@ -7,7 +7,7 @@ const Header = () => (
   <StaticQuery
     query={graphql`
       query {
-        logo: file(relativePath: { eq: "tm-logo.svg" }) {
+        logo: file(relativePath: { eq: "texmundial-logo.svg" }) {
           publicURL
         }
       }
@@ -20,7 +20,7 @@ const Header = () => (
               className="cabecera__link"
               onClick={() => scrollTo("#Principal")}
             >
-              <img src={data.logo.publicURL} alt="logo" />
+              <img src={data.logo.publicURL} alt="Logo Texmundial" />
             </button>
           </div>
           <nav className="cabecera__nav">

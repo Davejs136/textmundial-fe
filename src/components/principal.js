@@ -19,9 +19,23 @@ const Principal = () => (
   <StaticQuery
     query={graphql`
       query {
-        uno: file(relativePath: { eq: "tm-sec3.jpg" }) {
+        uno: file(relativePath: { eq: "texmundial-telas-calidad.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 490) {
+            fluid(maxWidth: 610) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        dos: file(relativePath: { eq: "texmundial-asesoria-sin-compromiso.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 610) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        tres: file(relativePath: { eq: "texmundial-neopreno-covid19.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 610) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -35,8 +49,7 @@ const Principal = () => (
             <div>
               <div className="principal__col-izq">
                 <p className="principal__descripcion">
-                  Somos distribuidores del mejor surtido de telas para trajes de
-                  baño
+                Una buena marca requiere de calidad total empezando por sus telas que las consigues en Texmundial
                 </p>
               </div>
               <div className="principal__col-der">
@@ -47,11 +60,22 @@ const Principal = () => (
             <div>
               <div className="principal__col-izq">
                 <p className="principal__descripcion">
-                  Otro copy diferente para este slide otro copy diferente para este slide en el carrusel
+                ¿Aún no decide cuál tela le conviene para ese negocio que tiene en mente? Nosotros le asesoramos sin ningún compromiso.
                 </p>
               </div>
               <div className="principal__col-der">
-                <Img fluid={data.uno.childImageSharp.fluid} alt="otra imagen" />
+                <Img fluid={data.dos.childImageSharp.fluid} alt="otra imagen" />
+              </div>
+            </div>
+
+            <div>
+              <div className="principal__col-izq">
+                <p className="principal__descripcion">
+                Dada la situación actual con el Covid-19, ofrecemos a nuestros clientes neopreno, usado en la elaboración de mascarillas para prevenir el contagio con el virus
+                </p>
+              </div>
+              <div className="principal__col-der">
+                <Img fluid={data.tres.childImageSharp.fluid} alt="otra imagen" />
               </div>
             </div>
           </Slider>
