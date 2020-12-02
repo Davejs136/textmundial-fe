@@ -13,7 +13,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-smoothscroll`,  
     `gatsby-plugin-offline`,
     // App images
     {
@@ -29,6 +29,14 @@ module.exports = {
       options: {
         name: `productos`,
         path: `${__dirname}/src/pages/productos/items`,
+      },
+    },
+    // MD Articulos e imágenes
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/pages/blog/articulos`,
       },
     },
     {

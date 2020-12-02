@@ -20,7 +20,7 @@
     "gatsby-plugin-sass": "^2.3.21",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-plugin-smoothscroll": "^1.2.0",
-    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-source-filesystem": "^2.7.0",
     "gatsby-transformer-cloudinary": "^1.1.3",
     "gatsby-transformer-remark": "^2.8.37",
     "gatsby-transformer-sharp": "^2.3.13",

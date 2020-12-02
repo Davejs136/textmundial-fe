@@ -1,9 +1,10 @@
 ---
+tipo: "articulo"
 fecha: 2020-12-16
 slug: "Publicidad-calidad-telas"
 titulo: "La publicidad y la calidad de las telas"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"
-imagen: "imagenes/publicidad-calidad-telas.jpg"
+imagen: "./imagenes/texmundial-publicidad-calidad-telas.jpg"
 alt: "Texto de la imagen"
 ---
 

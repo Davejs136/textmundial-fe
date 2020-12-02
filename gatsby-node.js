@@ -3,14 +3,16 @@ const path = require("path")
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
+  // Template productos
   const productoTemplate = path.resolve(
     `src/pages/productos/producto.template.js`
   )
 
-  const result = await graphql(`
+  const resultProduct = await graphql(`
     {
       allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___id] }        
+        filter: { frontmatter: { tipo: { eq: "producto" } } }
+        sort: { order: ASC, fields: [frontmatter___id] }
       ) {
         edges {
           node {
@@ -24,18 +26,51 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `)
 
-  if (result.errors) {
+  if (resultProduct.errors) {
     reporter.panicOnBuild(`Error while running Graphql query`)
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  resultProduct.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: `productos/${node.frontmatter.slug}`,
       component: productoTemplate,
       context: {
         // additional data can be passed via context
         id: node.frontmatter.id,
+      },
+    })
+  })
+
+  // Template articulos
+  const articuloTemplate = path.resolve(`src/pages/blog/articulo.template.js`)
+
+  const resultArticle = await graphql(`
+    {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___fecha] }) {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (resultArticle.errors) {
+    reporter.panicOnBuild(`Error while running Graphql query`)
+    return
+  }
+
+  resultArticle.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: `blog/${node.frontmatter.slug}`,
+      component: articuloTemplate,
+      context: {
+        // additional data can be passed via context
+        slug: node.frontmatter.slug,
       },
     })
   })
