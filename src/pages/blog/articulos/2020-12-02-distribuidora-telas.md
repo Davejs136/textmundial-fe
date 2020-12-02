@@ -1,7 +1,7 @@
 ---
 tipo: "articulo"
 fecha: 2020-12-01
-slug: "Texmundial-distribuidora-telas"
+slug: "texmundial-distribuidora-telas"
 titulo: "Texmundial, distribuidora de telas"
 description: "Texmundial, somos una distribuidora de telas donde queremos asesorarle, más que venderle."
 imagen: "./imagenes/texmundial-distribuidora-telas.jpg"
