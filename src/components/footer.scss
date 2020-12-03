@@ -1,0 +1,235 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.pie {
+  font-weight: 200;
+  color: $blanco;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDU1LjkgNzU3LjgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNTUuOSA3NTcuOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjMDAwQzNEIiBwb2ludHM9IjAsNzU3LjggMCwwIDEwNTUuOSwwIDkxNy44LDc1Ny44ICIvPg0KPC9zdmc+DQo=);
+  background-repeat: no-repeat;
+  @include flex;
+  @include column-justify;
+  &__circulo {
+    border-radius: 50%;
+    background: $amarillo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      color: $azul1;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .pie {
+    min-height: 20vh;
+    font-size: 0.65rem;
+    line-height: 1.2rem;
+    background-size: 100vw;
+    &__logo {
+      flex: 0 0 35%;
+      padding-bottom: 0.5vh;
+    }
+
+    &__rrss {
+      flex: 0 0 65%;
+    }
+
+    &__circulo {
+      width: 3.5vh;
+      height: 3.5vh;
+      margin-left: 3vh;
+      a {
+        svg {
+          margin-top: 0.6vh;
+          width: 1.4em !important;
+          height: 1.4em;
+        }
+      }
+    }
+    &__copy {
+      flex: 0 0 90%;
+      margin-bottom: 0.5vh;
+    }
+    &__designers {
+      flex: 0 0 90%;
+    }
+
+    &__novanet {
+      width: 9vh;
+      margin: 0 0 -0.7vh 1vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .ficha {
+    min-height: 185vh;
+    &__regreso {
+      font-size: 0.8rem;
+    }
+
+    &__titulo {
+      margin: 2vh 0 2.5vh 0;
+    }
+
+    &__individual {
+      padding: 5vh;
+      width: 96%;
+    }
+
+    &__col-izq {
+      padding: 0 0 7vh 0;
+    }
+
+    &__col-der {
+      flex: 0 90%;
+    }
+
+    &__compartir {
+      padding: 4.5vh 0 0 0;
+      &-link {
+        width: 7.5vh;
+        height: 7.5vh;
+        margin-left: 5vh;
+        a {
+          svg {
+            width: 0.95em !important;
+            height: 0.95em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .pie {
+    min-height: 28vh;
+    font-size: 0.7rem;
+    background-size: 80vw;
+    &__logo {
+      flex: 0 0 20%;
+      padding-bottom: 2vh;
+    }
+
+    &__rrss {
+      flex: 0 0 50%;
+    }
+
+    &__circulo {
+      width: 6vh;
+      height: 6vh;
+      margin-left: 5vh;
+      a {
+        svg {
+          width: 1.4em !important;
+          height: 1.4em;
+        }
+      }
+    }
+
+    &__copy {
+      flex: 0 0 80%;
+      padding-bottom: 2vh;
+    }
+
+    &__designers {
+      flex: 0 0 50%;
+      p {
+        margin-top: -0.5vh;
+      }
+    }
+
+    &__novanet {
+      width: 16vh;
+      margin: 0 0 -0.7vh 0.5vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .pie {
+    min-height: 15vh;
+    font-size: 0.8rem;
+    background-size: 90vw;
+    &__logo {
+      flex: 0 0 18%;
+      padding-bottom: 1vh;
+    }
+
+    &__circulo {
+      width: 2.25vh;
+      height: 2.25vh;
+      a {
+        svg {
+          margin-top: 0.2vh;
+          width: 1.2em !important;
+          height: 1.2em;
+        }
+      }
+    }
+
+    &__copy {
+      flex: 0 0 45%;
+      padding-bottom: 0.4vh;
+    }
+
+    &__novanet {
+      width: 7.5vh;
+      margin: 0 0 -0.6vh 0.8vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .pie {
+    min-height: 15vh;
+    font-size: 0.8rem;
+    background-size: 68vw;
+    &__logo {
+      flex: 0 0 12.5%;
+    }
+
+    &__circulo {
+      width: 3.25vh;
+      height: 3.25vh;
+      margin-left: 3vh;
+    }
+
+    &__novanet {
+      width: 10vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .pie {
+    background-size: 60.4vw;
+    margin-top: auto;
+
+    &__copy {
+      flex: 0 0 40%;
+      padding-bottom: 0;
+    }
+
+    &__designers {
+      flex: 0 0 17%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
+  .pie {
+    background-size: 59.7vw;
+
+    &__circulo {
+      width: 3vh;
+      height: 3vh;
+    }
+
+    &__novanet {
+      width: 8vh;
+    }
+  }
+}

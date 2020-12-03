@@ -2,64 +2,58 @@ import React from "react"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import Layout from "../../components/layout"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// @fortawesome libraries
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-// add fas and fab to the library
-library.add(fab)
+import SEO from "../../components/seo"
+import { window } from "browser-monads"
+import "./producto.template.scss"
+import {
+  InstapaperShareButton,
+  InstapaperIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share"
 
 const ProductoTemplate = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter } = markdownRemark
+  const shareUrl = window.location.href
   return (
     <Layout>
-      <section className="productos">
-        <div className="productos__individual">
-          <Link className="productos__regreso" to="/">
-            « Ir a inicio
-          </Link>
-          <div className="productos__col-izq">
-            <h1 className="productos__titulo">{frontmatter.nombre}</h1>
-            <div className="productos__informacion">
-              <h3>Descripción</h3>
-              <p className="descripcion">{frontmatter.descripcion}</p>
+      <SEO
+        title={frontmatter.nombre}
+        description={frontmatter.descripcion}
+        image={frontmatter.imagen.childImageSharp.fluid}
+      />
+      <section className="ficha">
+        <div className="contenedor">
+          <div className="ficha__individual">
+            <div className="ficha__col-izq">
+              <Link className="ficha__regreso" to="/">
+                « Volver al inicio
+              </Link>
+              <div className="ficha__informacion">
+                <h2 className="ficha__titulo">{frontmatter.nombre}</h2>
+                <p className="descripcion">{frontmatter.descripcion}</p>
+              </div>
             </div>
-          </div>
-          <div className="productos__col-der">
-            <Img
-              className="productos__imagen-principal"
-              fluid={frontmatter.imagen.childImageSharp.fluid}
-              alt={frontmatter.nombre}
-            />
-            <div className="productos__compartir">
-              Compartir
-              <div className="productos__compartir-link">
-                <a
-                  href="https://www.instagram.com/texmundial/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={["fab", "instagram"]} />
-                </a>
-              </div>
-              <div className="productos__compartir-link">
-                <a
-                  href="https://www.instagram.com/texmundial/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={["fab", "twitter"]} />
-                </a>
-              </div>
-              <div className="productos__compartir-link">
-                <a
-                  href="https://wa.me/584142702886"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={["fab", "whatsapp"]} />
-                </a>
+            <div className="ficha__col-der">
+              <Img
+                className="ficha__imagen-principal"
+                fluid={frontmatter.imagen.childImageSharp.fluid}
+                alt={frontmatter.nombre}
+              />
+              <div className="ficha__compartir">
+                Compartir
+                <InstapaperShareButton url={shareUrl} children="a">
+                  <InstapaperIcon size={28} round={true} />
+                </InstapaperShareButton>
+                <TwitterShareButton url={shareUrl} children="a">
+                  <TwitterIcon size={28} round={true} />
+                </TwitterShareButton>
+                <WhatsappShareButton url={shareUrl} children="a">
+                  <WhatsappIcon size={28} round={true} />
+                </WhatsappShareButton>
               </div>
             </div>
           </div>
@@ -80,7 +74,7 @@ export const query = graphql`
         descripcion
         imagen {
           childImageSharp {
-            fluid(maxWidth: 490) {
+            fluid(maxWidth: 610) {
               ...GatsbyImageSharpFluid
             }
           }

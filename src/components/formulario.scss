@@ -1,0 +1,176 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.formulario {
+  @include flex;
+  align-items: center;
+  justify-content: space-between;
+  &__contenido {
+    @include flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__descripcion {
+    color: $gris3;
+    font-weight: 300;
+  }
+
+  &__whatsapp {
+    color: $verde;
+  }
+
+  &__form {
+    @include flex;
+    justify-content: space-between;
+  }
+
+  &__input,
+  &__textarea {
+    font-weight: 400;
+    color: $gris3;
+    border: $gris3 1px solid;
+    background: $blanco;
+    border-radius: 12px;
+    &::placeholder {
+      color: $gris3;
+      font-weight: 400;
+    }
+  }
+
+  &__boton {
+    font-weight: 400;
+    cursor: pointer;
+    color: $blanco;
+    background: $azul1;
+    border-radius: 12px;
+    border: none;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .formulario {
+    min-height: 55vh;
+    &__informacion {
+      padding-bottom: 2vh;
+    }
+
+    &__descripcion {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    &__form {
+      flex: 1;
+    }
+
+    &__input,
+    &__textarea {
+      margin-bottom: 2vh;
+    }
+
+    &__input,
+    &__textarea,
+    &__boton {
+      flex: 0 0 100%;
+      padding: 1.5vh 2vh;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .formulario {
+    min-height: 70vh;
+    padding: 0 5vh;
+
+    &__informacion {
+      padding-bottom: 3vh;
+    }
+
+    &__descripcion {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+
+    &__form {
+      flex: 1;
+    }
+
+    &__input {
+      margin-bottom: 3vh;
+    }
+
+    &__textarea,
+    &__boton {
+      margin-bottom: 0;
+    }
+
+    &__input,
+    &__textarea,
+    &__boton {
+      flex: 0 0 48%;
+      padding: 2vh;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .formulario {
+    min-height: 30vh;
+
+    &__textarea,
+    &__boton {
+      margin-bottom: 0;
+    }
+
+    &__input,
+    &__textarea,
+    &__boton {
+      flex: 0 0 48%;
+      padding: 1vh;
+    }
+  }
+}
+
+/*--------Formulario--------*/
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .formulario {
+    min-height: 35vh;
+    padding: 0 5vh;
+    &__informacion {
+      flex: 0 0 39%;
+      padding-bottom: 0;
+    }
+
+    &__descripcion {
+      text-align: right;
+      font-size: 1.2rem;
+    }
+
+    &__form {
+      flex: 0 0 58%;
+    }
+
+    &__input,
+    &__textarea,
+    &__boton {
+      padding: 1vh 2vh;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .formulario {
+    &__descripcion {
+      font-size: 1.35rem;
+      line-height: 1.9rem;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
+  .formulario {
+    min-height: 30vh;
+  }
+}

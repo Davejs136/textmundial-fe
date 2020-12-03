@@ -1,41 +1,55 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-// Imagen
-import Logo from "../assets/images/tm-logo.svg"
+import scrollTo from "gatsby-plugin-smoothscroll"
+import { StaticQuery, graphql, Link } from "gatsby"
+import "./header.scss"
 
 const Header = () => (
-  <header className="cabecera">
-    <div className="contenedor">
-      <div className="cabecera__logo">
-        <Link to="/">
-          <img src={Logo} alt="logo" className="logo" />
-        </Link>
-        <p className="cabecera__descripcion">
-          Distribuidores del mejor surtido en telas para trajes de baño
-        </p>
-      </div>
-      <nav className="cabecera__nav">
-        <Link to="/" className="cabecera__link">
-          Inicio
-        </Link>
-        <Link to="#productos" className="cabecera__link">
-          Productos
-        </Link>
-        <Link to="#blog" className="cabecera__link">
-          Blog
-        </Link>
-      </nav>
-    </div>
-  </header>
+  <StaticQuery
+    query={graphql`
+      query {
+        logo: file(relativePath: { eq: "texmundial-logo.svg" }) {
+          publicURL
+        }
+      }
+    `}
+    render={data => (
+      <header className="cabecera">
+        <div className="contenedor">
+          <div className="cabecera__logo">
+            <Link className="cabecera__link" to="/">
+              <img src={data.logo.publicURL} alt="Logo Texmundial" />
+            </Link>
+          </div>
+          <nav className="cabecera__nav">
+            <button
+              className="cabecera__link"
+              onClick={() => scrollTo("#Productos")}
+            >
+              Productos
+            </button>
+            <button
+              className="cabecera__link"
+              onClick={() => scrollTo("#Mapa")}
+            >
+              Nosotros
+            </button>
+            <button
+              className="cabecera__link"
+              onClick={() => scrollTo("#Blog")}
+            >
+              Blog
+            </button>
+            <button
+              className="cabecera__link"
+              onClick={() => scrollTo("#Formulario")}
+            >
+              Contacto
+            </button>
+          </nav>
+        </div>
+      </header>
+    )}
+  />
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

@@ -1,0 +1,115 @@
+@import "../assets/scss/variables";
+@import "../assets/scss/mixins";
+
+.blog {
+  align-items: center;
+
+  &__contenido {
+    width: 100%;
+  }
+
+  &__columnas {
+    @include flex;
+  }
+  &__col-izq {
+    img {
+      width: 100%;
+      clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
+    }
+  }
+  &__col-der {
+    @include flex;
+    @include column-justify;
+  }
+  &__titulo {
+    border: 0;
+    &:before {
+      border: 0;
+    }
+  }
+  &__boton {
+    font-size: 0.8rem;
+    margin-top: 1.5vh;
+    padding: 1.25vh;
+    width: fit-content;
+    font-weight: 400;
+    cursor: pointer;
+    color: $blanco;
+    background: $azul1;
+    border-radius: 15px;
+    border: none;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .blog {
+     min-height: 85vh;
+     padding: 0 1vh;
+     &__columnas {
+        margin-top: 3vh;
+     }
+     &__col-izq {
+        width: 100%;
+     }
+     &__titulo {
+        margin-top: 2vh;
+     }
+  }
+}
+
+@media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .blog {
+   min-height: 60vh;  
+   padding: 0 5vh;
+   &__columnas {
+      margin-top: 2vh;
+   }   
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+  .blog {
+   min-height: 40vh;  
+   &__col-izq {
+      flex: 0 0 50%;
+      padding: 2vh;
+    }
+
+    &__col-der {
+      flex: 0 0 50%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+  .blog {
+     min-height: 40vh;
+  }
+  .descripcion {
+     width: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .blog {
+  }
+}
+
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .blog {
+    min-height: 65vh;
+    padding: 0 5vh;
+    &__col-izq {
+      flex: 0 0 50%;
+      padding: 5vh 2.5vh 5vh 5vh;
+    }
+
+    &__col-der {
+      flex: 0 0 50%;
+    }
+
+    .descripcion {
+      width: 80%;
+    }
+  }
+}
