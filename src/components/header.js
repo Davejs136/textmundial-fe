@@ -1,6 +1,6 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import "./header.scss"
 
 const Header = () => (
@@ -16,12 +16,9 @@ const Header = () => (
       <header className="cabecera">
         <div className="contenedor">
           <div className="cabecera__logo">
-            <button
-              className="cabecera__link"
-              onClick={() => scrollTo("#Principal")}
-            >
+            <Link className="cabecera__link" to="/">
               <img src={data.logo.publicURL} alt="Logo Texmundial" />
-            </button>
+            </Link>
           </div>
           <nav className="cabecera__nav">
             <button
@@ -35,6 +32,12 @@ const Header = () => (
               onClick={() => scrollTo("#Mapa")}
             >
               Nosotros
+            </button>
+            <button
+              className="cabecera__link"
+              onClick={() => scrollTo("#Blog")}
+            >
+              Blog
             </button>
             <button
               className="cabecera__link"

@@ -1,5 +1,6 @@
 ---
 tipo: "articulo"
+status: "activo"
 fecha: 2020-12-01
 slug: "texmundial-distribuidora-telas"
 titulo: "Texmundial, distribuidora de telas"

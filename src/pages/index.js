@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Principal from "../components/principal"
 import Productos from "../components/productos"
+import Blog from "../components/blog"
 import Mapa from "../components/mapa"
 import Nosotros from "../components/nosotros"
 import Formulario from "../components/formulario"
@@ -22,6 +23,8 @@ const IndexPage = () => (
     <Principal />
 
     <Productos />
+
+    <Blog />
 
     <Mapa />
 

@@ -7,7 +7,10 @@ const Productos = () => (
   <StaticQuery
     query={graphql`
       query {
-        allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___id] }) {
+        allMarkdownRemark(
+          sort: { order: ASC, fields: [frontmatter___id] }
+          filter: { frontmatter: { tipo: { eq: "producto" } } }
+        ) {
           edges {
             node {
               frontmatter {

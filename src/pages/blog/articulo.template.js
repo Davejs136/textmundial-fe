@@ -3,17 +3,21 @@ import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// @fortawesome libraries
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-
-// add fas and fab to the library
-library.add(fab)
+import { window } from "browser-monads"
+import "./articulo.template.scss"
+import {
+  InstapaperShareButton,
+  InstapaperIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share"
 
 const ArticuloTemplate = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter } = markdownRemark
+  const { frontmatter, html } = markdownRemark
+  const shareUrl = window.location.href
   return (
     <Layout>
       <SEO
@@ -21,43 +25,42 @@ const ArticuloTemplate = ({ data }) => {
         description={frontmatter.description}
         image={frontmatter.imagen.childImageSharp.fluid}
       />
-      <section className="ficha">
+      <section className="ficha articulo">
         <div className="contenedor">
           <div className="ficha__individual">
-            <div className="ficha__col-izq">
-              <Link className="ficha__regreso" to="/">
-                « Ir a inicio
-              </Link>
-              <div className="ficha__informacion">
-                <h2 className="ficha__titulo">{frontmatter.titulo}</h2>
-                {/* <p className="descripcion">{frontmatter.descripcion}</p> */}
-              </div>
-            </div>
-            <div className="ficha__col-der">
+            <Link className="ficha__regreso" to="/">
+              « Volver al inicio
+            </Link>
+            <div className="ficha__col-izq ficha__col-izq-articulo">
               <Img
                 className="ficha__imagen-principal"
                 fluid={frontmatter.imagen.childImageSharp.fluid}
                 alt={frontmatter.alt}
               />
-              <div className="ficha__compartir">
-                Compartir
-                <div className="ficha__compartir-link">
-                  <a href="/" rel="noopener noreferrer" target="_blank">
-                    <FontAwesomeIcon icon={["fab", "instagram"]} />
-                  </a>
-                </div>
-                <div className="ficha__compartir-link">
-                  <a href="/" rel="noopener noreferrer" target="_blank">
-                    <FontAwesomeIcon icon={["fab", "twitter"]} />
-                  </a>
-                </div>
-                <div className="ficha__compartir-link">
-                  <a href="/" rel="noopener noreferrer" target="_blank">
-                    <FontAwesomeIcon icon={["fab", "whatsapp"]} />
-                  </a>
+            </div>
+            <div className="ficha__col-der ficha__col-der-articulo">
+              <div className="ficha__informacion">
+                <h2 className="ficha__titulo ficha__titulo-articulo">
+                  {frontmatter.titulo}
+                </h2>
+                <div className="ficha__compartir">
+                  Compartir
+                  <InstapaperShareButton url={shareUrl} children="a">
+                    <InstapaperIcon size={28} round={true} />
+                  </InstapaperShareButton>
+                  <TwitterShareButton url={shareUrl} children="a">
+                    <TwitterIcon size={28} round={true} />
+                  </TwitterShareButton>
+                  <WhatsappShareButton url={shareUrl} children="a">
+                    <WhatsappIcon size={28} round={true} />
+                  </WhatsappShareButton>
                 </div>
               </div>
             </div>
+            <div
+              className="ficha__contenido descripcion"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
         </div>
       </section>
@@ -70,6 +73,7 @@ export default ArticuloTemplate
 export const query = graphql`
   query ArticuloQuery($slug: String) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
       frontmatter {
         fecha(formatString: "DD MMMM YYYY")
         titulo

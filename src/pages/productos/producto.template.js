@@ -3,17 +3,21 @@ import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// @fortawesome libraries
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
+import { window } from "browser-monads"
 import "./producto.template.scss"
-// add fas and fab to the library
-library.add(fab)
+import {
+  InstapaperShareButton,
+  InstapaperIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share"
 
 const ProductoTemplate = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter } = markdownRemark
+  const shareUrl = window.location.href
   return (
     <Layout>
       <SEO
@@ -26,7 +30,7 @@ const ProductoTemplate = ({ data }) => {
           <div className="ficha__individual">
             <div className="ficha__col-izq">
               <Link className="ficha__regreso" to="/">
-                « Ir a inicio
+                « Volver al inicio
               </Link>
               <div className="ficha__informacion">
                 <h2 className="ficha__titulo">{frontmatter.nombre}</h2>
@@ -41,21 +45,15 @@ const ProductoTemplate = ({ data }) => {
               />
               <div className="ficha__compartir">
                 Compartir
-                <div className="ficha__compartir-link">
-                  <a href="/" rel="noopener noreferrer" target="_blank">
-                    <FontAwesomeIcon icon={["fab", "instagram"]} />
-                  </a>
-                </div>
-                <div className="ficha__compartir-link">
-                  <a href="/" rel="noopener noreferrer" target="_blank">
-                    <FontAwesomeIcon icon={["fab", "twitter"]} />
-                  </a>
-                </div>
-                <div className="ficha__compartir-link">
-                  <a href="/" rel="noopener noreferrer" target="_blank">
-                    <FontAwesomeIcon icon={["fab", "whatsapp"]} />
-                  </a>
-                </div>
+                <InstapaperShareButton url={shareUrl} children="a">
+                  <InstapaperIcon size={28} round={true} />
+                </InstapaperShareButton>
+                <TwitterShareButton url={shareUrl} children="a">
+                  <TwitterIcon size={28} round={true} />
+                </TwitterShareButton>
+                <WhatsappShareButton url={shareUrl} children="a">
+                  <WhatsappIcon size={28} round={true} />
+                </WhatsappShareButton>
               </div>
             </div>
           </div>

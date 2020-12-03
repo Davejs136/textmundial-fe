@@ -97,49 +97,11 @@ ul {
   main {
     margin-top: 13vh;
     background-size: 65vw;
-    background-position: 130% 82%;
+    background-position: 170% 82%;
   }
 
   .contenedor {
     margin: 0 2vh;
-  }
-
-  .ficha {
-    min-height: 105vh;
-    &__regreso {
-      font-size: 0.8rem;
-    }
-
-    &__titulo {
-      margin: 2vh 0;
-    }
-
-    &__individual {
-      padding: 3vh;
-    }
-
-    &__col-izq {
-      padding: 0 0 3vh 0;
-    }
-
-    &__col-der {
-      flex: 1 0 0;
-    }
-
-    &__compartir {
-      padding: 2.5vh 0 0 0;
-      &-link {
-        width: 4vh;
-        height: 4vh;
-        margin-left: 3vh;
-        a {
-          svg {
-            width: 0.9em !important;
-            height: 0.9em;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -153,8 +115,8 @@ ul {
   }
 
   .descripcion {
-    line-height: 1.5rem;
-    font-size: 1.1rem;
+    line-height: 1.1rem;
+    font-size: 0.9rem;
   }
 
   #___gatsby {
@@ -192,28 +154,7 @@ ul {
 
   main {
     margin-top: 10vh;
-    background-position: 195% 75%;
-  }
-  .ficha {
-    min-height: 75vh;
-    &__col-izq {
-      flex: 1 0;
-      padding: 0 3vh 0 0;
-    }
-    &__col-der {
-      flex: 1 0;
-    }
-    &__titulo {
-      margin: 1vh 0;
-    }
-
-    &__compartir {
-      padding: 1.5vh 0 0;
-      &-link {
-        width: 3vh;
-        height: 3vh;
-      }
-    }
+    background-position: 230% 75%;
   }
 }
 

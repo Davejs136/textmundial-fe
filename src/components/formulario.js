@@ -1,5 +1,11 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// @fortawesome libraries
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
 import "./formulario.scss"
+// add fas and fab to the library
+library.add(fab)
 
 const Formulario = () => {
   return (
@@ -14,7 +20,7 @@ const Formulario = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              +58 414-270-28-86
+              <FontAwesomeIcon icon={["fab", "whatsapp"]} /> +58 414-270-28-86
             </a>{" "}
             o enviános un mensaje a través del siguiente formulario:
           </p>
