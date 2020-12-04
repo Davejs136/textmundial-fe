@@ -43,7 +43,7 @@ const Principal = () => (
       }
     `}
     render={data => (
-      <section className="principal contenedor">
+      <section id="Principal" className="principal contenedor">
         <div className="principal__columnas">
           <Slider {...settings}>
             <div>

@@ -13,6 +13,7 @@
   &__descripcion {
     color: $gris3;
     font-weight: 300;
+    font-size: 1.2rem;
   }
 
   &__whatsapp {
@@ -55,7 +56,6 @@
     }
 
     &__descripcion {
-      font-size: 1rem;
       line-height: 1.5rem;
     }
 
@@ -88,7 +88,7 @@
     }
 
     &__descripcion {
-      font-size: 1rem;
+      
       line-height: 1.5rem;
     }
 
@@ -145,7 +145,6 @@
 
     &__descripcion {
       text-align: right;
-      font-size: 1.2rem;
     }
 
     &__form {
@@ -163,7 +162,7 @@
 @media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
   .formulario {
     &__descripcion {
-      font-size: 1.35rem;
+      font-size: 1.45rem;
       line-height: 1.9rem;
     }
   }

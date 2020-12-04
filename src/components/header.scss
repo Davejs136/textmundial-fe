@@ -36,7 +36,7 @@
   .cabecera {
     height: 13vh;
     &__logo {
-      width: 40%;
+      width: 45%;
       margin: 0 auto;
     }
 
@@ -58,11 +58,12 @@
     height: 20vh;
     background-size: 85vw;
     &__logo {
-      flex: 0 0 22%;
+      flex: 0 0 25%;     
     }
 
     &__nav {
       flex: 0 0 50%;
+      margin-left: 5vh;
     }
 
     &__link {
@@ -78,34 +79,14 @@
     height: 10vh;
     background-size: 80vw;
     &__logo {
-      flex: 0 0 20%;
+      flex: 0 0 25%;
       margin: 0;
     }
 
     &__nav {
       flex: 0 0 55%;
       padding-top: 0;
-    }
-
-    &__link {
-      font-size: 0.9rem;
-      text-align: center;
-    }
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
-  .cabecera {
-    height: 10vh;
-    background-size: 80vw;
-    &__logo {
-      flex: 0 0 20%;
-      margin: 0;
-    }
-
-    &__nav {
-      flex: 0 0 55%;
-      padding-top: 0;
+      margin-left: 2vh;
     }
 
     &__link {
@@ -136,8 +117,8 @@
 @media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
   .cabecera {
     background-size: 67.5vw;
-    img {
-      width: 70%;
+    &__logo {
+      flex: 0 0 15%;
     }
   }
 }

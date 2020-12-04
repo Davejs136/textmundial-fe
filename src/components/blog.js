@@ -36,8 +36,8 @@ const Blog = () => (
         <div className="blog__contenido">
           <h2>Blog</h2>
           {data.allMarkdownRemark.edges.map(item => (
-            <div className="blog__columnas">
-              <div className="blog__col-izq" key={item.node.frontmatter.slug}>
+            <div className="blog__columnas" key={item.node.frontmatter.slug}>
+              <div className="blog__col-izq">
                 <Link to={`blog/${item.node.frontmatter.slug}`}>
                   <Img
                     className="blog__imagen"

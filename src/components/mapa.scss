@@ -1,8 +1,7 @@
 @import "../assets/scss/variables";
 @import "../assets/scss/mixins";
 
-.mapa {
-  align-items: flex-end;
+.mapa {  
   &__contenido {
     width: 100%;
   }
@@ -30,7 +29,7 @@
 
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .mapa {
-    min-height: 50vh;
+    min-height:75vh;
     padding: 0 1vh;
     &__contenido {
       h2 {
@@ -122,6 +121,7 @@
 
 @media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
   .mapa {
+    align-items: flex-end;
     min-height: 50vh;
     padding: 0 5vh;
     &__columnas {

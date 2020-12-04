@@ -36,9 +36,12 @@
     &__lista {
       @include flex;
       justify-content: space-between;
+      
     }
 
     &__items {
+      @include flex;
+      @include column-justify;
       flex: 0 0 50%;
       margin: 7vh 0 0 0;
     }
@@ -50,7 +53,7 @@
     }
 
     &__nombre {
-      @include col-3-4;
+      width: 100%;
       padding: 1.5vh 2vh;
       text-align: center;
     }
@@ -98,6 +101,7 @@
     }
 
     &__nombre {
+      @include col-3-4;
       padding: 0 1vh;
       text-align: left;
     }

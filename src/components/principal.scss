@@ -22,7 +22,8 @@
 
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .principal {
-    height: 62.5vh;
+    height: 65vh;
+    padding-top: 4vh;
     &__descripcion {
       text-align: center;
       font-size: 1.25rem;
@@ -80,6 +81,7 @@
     &__col-izq {
       @include table-cell-50;
       vertical-align: middle;
+      padding-right: 1.5vh;
     }
 
     &__col-der {

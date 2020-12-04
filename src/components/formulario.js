@@ -13,16 +13,16 @@ const Formulario = () => {
       <div className="formulario__contenido">
         <div className="formulario__informacion">
           <p className="formulario__descripcion">
-            Consúltenos enviándonos un mensaje a WhatsApp{" "}
+            Mándenos un mensaje por{" "}
             <a
               className="formulario__whatsapp"
               href="https://wa.me/584142702886"
               rel="noopener noreferrer"
               target="_blank"
             >
-              <FontAwesomeIcon icon={["fab", "whatsapp"]} /> +58 414-270-28-86
+              WhatsApp <FontAwesomeIcon icon={["fab", "whatsapp"]} size="1x" />
             </a>{" "}
-            o enviános un mensaje a través del siguiente formulario:
+            o por el siguiente formulario:
           </p>
         </div>
 

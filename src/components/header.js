@@ -16,7 +16,7 @@ const Header = () => (
       <header className="cabecera">
         <div className="contenedor">
           <div className="cabecera__logo">
-            <Link className="cabecera__link" to="/">
+            <Link className="cabecera__link" to="/" onClick={() => scrollTo("#Principal")}>
               <img src={data.logo.publicURL} alt="Logo Texmundial" />
             </Link>
           </div>
