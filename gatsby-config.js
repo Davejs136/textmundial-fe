@@ -13,7 +13,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-smoothscroll`,  
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-offline`,
     // App images
     {

@@ -8,8 +8,6 @@ import Mapa from "../components/mapa"
 import Nosotros from "../components/nosotros"
 import Formulario from "../components/formulario"
 
-
-
 const IndexPage = () => (
   <Layout>
     <SEO
@@ -17,7 +15,7 @@ const IndexPage = () => (
       description="Somos una empresa con más de 27 años en el mercado, conocidos por la excelente calidad de nuestras telas."
       image="http://gruponovanet.com.ve/misc/tm-site-thumb.jpg"
     />
-    
+
     <h1>Texmundial</h1>
 
     <Principal />
@@ -28,10 +26,9 @@ const IndexPage = () => (
 
     <Mapa />
 
-    <Nosotros />    
+    <Nosotros />
 
-    <Formulario />  
-    
+    <Formulario />
   </Layout>
 )
 

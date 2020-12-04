@@ -9,7 +9,7 @@ imagen: "./imagenes/texmundial-publicidad-calidad-telas.jpg"
 alt: "Texto de la imagen"
 ---
 
-***¿La calidad de la publicidad o la publicidad de la calidad?***
+**_¿La calidad de la publicidad o la publicidad de la calidad?_**
 
 Cualquier negocio que haya existido, que exista o que vaya a existir se tiene que enfrentar al dilema de los recursos: ¿Qué tanto conviene usar para ofrecer productos de calidad y qué tanto para hacer publicidad?
 
@@ -25,7 +25,7 @@ Eso sí, hay que tener claro que la calidad tiene más prioridad que la publicid
 
 Nuestro negocio tiene valor en función de que asistamos a nuestros clientes. Si nuestra publicidad es excelente, pero el producto no tanto, va a pasar como con Cenicienta: el encanto se acaba después de medianoche.
 
-En cambio, cuando pasa lo contrario, cuando nos enfocamos primero en la calidad, estamos en una buena posición para asistir a nuestros clientes con lo que vendemos. 
+En cambio, cuando pasa lo contrario, cuando nos enfocamos primero en la calidad, estamos en una buena posición para asistir a nuestros clientes con lo que vendemos.
 
 Una vez que hemos consolidado un buen producto, podemos darnos el lujo de invertir más en publicidad para darnos a conocer. De esa manera, quien quiera que llegue gracias a la publicidad tan solo va a encontrar una confirmación en lo que leyó o vio en el anuncio.
 

@@ -3,13 +3,13 @@ import GoogleMapReact from "google-map-react"
 import "./mapa.scss"
 
 const Mapa = () => {
-   const ubicacion = {
-      center: {
-        lat: 10.5055579,
-        lng: -66.9091227,
-      },
-      zoom: 15,
-    }
+  const ubicacion = {
+    center: {
+      lat: 10.5055579,
+      lng: -66.9091227,
+    },
+    zoom: 15,
+  }
   return (
     <section id="Mapa" className="mapa contenedor">
       <div className="mapa__contenido">
