@@ -1,7 +1,7 @@
 @import "../assets/scss/variables";
 @import "../assets/scss/mixins";
 
-.mapa {  
+.mapa {
   &__contenido {
     width: 100%;
   }
@@ -22,6 +22,10 @@
     color: $azul1;
     font-weight: 400;
   }
+  &__direccion {
+    font-weight: 300;
+    color: $gris3;
+  }
   &__mapa {
     box-shadow: 5px 5px 5px #999999;
   }
@@ -29,7 +33,7 @@
 
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .mapa {
-    min-height:75vh;
+    min-height: 85vh;
     padding: 0 1vh;
     &__contenido {
       h2 {
@@ -54,6 +58,10 @@
       font-size: 1.25rem;
       line-height: 1.8rem;
     }
+    &__direccion {
+      font-size: 0.9rem;
+      line-height: 1.1rem;
+    }
 
     &__mapa {
       height: 30vh;
@@ -63,7 +71,7 @@
 
 @media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
   .mapa {
-    min-height: 70vh;
+    min-height: 77vh;
     padding: 0 5vh;
     align-items: center;
     &__columnas {
@@ -71,17 +79,20 @@
     }
 
     &__col-izq {
-      flex: 0 0 40%;
+      flex: 0 0 50%;
     }
 
     &__col-der {
-      flex: 0 0 58%;
+      flex: 0 0 48%;
     }
 
     &__descripcion {
       text-align: right;
       font-size: 1.25rem;
       line-height: 1.8rem;
+    }
+    &__direccion {
+      text-align: right;
     }
 
     &__mapa {
@@ -105,7 +116,9 @@
     &__descripcion {
       text-align: right;
     }
-
+    &__direccion {
+      text-align: right;
+    }
     &__col-izq {
       flex: 0 0 40%;
     }
@@ -131,6 +144,9 @@
     &__descripcion {
       font-size: 1.6rem;
       line-height: 2.2rem;
+    }
+    &__direccion {
+      font-size: 1.3rem;
     }
 
     &__mapa {

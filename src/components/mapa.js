@@ -19,6 +19,10 @@ const Mapa = () => {
             <p className="mapa__descripcion">
               Atención personalizada sin ningún compromiso visitándonos en:
             </p>
+            <p className="mapa__direccion">
+              Manduca a Romualda. Edificio Jobalco. P.B. La Candelaria. Caracas
+              - Venezuela.
+            </p>
           </div>
           <div className="mapa__col-der">
             <div className="mapa__mapa">
