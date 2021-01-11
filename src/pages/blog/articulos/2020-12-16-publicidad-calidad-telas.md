@@ -1,6 +1,6 @@
 ---
 tipo: "articulo"
-status: "inactivo"
+status: "activo"
 fecha: 2020-12-16
 slug: "publicidad-calidad-telas"
 titulo: "La publicidad y la calidad de las telas"
