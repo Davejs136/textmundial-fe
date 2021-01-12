@@ -6,7 +6,7 @@ slug: "texmundial-distribuidora-telas"
 titulo: "Texmundial, distribuidora de telas"
 description: "Texmundial, somos una distribuidora de telas donde queremos asesorarle, más que venderle."
 imagen: "./imagenes/texmundial-distribuidora-telas.jpg"
-alt: "Texto de la imagen"
+alt: "Depósito de la distribuidora de telas Texmundial que ofrece gran variedad de telas unicolor y estampadas."
 ---
 
 **_Queremos asesorarle, más que venderle_**
