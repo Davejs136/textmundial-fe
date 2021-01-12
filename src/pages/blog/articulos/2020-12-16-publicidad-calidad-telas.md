@@ -4,9 +4,9 @@ status: "activo"
 fecha: 2020-12-16
 slug: "publicidad-calidad-telas"
 titulo: "La publicidad y la calidad de las telas"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+description: "Explicación sobre la importancia de darle prioridad a la calidad del producto en vez de a la publicidad."
 imagen: "./imagenes/texmundial-publicidad-calidad-telas.jpg"
-alt: "Texto de la imagen"
+alt: "Diferentes muestras de telas unicolor con tonos alrededor del rojo y el blanco. Son una muestra de la calidad de las telas."
 ---
 
 **_¿La calidad de la publicidad o la publicidad de la calidad?_**
@@ -37,6 +37,6 @@ En ese sentido, ganamos de muchas maneras:
 
 En fin, no se trata de decidir qué es más importante sino establecer las prioridades de forma clara. En este mundo donde nos desenvolvemos, los recursos no son infinitos y hay que tomar decisiones acertadas para darles el mejor uso posible.
 
-En virtud de ello, parece que tiene más sentido darle prioridad a la calidad sin descuidar la publicidad, y esperar a que el negocio haya crecido lo suficiente para aumentar la inversión en esta área sin tener que descuidar la calidad de lo que se vende.
+En virtud de ello, parece que (tiene más sentido darle prioridad a la calidad)[https://www.printful.com/blog/es/guia-algodon-poliester-telas-mixtas/] sin descuidar la publicidad, y esperar a que el negocio haya crecido lo suficiente para aumentar la inversión en esta área sin tener que descuidar la calidad de lo que se vende.
 
 Durante todo este tiempo que hemos estado ofreciendo telas a nuestros clientes, nos hemos guiado bajo esta máxima y hemos tenido buenos resultados. No vemos cómo no podría funcionar en otros negocios.
