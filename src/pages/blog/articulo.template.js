@@ -78,6 +78,7 @@ export const query = graphql`
         fecha(formatString: "DD MMMM YYYY")
         titulo
         description
+        alt
         imagen {
           childImageSharp {
             fluid(maxWidth: 610) {

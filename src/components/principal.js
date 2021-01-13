@@ -56,7 +56,7 @@ const Principal = () => (
                 </p>
               </div>
               <div className="principal__col-der">
-                <Img fluid={data.uno.childImageSharp.fluid} alt="otra imagen" />
+                <Img fluid={data.uno.childImageSharp.fluid} alt="Muestras de las variadas telas que ofrece texmundial, hay diferentes colores y estilos." />
               </div>
             </div>
 
@@ -68,7 +68,7 @@ const Principal = () => (
                 </p>
               </div>
               <div className="principal__col-der">
-                <Img fluid={data.dos.childImageSharp.fluid} alt="otra imagen" />
+                <Img fluid={data.dos.childImageSharp.fluid} alt="Exhibición de la variedad de telas disponibles en la tienda de texmundial." />
               </div>
             </div>
 
@@ -83,7 +83,7 @@ const Principal = () => (
               <div className="principal__col-der">
                 <Img
                   fluid={data.tres.childImageSharp.fluid}
-                  alt="otra imagen"
+                  alt="Muestra de neopreno en gris y negro, vendido por la distribuidora de telas texnundial."
                 />
               </div>
             </div>
