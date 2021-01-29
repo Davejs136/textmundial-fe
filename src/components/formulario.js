@@ -20,7 +20,8 @@ const Formulario = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              WhatsApp <FontAwesomeIcon icon={["fab", "whatsapp"]} size="1x" />
+              WhatsApp <FontAwesomeIcon icon={["fab", "whatsapp"]} size="1x" /> 
+              0414.270.28.86
             </a>{" "}
             o por el siguiente formulario:
           </p>

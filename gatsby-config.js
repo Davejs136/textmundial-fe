@@ -52,22 +52,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: "./src/assets/images/icon.png",
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          yandex: false,
-          windows: true,
-        },
-      },
-    },
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [],

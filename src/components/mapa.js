@@ -21,7 +21,7 @@ const Mapa = () => {
             </p>
             <p className="mapa__direccion">
               Manduca a Romualda. Edificio Jobalco. P.B. La Candelaria. Caracas
-              - Venezuela.
+              - Venezuela. <br/> Teléfonos: 0414.270.28.86 - 0414.249.63.50
             </p>
           </div>
           <div className="mapa__col-der">
