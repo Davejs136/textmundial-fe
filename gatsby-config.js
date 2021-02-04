@@ -39,6 +39,7 @@ module.exports = {
         path: `${__dirname}/src/pages/blog/articulos`,
       },
     },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
