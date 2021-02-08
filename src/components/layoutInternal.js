@@ -18,7 +18,7 @@ const LayoutInternal = ({ children }) => (
   </div>
 )
 
-Layout.propTypes = {
+LayoutInternal.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
