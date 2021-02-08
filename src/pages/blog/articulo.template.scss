@@ -56,20 +56,22 @@
     &__contenido {
       p {
         font-size: 0.8rem;
-        line-height: 1rem;
-        column-count: 2;
-        column-gap: 2vw;
+        line-height: 1rem;        
       }
     }
     &__titulo-articulo {
       font-size: 1.2rem;
+    }
+    .descripcion {
+      column-count: 2;
+      column-gap: 2vw;
     }
   }
 }
 
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .ficha {
-    p {
+    .descripcion {
       column-count: 2;
       column-gap: 2vw;
     }
@@ -88,7 +90,7 @@
       font-size: 0.9rem;
     }
     .descripcion {
-      width: 100%;
+      width: 100%;      
     }
   }
 }
@@ -98,6 +100,10 @@
     p {
       font-size: 1rem;
       line-height: 1.2rem;
+    }
+    .descripcion {
+      column-count: 2;
+      column-gap: 2vw;
     }
   }
 }

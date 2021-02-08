@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
-import Layout from "../../components/layout"
+import LayoutInternal from "../../components/layoutInternal"
 import SEO from "../../components/seo"
 import { window } from "browser-monads"
 import "./articulo.template.scss"
@@ -19,7 +19,7 @@ const ArticuloTemplate = ({ data }) => {
   const { frontmatter, html } = markdownRemark
   const shareUrl = window.location.href
   return (
-    <Layout>
+    <LayoutInternal>
       <SEO
         title={frontmatter.titulo}
         description={frontmatter.description}
@@ -64,7 +64,7 @@ const ArticuloTemplate = ({ data }) => {
           </div>
         </div>
       </section>
-    </Layout>
+    </LayoutInternal>
   )
 }
 
