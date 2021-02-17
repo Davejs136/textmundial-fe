@@ -25,7 +25,7 @@ Eso es apenas un ejemplo entre tantas situaciones que nos hemos encontrado duran
 
 Cierto, no somos la Madre Teresa de Calcuta ni aspiramos a serlo. Al final del día, esto es un negocio y el objetivo es vender, pero nos enfocamos más en el proceso que en el resultado. Estamos convencidos que esto vendrá por sí solo, como una consecuencia de nuestra pasión y denuedo al momento de atender a nuestros clientes.
 
-Para ser más claros, pongamos de ejemplo lo que cuenta [Cavafis en su poema ítaca](https://culturainquieta.com/es/inspiring/item/12984-itaca-un-poema-nos-recuerda-que-el-viaje-es-mas-importante-que-la-meta.html) o dejémoslo en que es un asunto de confianza. ¿A quién prefiere comprarle? ¿A alguien que es sincero y le ayuda a tomar la mejor decisión posible o a alguien que está completamente desinteresado en lo que hace y en su negocio? Nosotros sabemos la respuesta y actuamos en consecuencia.
+Para ser más claros, pongamos de ejemplo lo que cuenta <a href="https://tinyurl.com/9qlxcjpc" target="_blank">Cavafis en su poema ítaca</a> o dejémoslo en que es un asunto de confianza. ¿A quién prefiere comprarle? ¿A alguien que es sincero y le ayuda a tomar la mejor decisión posible o a alguien que está completamente desinteresado en lo que hace y en su negocio? Nosotros sabemos la respuesta y actuamos en consecuencia.
 
 Hay otra razón más y tiene que ver con algo que tienen en común quien nos visita y las telas: ambos tienen una historia que contar. Usualmente, nuestros clientes son emprendedores y han tenido que superar obstáculos, es decir, hay una trama que compartir. Curiosamente, la palabra que describe a los hilos horizontales cruzándose con los hilos verticales también se le llama trama.
 

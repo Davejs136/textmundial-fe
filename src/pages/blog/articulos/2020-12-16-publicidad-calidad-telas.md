@@ -37,6 +37,6 @@ En ese sentido, ganamos de muchas maneras:
 
 En fin, no se trata de decidir qué es más importante sino establecer las prioridades de forma clara. En este mundo donde nos desenvolvemos, los recursos no son infinitos y hay que tomar decisiones acertadas para darles el mejor uso posible.
 
-En virtud de ello, parece que [tiene más sentido darle prioridad a la calidad](https://www.printful.com/blog/es/guia-algodon-poliester-telas-mixtas/) sin descuidar la publicidad, y esperar a que el negocio haya crecido lo suficiente para aumentar la inversión en esta área sin tener que descuidar la calidad de lo que se vende.
+En virtud de ello, parece que <a href="https://www.printful.com/blog/es/guia-algodon-poliester-telas-mixtas/" target="_blank"> tiene más sentido darle prioridad a la calidad</a> sin descuidar la publicidad, y esperar a que el negocio haya crecido lo suficiente para aumentar la inversión en esta área sin tener que descuidar la calidad de lo que se vende.
 
 Durante todo este tiempo que hemos estado ofreciendo telas a nuestros clientes, nos hemos guiado bajo esta máxima y hemos tenido buenos resultados. No vemos cómo no podría funcionar en otros negocios.
