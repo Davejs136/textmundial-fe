@@ -9,7 +9,7 @@ imagen: "./imagenes/texmundial-publicidad-calidad-telas.jpg"
 alt: "Diferentes muestras de telas unicolor con tonos alrededor del rojo y el blanco. Son una muestra de la calidad de las telas."
 ---
 
-**_¿La calidad de la publicidad o la publicidad de la calidad?_**
+### ¿La calidad de la publicidad o la publicidad de la calidad? 
 
 Cualquier negocio que haya existido, que exista o que vaya a existir se tiene que enfrentar al dilema de los recursos: ¿Qué tanto conviene usar para ofrecer productos de calidad y qué tanto para hacer publicidad?
 
@@ -19,7 +19,7 @@ Si nos enfocamos solo en la calidad, corremos el riesgo de que pocos nos conozca
 
 Sin duda, es un asunto de ensayo y error que vamos afinando en la medida que vamos conociendo mejor a nuestros clientes, con qué tipo de personas queremos conectar y a quién queremos venderle. En función de eso es posible determinar cuánto estamos dispuestos a invertir en publicidad y va a quedar claro cuánto vamos a invertir en darle calidad a nuestros clientes.
 
-## La calidad primero, la publicidad después
+### La calidad primero, la publicidad después
 
 Eso sí, hay que tener claro que la calidad tiene más prioridad que la publicidad. De nada sirve tener la mejor publicidad del mundo para dar a conocer un producto bastante pobre y que no soluciona nada a nadie.
 
