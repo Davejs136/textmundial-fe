@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
     // App images
     {
       resolve: `gatsby-source-filesystem`,
@@ -68,6 +69,18 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaultQuality: 100,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "GA-263123721", // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: false,
+        },
       },
     },
   ],

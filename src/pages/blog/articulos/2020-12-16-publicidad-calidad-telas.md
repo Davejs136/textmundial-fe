@@ -9,7 +9,7 @@ imagen: "./imagenes/texmundial-publicidad-calidad-telas.jpg"
 alt: "Diferentes muestras de telas unicolor con tonos alrededor del rojo y el blanco. Son una muestra de la calidad de las telas."
 ---
 
-**_¿La calidad de la publicidad o la publicidad de la calidad?_**
+### ¿La calidad de la publicidad o la publicidad de la calidad?
 
 Cualquier negocio que haya existido, que exista o que vaya a existir se tiene que enfrentar al dilema de los recursos: ¿Qué tanto conviene usar para ofrecer productos de calidad y qué tanto para hacer publicidad?
 
@@ -19,7 +19,7 @@ Si nos enfocamos solo en la calidad, corremos el riesgo de que pocos nos conozca
 
 Sin duda, es un asunto de ensayo y error que vamos afinando en la medida que vamos conociendo mejor a nuestros clientes, con qué tipo de personas queremos conectar y a quién queremos venderle. En función de eso es posible determinar cuánto estamos dispuestos a invertir en publicidad y va a quedar claro cuánto vamos a invertir en darle calidad a nuestros clientes.
 
-## La calidad primero, la publicidad después
+### La calidad primero, la publicidad después
 
 Eso sí, hay que tener claro que la calidad tiene más prioridad que la publicidad. De nada sirve tener la mejor publicidad del mundo para dar a conocer un producto bastante pobre y que no soluciona nada a nadie.
 
@@ -37,6 +37,6 @@ En ese sentido, ganamos de muchas maneras:
 
 En fin, no se trata de decidir qué es más importante sino establecer las prioridades de forma clara. En este mundo donde nos desenvolvemos, los recursos no son infinitos y hay que tomar decisiones acertadas para darles el mejor uso posible.
 
-En virtud de ello, parece que [tiene más sentido darle prioridad a la calidad](https://www.printful.com/blog/es/guia-algodon-poliester-telas-mixtas/) sin descuidar la publicidad, y esperar a que el negocio haya crecido lo suficiente para aumentar la inversión en esta área sin tener que descuidar la calidad de lo que se vende.
+En virtud de ello, parece que <a href="https://www.printful.com/blog/es/guia-algodon-poliester-telas-mixtas/" target="_blank"> tiene más sentido darle prioridad a la calidad</a> sin descuidar la publicidad, y esperar a que el negocio haya crecido lo suficiente para aumentar la inversión en esta área sin tener que descuidar la calidad de lo que se vende.
 
 Durante todo este tiempo que hemos estado ofreciendo telas a nuestros clientes, nos hemos guiado bajo esta máxima y hemos tenido buenos resultados. No vemos cómo no podría funcionar en otros negocios.
