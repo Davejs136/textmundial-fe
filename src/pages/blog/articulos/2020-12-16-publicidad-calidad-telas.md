@@ -9,7 +9,7 @@ imagen: "./imagenes/texmundial-publicidad-calidad-telas.jpg"
 alt: "Diferentes muestras de telas unicolor con tonos alrededor del rojo y el blanco. Son una muestra de la calidad de las telas."
 ---
 
-### ¿La calidad de la publicidad o la publicidad de la calidad? 
+### ¿La calidad de la publicidad o la publicidad de la calidad?
 
 Cualquier negocio que haya existido, que exista o que vaya a existir se tiene que enfrentar al dilema de los recursos: ¿Qué tanto conviene usar para ofrecer productos de calidad y qué tanto para hacer publicidad?
 

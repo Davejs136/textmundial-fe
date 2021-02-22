@@ -8,6 +8,7 @@ description: "Breve descripción sobre la historia del algodón y su relación c
 imagen: "./imagenes/texmundial-algodon.jpg"
 alt: "Algodón crudo luego de haber sido cosechado para la confección de telas y para otros usos que se le suele dar a esta fibra."
 ---
+
 ### La lana que crece de los árboles
 
 Era final de la tarde cuando Ana encontró algunas reacciones desfavorables en su piel muy cercanas a su zona íntima. Apenas se dio cuenta, llamó a su ginecóloga de confianza y ella le recomendó varias cosas, entre ellas usar <a href="https://tinyurl.com/1rwp9aed" target="_blank">ropa de algodón.</a>
@@ -16,9 +17,9 @@ De seguro ya conocías que el algodón es especial para lidiar con alergias en l
 
 Nadie sabe dónde se usó por primera vez el algodón, pero se suele pensar que fue en la India. De todas formas, en muchas culturas a lo largo del mundo se desarrolló independientemente la explotación del algodón y en varias se pueden encontrar referencias del uso de esta tela.
 
-Lo curioso es que, al menos los griegos, pensaban que el algodón era una especie de tela de la cual brotaban animales y de estos animales se sacaba el textil para hacer las telas. En palabras de Herodoto, 
+Lo curioso es que, al menos los griegos, pensaban que el algodón era una especie de tela de la cual brotaban animales y de estos animales se sacaba el textil para hacer las telas. En palabras de Herodoto,
 
-“Ellos poseen una especie de planta que, en vez de fruto, produce lana de una calidad más hermosa y mejor que la de los carneros: de ella los Indios hacen sus vestidos.”  
+“Ellos poseen una especie de planta que, en vez de fruto, produce lana de una calidad más hermosa y mejor que la de los carneros: de ella los Indios hacen sus vestidos.”
 
 <img src="https://tinyurl.com/2gadolba" alt="Planta con una flor alta de la cual se observa cómo surge de ella un animal parecido a un lobo. Todo está a escala de grises."></a>
 

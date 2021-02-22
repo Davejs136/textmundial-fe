@@ -2,8 +2,6 @@ import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import "./header.scss"
 
-
-
 const HeaderInternal = () => (
   <StaticQuery
     query={graphql`
