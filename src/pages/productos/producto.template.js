@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
-import Layout from "../../components/layout"
+import LayoutInternal from "../../components/layoutInternal"
 import SEO from "../../components/seo"
 import { window } from "browser-monads"
 import "./producto.template.scss"
@@ -19,7 +19,7 @@ const ProductoTemplate = ({ data }) => {
   const { frontmatter } = markdownRemark
   const shareUrl = window.location.href
   return (
-    <Layout>
+    <LayoutInternal>
       <SEO
         title={frontmatter.nombre}
         description={frontmatter.descripcion}
@@ -32,9 +32,9 @@ const ProductoTemplate = ({ data }) => {
               <Link className="ficha__regreso" to="/">
                 « Volver al inicio
               </Link>
-              <div className="ficha__informacion">
+              <div className="ficha__informacion descripcion">
                 <h2 className="ficha__titulo">{frontmatter.nombre}</h2>
-                <p className="descripcion">{frontmatter.descripcion}</p>
+                <p>{frontmatter.descripcion}</p>
               </div>
             </div>
             <div className="ficha__col-der">
@@ -59,7 +59,7 @@ const ProductoTemplate = ({ data }) => {
           </div>
         </div>
       </section>
-    </Layout>
+    </LayoutInternal>
   )
 }
 
