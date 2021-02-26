@@ -6,8 +6,6 @@ import SEO from "../../components/seo"
 import { window } from "browser-monads"
 import "./producto.template.scss"
 import {
-  InstapaperShareButton,
-  InstapaperIcon,
   TwitterShareButton,
   TwitterIcon,
   WhatsappShareButton,
@@ -25,16 +23,16 @@ const ProductoTemplate = ({ data }) => {
         description={frontmatter.descripcion}
         image={frontmatter.imagen.childImageSharp.fluid}
       />
-      <section className="ficha">
+      <section className="ficha producto">
         <div className="contenedor">
           <div className="ficha__individual">
             <div className="ficha__col-izq">
               <Link className="ficha__regreso" to="/">
                 « Volver al inicio
               </Link>
-              <div className="ficha__informacion descripcion">
-                <h2 className="ficha__titulo">{frontmatter.nombre}</h2>
-                <p>{frontmatter.descripcion}</p>
+              <div className="ficha__informacion">
+                <h1 className="ficha__titulo">{frontmatter.nombre}</h1>
+                <p className="descripcion">{frontmatter.descripcion}</p>
               </div>
             </div>
             <div className="ficha__col-der">
@@ -45,9 +43,6 @@ const ProductoTemplate = ({ data }) => {
               />
               <div className="ficha__compartir">
                 Compartir
-                <InstapaperShareButton url={shareUrl} children="a">
-                  <InstapaperIcon size={28} round={true} />
-                </InstapaperShareButton>
                 <TwitterShareButton url={shareUrl} children="a">
                   <TwitterIcon size={28} round={true} />
                 </TwitterShareButton>

@@ -20,11 +20,12 @@
   &__col-der {
     @include flex;
     @include column-justify;
-  }
-  &__titulo {
-    border: 0;
-    &:before {
-      border: 0;
+    h2 {
+      border-bottom: 0;
+      &:before {
+        content: " ";
+        border: 0;
+      }
     }
   }
   &__boton {
@@ -43,34 +44,34 @@
 
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .blog {
-     min-height: 105vh;
-     padding: 5vh 1vh;
-     &__columnas {
-        margin-top: 3vh;
-     }
-     &__col-izq {
-        width: 100%;
-     }
-     &__titulo {
-        margin-top: 2vh;
-     }
+    min-height: 105vh;
+    padding: 5vh 1vh;
+    &__columnas {
+      margin-top: 3vh;
+    }
+    &__col-izq {
+      width: 100%;
+    }
+    &__titulo {
+      margin-top: 2vh;
+    }
   }
 }
 
 @media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
   .blog {
-   min-height: 70vh;  
-   padding: 05vh 5vh;
-   &__columnas {
+    min-height: 70vh;
+    padding: 05vh 5vh;
+    &__columnas {
       margin-top: 2vh;
-   }   
+    }
   }
 }
 
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
   .blog {
-   min-height: 40vh;  
-   &__col-izq {
+    min-height: 40vh;
+    &__col-izq {
       flex: 0 0 50%;
       padding: 2vh;
     }
@@ -83,15 +84,10 @@
 
 @media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
   .blog {
-     min-height: 40vh;
+    min-height: 40vh;
   }
   .descripcion {
-     width: 80%;
-  }
-}
-
-@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
-  .blog {
+    width: 80%;
   }
 }
 
@@ -110,6 +106,9 @@
 
     .descripcion {
       width: 80%;
+      h2 {
+        font-size: 1.1rem;
+      }
     }
   }
 }
