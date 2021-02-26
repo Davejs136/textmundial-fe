@@ -21,7 +21,7 @@ Lo curioso es que, al menos los griegos, pensaban que el algodón era una especi
 
 “Ellos poseen una especie de planta que, en vez de fruto, produce lana de una calidad más hermosa y mejor que la de los carneros: de ella los Indios hacen sus vestidos.”
 
-<img src="https://tinyurl.com/2gadolba" alt="Planta con una flor alta de la cual se observa cómo surge de ella un animal parecido a un lobo. Todo está a escala de grises."></a>
+<img src="https://tinyurl.com/2gadolba" alt="Planta con una flor alta de la cual se observa cómo surge de ella un animal parecido a un lobo. Todo está a escala de grises.">
 
 En verdad, todo esto está lleno de anécdotas interesantes como esas. En caso de que quiera ahondar un poco más, en el siguiente link puede ver más sobre la <a href="https://tinyurl.com/4lkii7po" target="_blank">historia del algodón</a>.
 
