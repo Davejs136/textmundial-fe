@@ -25,15 +25,15 @@ main {
   @include flex;
 }
 
-h1 {
-  display: none;
+h1,
+h2,
+h3 {
+  color: $azul2;
 }
 
-h2 {
-  font-size: 1.5rem;
+h1 {
   font-weight: 900;
   border-bottom: $azul2 3px solid;
-  color: $azul2;
   position: relative;
   display: inline-flex;
   padding-bottom: 1vh;
@@ -56,10 +56,29 @@ h2 {
   }
 }
 
-h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: $azul2;
+h2 {
+  font-weight: 900;
+  border-bottom: $azul2 3px solid;
+  position: relative;
+  display: inline-flex;
+  padding-bottom: 1vh;
+  &:before {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    left: -1vh;
+    right: -1vh;
+    bottom: 0;
+    border: 2px solid transparent;
+    -moz-border-image: -moz-linear-gradient(to right, #ffee00 0%, #e14314 100%);
+    -webkit-border-image: -webkit-linear-gradient(
+      to right,
+      #ffee00 0%,
+      #e14314 100%
+    );
+    border-image: linear-gradient(to right, #ffee00 0%, #e14314 100%);
+    border-image-slice: 1;
+  }
 }
 
 .descripcion {
@@ -77,11 +96,11 @@ ul {
 }
 
 @media only screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
-  h2 {
+  h1 {
     font-size: 1.2rem;
   }
 
-  h3 {
+  h2 {
     font-size: 0.8rem;
   }
 
@@ -106,12 +125,12 @@ ul {
 }
 
 @media only screen and (min-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-  h2 {
+  h1 {
     font-size: 1.4rem;
   }
 
-  h3 {
-    font-size: 1rem;
+  h2 {
+    font-size: 1.25rem;
   }
 
   .descripcion {
@@ -135,11 +154,11 @@ ul {
 }
 
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
-  h2 {
+  h1 {
     font-size: 1.35rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1.2rem;
   }
 

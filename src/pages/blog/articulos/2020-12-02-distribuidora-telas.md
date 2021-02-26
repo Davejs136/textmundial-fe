@@ -9,7 +9,7 @@ imagen: "./imagenes/texmundial-distribuidora-telas.jpg"
 alt: "Depósito de la distribuidora de telas Texmundial que ofrece gran variedad de telas unicolor y estampadas."
 ---
 
-### Queremos asesorarle, más que venderle
+## Queremos asesorarle, más que venderle
 
 Ese es nuestro lema. Por más de 27 años hemos trabajado bajo ese credo y nos gusta que sea así porque sentimos que es la mejor manera que hemos conseguido para conectar con nuestros clientes, con sus historias y con las que cuentan las telas.
 
@@ -21,7 +21,7 @@ Por los gustos se venden las telas, dicen. Hay tantos tipos de telas y, a su vez
 
 Eso es apenas un ejemplo entre tantas situaciones que nos hemos encontrado durante todo este tiempo. Como hemos visto tantos casos y hemos probado diferentes tipos de tela, hemos aprendido ciertas cosas que estamos dispuestos a compartir con quienes nos visitan incluso si no nos compran. ¿Por qué lo hacemos? ¿Qué sacamos de todo esto?
 
-### Una cuestión de confianza
+## Una cuestión de confianza
 
 Cierto, no somos la Madre Teresa de Calcuta ni aspiramos a serlo. Al final del día, esto es un negocio y el objetivo es vender, pero nos enfocamos más en el proceso que en el resultado. Estamos convencidos que esto vendrá por sí solo, como una consecuencia de nuestra pasión y denuedo al momento de atender a nuestros clientes.
 

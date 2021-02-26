@@ -17,6 +17,11 @@
   &__descripcion {
     color: $blanco;
     font-weight: 400;
+    border-bottom: 0;
+    &:before {
+      content: " ";
+      border:0
+    }
   }
 }
 

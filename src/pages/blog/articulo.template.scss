@@ -29,6 +29,11 @@
   }
   h2 {
     margin: 0 0 1vh 0;
+    border-bottom: 0;
+    &:before {
+      content: " ";
+      border:0
+    }
   }
   p {
     margin-bottom: 1.5vh;

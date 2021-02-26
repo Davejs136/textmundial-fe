@@ -9,7 +9,7 @@ imagen: "./imagenes/texmundial-romualda-atencion-clientes.jpg"
 alt: "Dibujo a mano de la catedral cerca de la esquina La Romualda, cerca de Texmundial."
 ---
 
-### Sobre la esquina La Romualda 
+## Sobre la esquina La Romualda 
 
 Caracas es una ciudad hermosa, llena de cultura y aspectos interesantes para quienes viven en ella, la han visitado hasta conocerla lo suficiente o han leído bastante sobre ella aunque no hayan vivido allí.
 
@@ -25,7 +25,7 @@ Pero precisamente ese es el caso de Romualda Rubí quien, a saber de la escritor
 
 Para decirlo de otra forma, esta esquina siempre ha tenido una gran actividad comercial, incluso desde la colonia. Mucha agua ha pasado por los ríos desde que Doña Romualda hiciera vida en la esquina y, aún así, sigue siendo un lugar de referencia comercial.
 
-### 27 años asesorando a nuestros clientes
+## 27 años asesorando a nuestros clientes
 
 ¿Por qué hablamos de la esquina La Romualda? Resulta ser que nuestro local de venta de telas al mayor queda muy cerca de esa esquina, yendo hacia Manduca. Tal como Doña Romualda Rubí montó su puesto de mondongo en la esquina, nosotros abrimos una tienda hace 27 años con un objetivo claro: asesorar a nuestros clientes sobre el mejor uso de nuestras telas.
 

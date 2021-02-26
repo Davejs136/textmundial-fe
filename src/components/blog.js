@@ -10,7 +10,7 @@ const Blog = () => (
       query {
         allMarkdownRemark(
           filter: { frontmatter: { status: { eq: "activo" } } }
-          sort: { fields: [frontmatter___fecha], order: ASC }
+          sort: { fields: [frontmatter___fecha], order: DESC }
         ) {
           edges {
             node {

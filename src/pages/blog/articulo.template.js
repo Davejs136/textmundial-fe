@@ -6,8 +6,6 @@ import SEO from "../../components/seo"
 import { window } from "browser-monads"
 import "./articulo.template.scss"
 import {
-  InstapaperShareButton,
-  InstapaperIcon,
   TwitterShareButton,
   TwitterIcon,
   WhatsappShareButton,
@@ -40,14 +38,11 @@ const ArticuloTemplate = ({ data }) => {
             </div>
             <div className="ficha__col-der ficha__col-der-articulo">
               <div className="ficha__informacion">
-                <h2 className="ficha__titulo ficha__titulo-articulo">
+                <h1 className="ficha__titulo ficha__titulo-articulo">
                   {frontmatter.titulo}
-                </h2>
+                </h1>
                 <div className="ficha__compartir">
-                  Compartir
-                  <InstapaperShareButton url={shareUrl} children="a">
-                    <InstapaperIcon size={28} round={true} />
-                  </InstapaperShareButton>
+                  Compartir              
                   <TwitterShareButton url={shareUrl} children="a">
                     <TwitterIcon size={28} round={true} />
                   </TwitterShareButton>

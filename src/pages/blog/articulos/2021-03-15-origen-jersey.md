@@ -9,7 +9,7 @@ imagen: "./imagenes/texmundial-origen-jersey.jpg"
 alt: "Diferentes telas jersey apiladas unas a otras con diferentes colores."
 ---
 
-### El jersey viene de Jersey
+## El jersey viene de Jersey
 Nosotros, los seres humanos, solemos dar por sentado muchas cosas. Solo nos preocupamos por conocer aquello que es necesario para nuestras actividades inmediatas o de mediano plazo. Un buen ejemplo es la tela jersey.
 
 ¿De dónde viene esta tela? ¿De qué fibra proviene? ¿Dónde se producía originalmente y por qué? Y, aunque no sepamos las respuestas a estas preguntas en este preciso instante, es probable que estemos usando tela jersey ahora mismo. ¿Cómo asegurarnos? La etiqueta de la prenda nos da todos los detalles.
@@ -20,7 +20,7 @@ Sin más, hay que decir que esta tela proviene del archipiélago de las islas de
 
 Resulta ser que no todo el mundo usaba jersey y tampoco esta tela era como la conocemos ahora. Antes se hacía a partir de la lana para proteger a los pescadores del viento frío mientras andaban en su faena. Lo que sí se conserva es la forma en que la tela es tejida, es decir, por medio de telares circulares donde las tramas se mezclan con las urdimbres.
 
-### ¿Cómo la tela jersey salió de Jersey?
+## ¿Cómo la tela jersey salió de Jersey?
 Decíamos que la tela jersey solo se usaba en Jersey por los pescadores. Por esta razón, se asociaba con humildad, pobreza y sencillez. No obstante, todo eso iba a cambiar en la primavera de 1924 cuando la famosa diseñadora francesa Coco Chanel sacó su colección de ropa hecha con jersey.
 
 Desde que se asentara en la Rue de Cambon 31, en París, en el año 1910, obtuvo buena fama como diseñadora y costurera meticulosa. Claramente el mundo de la moda estaba viendo lo que ella hacía. Desde entonces, el jersey dejó de ser una tela poco conocida para convertirse en una de las principales telas del buen vestir.

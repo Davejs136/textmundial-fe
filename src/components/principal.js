@@ -50,10 +50,10 @@ const Principal = () => (
           <Slider {...settings}>
             <div>
               <div className="principal__col-izq">
-                <p className="principal__descripcion">
+                <h1 className="principal__descripcion">
                   Una buena marca requiere de calidad total empezando por sus
                   telas que las consigues en Texmundial
-                </p>
+                </h1>
               </div>
               <div className="principal__col-der">
                 <Img
@@ -65,10 +65,10 @@ const Principal = () => (
 
             <div>
               <div className="principal__col-izq">
-                <p className="principal__descripcion">
+                <h1 className="principal__descripcion">
                   ¿Aún no decide cuál tela le conviene para ese negocio que
                   tiene en mente? Nosotros le asesoramos sin ningún compromiso.
-                </p>
+                </h1>
               </div>
               <div className="principal__col-der">
                 <Img
@@ -80,11 +80,11 @@ const Principal = () => (
 
             <div>
               <div className="principal__col-izq">
-                <p className="principal__descripcion">
+                <h1 className="principal__descripcion">
                   Dada la situación actual con el Covid-19, ofrecemos a nuestros
                   clientes neopreno, usado en la elaboración de mascarillas para
                   prevenir el contagio con el virus
-                </p>
+                </h1>
               </div>
               <div className="principal__col-der">
                 <Img

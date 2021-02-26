@@ -181,6 +181,16 @@
   }
 }
 
+@media only screen and (min-device-width: 1280px) and (-webkit-min-device-pixel-ratio: 1) {
+  .producto {
+    .descripcion {
+      column-count: unset;
+    }
+  }
+}
+
+
+
 @media only screen and (min-device-width: 1920px) and (-webkit-min-device-pixel-ratio: 1) {
   .ficha {
     &__compartir-link {

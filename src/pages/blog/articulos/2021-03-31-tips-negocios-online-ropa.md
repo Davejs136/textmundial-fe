@@ -9,7 +9,7 @@ imagen: "./imagenes/texmundial-tips-negocios-online-ropa.jpg"
 alt: "Joven emprendedora frente a la computadora montando su negocio online de ropa."
 ---
 
-### Sobre el emprendimiento
+## Sobre el emprendimiento
 Emprender no es una tarea fácil. Requiere conocer de todo un poco y, especialmente, sobre el producto a vender. En este caso, habría que saber sobre la clase de ropa que están buscando quienes podrían ser nuestros clientes.
 
 Dicho esto, veamos ahora lo que sucede en el mundo. Las condiciones actuales nos llevan a pensar que conviene prestar atención a las ventas online. Ahora bien, vender así es muy diferente a vender en una tienda física. ¿Qué deberíamos saber para vender ropa online de forma exitosa?
@@ -22,7 +22,7 @@ Antes de ir para allá, pongamos en contexto al emprendedor. Todo proceso produc
 
 Esto hace del emprendedor una especie de coordinador de los recursos disponibles para producir algo en particular, en este caso, <a href="https://tinyurl.com/n29arm77" target="_blank">ropa de calidad con buenos colores</a> y estampados para vender online. Ahora sí, vamos con la pregunta que dejamos pendiente.
 
-### ¿Cómo vender ropa a través de la web?
+## ¿Cómo vender ropa a través de la web?
 Naturalmente, vender es un proceso muy complejo. Y es así porque envuelve a muchos seres humanos relacionándose de formas que solo podemos imaginar. Aun así, vamos a conversar sobre un esquema general que podría servir para montar un negocio de ropa online propio. Para hacer todo más fácil, organizamos la información en 9 pasos.
 
 **Paso 1. Define el nicho de mercado.** Tenemos que conocer a quién le vamos a vender y qué le vamos a vender. Un buen nicho de mercado es aquel donde producir algo sea apasionante y, a la vez, tenga poca competencia.

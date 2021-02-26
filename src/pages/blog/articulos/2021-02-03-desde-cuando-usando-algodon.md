@@ -1,7 +1,7 @@
 ---
 tipo: "articulo"
 status: "activo"
-fecha: 2020-02-03
+fecha: 2021-02-03
 slug: "desde-cuando-usando-algodon"
 titulo: "¿Desde cuándo hemos estado usando el algodón?"
 description: "Breve descripción sobre la historia del algodón y su relación con nosotros."
@@ -9,7 +9,7 @@ imagen: "./imagenes/texmundial-algodon.jpg"
 alt: "Algodón crudo luego de haber sido cosechado para la confección de telas y para otros usos que se le suele dar a esta fibra."
 ---
 
-### La lana que crece de los árboles
+## La lana que crece de los árboles
 
 Era final de la tarde cuando Ana encontró algunas reacciones desfavorables en su piel muy cercanas a su zona íntima. Apenas se dio cuenta, llamó a su ginecóloga de confianza y ella le recomendó varias cosas, entre ellas usar <a href="https://tinyurl.com/1rwp9aed" target="_blank">ropa de algodón.</a>
 
@@ -25,7 +25,7 @@ Lo curioso es que, al menos los griegos, pensaban que el algodón era una especi
 
 En verdad, todo esto está lleno de anécdotas interesantes como esas. En caso de que quiera ahondar un poco más, en el siguiente link puede ver más sobre la <a href="https://tinyurl.com/4lkii7po" target="_blank">historia del algodón</a>.
 
-### El algodón en nuestros días
+## El algodón en nuestros días
 
 Desde que Heródoto escribiera, entre 484 AC y 425 AC, ha transcurrido mucho tiempo y muchas cosas han transcurrido alrededor del algodón. Mencionemos algunas:
 

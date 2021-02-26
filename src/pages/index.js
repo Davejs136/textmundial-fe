@@ -16,8 +16,6 @@ const IndexPage = () => (
       image="http://gruponovanet.com.ve/misc/tm-site-thumb.jpg"
     />
 
-    <h1>Texmundial</h1>
-
     <Principal />
 
     <Productos />
