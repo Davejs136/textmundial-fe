@@ -1,6 +1,6 @@
 ---
 tipo: "articulo"
-status: "inactivo"
+status: "activo"
 fecha: 2021-03-15
 slug: "texmundial-origen-jersey"
 titulo: "¿De dónde viene el jersey?"
