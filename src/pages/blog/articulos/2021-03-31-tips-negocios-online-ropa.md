@@ -1,6 +1,6 @@
 ---
 tipo: "articulo"
-status: "inactivo"
+status: "activo"
 fecha: 2021-03-31
 slug: "texmundial-tips-negocios-online-ropa"
 titulo: "¿Cómo emprender vendiendo ropa online?"
