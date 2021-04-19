@@ -3,7 +3,7 @@ tipo: "articulo"
 status: "activo"
 fecha: 2021-03-15
 slug: "texmundial-origen-jersey"
-titulo: "¿De dónde viene el jersey?"
+titulo: "¿De dónde viene el jersey? | Texmundial"
 description: "¿Alguna vez se ha preguntado por qué el jersey se llama así? Aquí le contamos en pocas palabras."
 imagen: "./imagenes/texmundial-origen-jersey.jpg"
 alt: "Diferentes telas jersey apiladas unas a otras con diferentes colores."

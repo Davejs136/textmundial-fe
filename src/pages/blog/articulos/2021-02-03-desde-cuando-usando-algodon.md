@@ -3,7 +3,7 @@ tipo: "articulo"
 status: "activo"
 fecha: 2021-02-03
 slug: "desde-cuando-usando-algodon"
-titulo: "¿Desde cuándo hemos estado usando el algodón?"
+titulo: "¿Desde cuándo hemos estado usando el algodón? | Texmundial"
 description: "Breve descripción sobre la historia del algodón y su relación con nosotros."
 imagen: "./imagenes/texmundial-algodon.jpg"
 alt: "Algodón crudo luego de haber sido cosechado para la confección de telas y para otros usos que se le suele dar a esta fibra."

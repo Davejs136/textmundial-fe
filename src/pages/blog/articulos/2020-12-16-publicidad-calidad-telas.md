@@ -3,7 +3,7 @@ tipo: "articulo"
 status: "activo"
 fecha: 2020-12-16
 slug: "publicidad-calidad-telas"
-titulo: "La publicidad y la calidad de las telas"
+titulo: "La publicidad y la calidad de las telas | Texmundial"
 description: "Explicación sobre la importancia de darle prioridad a la calidad del producto en vez de a la publicidad."
 imagen: "./imagenes/texmundial-publicidad-calidad-telas.jpg"
 alt: "Diferentes muestras de telas unicolor con tonos alrededor del rojo y el blanco. Son una muestra de la calidad de las telas."

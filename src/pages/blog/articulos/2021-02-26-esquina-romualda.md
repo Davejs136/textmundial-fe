@@ -3,7 +3,7 @@ tipo: "articulo"
 status: "activo"
 fecha: 2021-02-26
 slug: "texmundial-esquina-romualda"
-titulo: "Manduca a La Romualda, más de 27 años de servicio"
+titulo: "Manduca a La Romualda, más de 27 años de servicio | Texmundial"
 description: "Breve historia sobre la esquina La Romualda y sobre nuestra tienda de telas en Manduca."
 imagen: "./imagenes/texmundial-romualda-atencion-clientes.jpg"
 alt: "Dibujo a mano de la catedral cerca de la esquina La Romualda, cerca de Texmundial."

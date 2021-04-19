@@ -3,7 +3,7 @@ tipo: "articulo"
 status: "activo"
 fecha: 2021-03-31
 slug: "texmundial-tips-negocios-online-ropa"
-titulo: "¿Cómo emprender vendiendo ropa online?"
+titulo: "¿Cómo emprender vendiendo ropa online? | Texmundial"
 description: "En los días que corren, emprender con un negocio online para venta de ropa es muy sencillo. Aquí le contamos cómo hacerlo."
 imagen: "./imagenes/texmundial-tips-negocios-online-ropa.jpg"
 alt: "Joven emprendedora frente a la computadora montando su negocio online de ropa."
